@@ -1,0 +1,21 @@
+id: eco-and-apartment
+class: prose
+kind: howto
+verified: false
+license: original
+weight: 7
+title: { mr: पर्यावरणपूरक आणि छोट्या घरातील गणपती, hi: पर्यावरण-अनुकूल और छोटे घर का गणपति, en: Eco-friendly and small-home Ganpati }
+facts:
+  - "Shadu mati (natural river clay) idols dissolve in water within hours and are the traditional material. Plaster of Paris does not dissolve, and PoP idols with chemical paints damage water bodies."
+  - "Many Mumbai and Pune households now do home visarjan: a bucket, drum, or large tub of water, the idol immersed there, and the resulting clay slurry poured into a garden pot or used for a plant."
+  - "Seed idols (with tulsi, or vegetable seeds embedded in the clay) are immersed in a pot of soil rather than water, so the idol becomes a plant."
+  - "Nirmalya — flowers, leaves, cloth, decorations — must be separated before immersion and put in the nirmalya collection kalash, not into the water. Municipal bodies collect it for composting."
+  - "The BMC sets up artificial immersion tanks (krutrim talav) across Mumbai each year; using them is now the recommended civic practice."
+  - "For a small flat: a shelf or a corner table serves as the sthapana place. A small murti (6 inches or less), a clean cloth, a chowrang or a stool, a diya, durva and a flower is a complete arrangement."
+  - "Fire safety matters in small spaces — keep the diya and niranjan clear of cloth decorations and paper makhar, and never leave a lit lamp unattended."
+must_contain: ["शाडू"]
+variants:
+  - "Some families keep a permanent metal murti for daily worship and install a clay one only for the festival."
+sensitivities:
+  - "Do not state the current year's BMC tank locations or counts. Say tanks are provided each year and tell the user to check the BMC's announcement for their ward."
+  - "Frame eco-friendly practice as widely adopted good practice, never as a judgement on families who do otherwise."

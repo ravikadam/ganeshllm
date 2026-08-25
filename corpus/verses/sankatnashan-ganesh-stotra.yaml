@@ -1,0 +1,58 @@
+id: sankatnashan-ganesh-stotra
+class: verbatim
+kind: stotra
+verified: true
+verified_by: "sanskritdocuments.org, machine-verified against source 2026-08-26 (human pothi check still recommended before public release)"
+license: public-domain
+source: "Narada Purana. Known as Sankatnashan Ganesh Stotra — 'the hymn that destroys calamity'."
+weight: 12
+title:
+  sa: सङ्कटनाशन गणेश स्तोत्र
+  mr: संकटनाशन गणेश स्तोत्र
+  hi: संकटनाशन गणेश स्तोत्र
+  en: Sankatnashan Ganesh Stotra
+text:
+  devanagari: |
+    श्रीगणेशाय नमः । नारद उवाच ।
+    प्रणम्य शिरसा देवं गौरीपुत्रं विनायकम् ।
+    भक्तावासं स्मरेन्नित्यमायुःकामार्थसिद्धये ॥ १॥
+    प्रथमं वक्रतुण्डं च एकदन्तं द्वितीयकम् ।
+    तृतीयं कृष्णपिङ्गाक्षं गजवक्त्रं चतुर्थकम् ॥ २॥
+    लम्बोदरं पञ्चमं च षष्ठं विकटमेव च ।
+    सप्तमं विघ्नराजेन्द्रं धूम्रवर्णं तथाष्टमम् ॥ ३॥
+    नवमं भालचन्द्रं च दशमं तु विनायकम् ।
+    एकादशं गणपतिं द्वादशं तु गजाननम् ॥ ४॥
+    द्वादशैतानि नामानि त्रिसन्ध्यं यः पठेन्नरः ।
+    न च विघ्नभयं तस्य सर्वसिद्धिकरः प्रभुः ॥ ५॥
+    विद्यार्थी लभते विद्यां धनार्थी लभते धनम् ।
+    पुत्रार्थी लभते पुत्रान्मोक्षार्थी लभते गतिम् ॥ ६॥
+    जपेद्गणपतिस्तोत्रं षड्भिर्मासैः फलं लभेत् ।
+    संवत्सरेण सिद्धिं च लभते नात्र संशयः ॥ ७॥
+    अष्टभ्यो ब्राह्मणेभ्यश्च लिखित्वा यः समर्पयेत् ।
+    तस्य विद्या भवेत्सर्वा गणेशस्य प्रसादतः ॥ ८॥
+    ॥ इति श्रीनारदपुराणे संकटनाशनं गणेशस्तोत्रं सम्पूर्णम् ॥
+  roman_simple: |
+    Pranamya Shirasa Devam Gauriputram Vinayakam |
+    Bhaktavasam Smarennityamayuhkamarthasiddhaye || 1 ||
+    Prathamam Vakratundam Cha Ekadantam Dvitiyakam |
+    Tritiyam Krishnapingaksham Gajavaktram Chaturthakam || 2 ||
+    Lambodaram Panchamam Cha Shashtham Vikatameva Cha |
+    Saptamam Vighnarajendram Dhumravarnam Tathashtamam || 3 ||
+    Navamam Bhalachandram Cha Dashamam Tu Vinayakam |
+    Ekadasham Ganapatim Dvadasham Tu Gajananam || 4 ||
+    Dvadashaitani Namani Trisandhyam Yah Pathennarah |
+    Na Cha Vighnabhayam Tasya Sarvasiddhikaram Prabho || 5 ||
+    Vidyarthi Labhate Vidyam Dhanarthi Labhate Dhanam |
+    Putrarthi Labhate Putranmoksharthi Labhate Gatim || 6 ||
+    Japedganapatistotram Shadbhirmasaih Phalam Labhet |
+    Samvatsarena Siddhim Cha Labhate Natra Samshayah || 7 ||
+    Ashtebhyo Brahmanebhyashcha Likhitva Yah Samarpayet |
+    Tasya Vidya Bhavetsarva Ganeshasya Prasadatah || 8 ||
+meaning:
+  en: "Bowing my head to Vinayaka, son of Gauri, the refuge of devotees, I remember him daily for long life and the fulfilment of desire and purpose. The twelve names follow: Vakratunda, Ekadanta, Krishnapingaksha, Gajavaktra, Lambodara, Vikata, Vighnarajendra, Dhumravarna, Bhalachandra, Vinayaka, Ganapati, Gajanana. Whoever recites these twelve names at the three junctures of the day has no fear of obstacles."
+  mr: "गौरीपुत्र विनायकाला मस्तक नमवून, भक्तांचा आश्रय असलेल्या त्याचे नित्य स्मरण करावे. पुढे बारा नावे येतात. जो ही बारा नावे त्रिकाळ म्हणतो त्याला विघ्नाचे भय राहत नाही."
+  hi: "गौरीपुत्र विनायक को शिर से प्रणाम कर, भक्तों के आश्रय का नित्य स्मरण करें. आगे बारह नाम आते हैं. जो इन्हें त्रिकाल पढ़ता है उसे विघ्न का भय नहीं रहता."
+usage:
+  when: "Recited during Sankashti Chaturthi, during the Ganeshotsav days, and by students before examinations."
+  count: "Traditionally three times a day (trisandhya); many recite once daily."
+notes_en: "Verses 2-4 are the famous list of twelve names (Dvadasha Nama). Verses 5-8 are the phalashruti, the statement of fruits. Verse 8's instruction about copying the stotra for eight brahmins is rarely practised today and should be described as traditional text, not as advice."

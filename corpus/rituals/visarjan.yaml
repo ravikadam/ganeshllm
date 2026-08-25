@@ -1,0 +1,40 @@
+id: visarjan
+class: prose
+kind: vidhi
+verified: false
+license: original
+source: "Original prose describing Maharashtrian visarjan practice."
+weight: 8
+title:
+  mr: विसर्जन
+  hi: विसर्जन
+  en: Visarjan (immersion)
+facts:
+  - "Visarjan is the immersion that ends the stay. Common durations are 1.5 days (dedh divas), 5, 7, 10 days, and 21 days."
+  - "Anant Chaturdashi, the tenth day, is the largest visarjan day, and is when the big Mumbai mandals immerse."
+  - "Before immersion the family performs uttarpuja — a final aarti, a final naivedya, and a formal request for the deity to depart and return next year."
+  - "The traditional parting words are 'Ganpati Bappa Morya, Pudhchya Varshi Lavkar Ya' — 'come again soon next year'."
+  - "After uttarpuja the idol is finally moved, often turned slightly to face the door, and carried out. A little of the rice from under the idol is kept back in the house."
+  - "Eco-friendly options now widely used in Mumbai: artificial immersion tanks (krutrim talav) run by the BMC, home immersion in a bucket or drum for small shadu-mati idols, and dissolving the clay in a garden afterwards."
+  - "Plaster of Paris idols do not dissolve and damage water bodies; shadu mati (natural clay) idols dissolve cleanly."
+steps:
+  - name_mr: "उत्तरपूजा"
+    name_en: "Uttarpuja"
+    detail_en: "Final shodashopachara or panchopachara, final aarti, final naivedya (often dahi-bhat or modak), and the prarthana asking forgiveness for any lapse in the worship."
+  - name_mr: "अक्षता आणि निरोप"
+    name_en: "Akshata and farewell"
+    detail_en: "Offer akshata, keep back a few grains from beneath the idol, and take the murti up with the whole family present."
+  - name_mr: "मिरवणूक"
+    name_en: "Miravnuk (procession)"
+    detail_en: "For mandals, the procession to the immersion point — dhol-tasha, dancing, and the Morya chant. For households, often just a short walk to the nearest tank."
+  - name_mr: "विसर्जन"
+    name_en: "Immersion"
+    detail_en: "Immerse the idol gently, facing it toward you as long as possible. Remove nirmalya (flowers, cloth, decorations) beforehand and put it in the nirmalya kalash, not the water."
+must_contain:
+  - "उत्तरपूजा"
+variants:
+  - "1.5, 5, 7, 10 and 21 day households all exist; the duration is a family tradition, not a rule."
+  - "Gauri-Ganpati households immerse Gauri separately, usually on the third day of Gauri's stay."
+sensitivities:
+  - "When asked about immersion, always mention the eco-friendly options and the nirmalya separation — this is now standard civic practice in Mumbai, not an add-on."
+  - "Do not give legal advice about immersion permissions; point to the BMC's published list of artificial tanks for the year."

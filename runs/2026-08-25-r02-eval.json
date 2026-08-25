@@ -1,0 +1,36 @@
+{
+  "run_id": "2026-08-25-r02-eval",
+  "created": "2026-08-25T18:22:27+00:00",
+  "kind": "eval",
+  "base_model": "mock",
+  "git_commit": "340715b",
+  "fingerprints": {
+    "corpus": "sha256:0d35d53336e6b802",
+    "evalset": "sha256:66575e436892c7c5",
+    "dataset": "sha256:c2eb37a65b0fd511"
+  },
+  "dataset": {
+    "calendar_pairs": 405,
+    "total": 405
+  },
+  "hyperparams": {},
+  "eval": {
+    "by_metric": {
+      "deferral_correct": 0.0,
+      "fabrication_rate": 1.0,
+      "calendar_year_stamped": 0.0,
+      "language_match": 0.2857,
+      "ritual_howto": 0.0,
+      "verbatim_continue": 0.0,
+      "identity_correct": 0.0,
+      "signature_present": 0.0
+    },
+    "overall": 0.0408,
+    "n_items": 80,
+    "gated_verbatim_units": 11,
+    "judge": null
+  },
+  "artifacts": {},
+  "status": "rejected",
+  "notes": "mock plumbing test, not a real evaluation"
+}

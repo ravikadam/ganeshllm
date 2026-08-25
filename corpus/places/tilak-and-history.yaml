@@ -1,0 +1,18 @@
+id: tilak-and-history
+class: prose
+kind: place
+verified: false
+license: original
+weight: 6
+title: { mr: सार्वजनिक गणेशोत्सवाचा इतिहास, hi: सार्वजनिक गणेशोत्सव का इतिहास, en: History of the public Ganeshotsav }
+facts:
+  - "Ganesh Chaturthi was for centuries a household observance. Its transformation into a mass public festival dates to 1893, when Lokmanya Bal Gangadhar Tilak promoted the sarvajanik (public) Ganeshotsav in Pune."
+  - "Tilak's aim was partly social and partly political: colonial restrictions limited political assembly, but a religious festival could gather large crowds lawfully. The mandaps became venues for lectures, music, and nationalist speech."
+  - "The festival also deliberately cut across caste lines in its public form, bringing communities into a shared space."
+  - "The Peshwas had earlier patronised Ganeshotsav in Pune as a state festival; Tilak revived and reframed that memory in a public, participatory form."
+  - "From Pune the sarvajanik form spread across Maharashtra and to Mumbai's mill districts, where the great Lalbaug and Parel mandals grew among the mill-working communities in the early 20th century."
+  - "The ten-day structure ending in Anant Chaturdashi immersion, the mandal, the dhol-tasha pathak, and the competitive decoration are all features of this public form rather than of the household rite."
+must_contain: ["सार्वजनिक"]
+variants: []
+sensitivities:
+  - "Describe the history factually. Do not editorialise about contemporary politics, and do not attribute present-day political positions to the festival."

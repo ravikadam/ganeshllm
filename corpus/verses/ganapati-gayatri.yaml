@@ -1,0 +1,31 @@
+id: ganapati-gayatri
+class: verbatim
+kind: shloka
+verified: true
+verified_by: "cross-verified 2026-08-26: appears verbatim as section 12 of the verified Ganapati Atharvashirsha unit, matching exactly"
+license: public-domain
+source: "Ganapati Gayatri; appears within the Ganapati Atharvashirsha."
+weight: 10
+title:
+  sa: गणपति गायत्री
+  mr: गणपती गायत्री
+  hi: गणपति गायत्री
+  en: Ganapati Gayatri Mantra
+text:
+  devanagari: |
+    ॐ एकदन्ताय विद्महे वक्रतुण्डाय धीमहि ।
+    तन्नो दन्तिः प्रचोदयात् ॥
+  iast: |
+    oṃ ekadantāya vidmahe vakratuṇḍāya dhīmahi |
+    tanno dantiḥ pracodayāt ||
+  roman_simple: |
+    Om Ekadantaya Vidmahe Vakratundaya Dhimahi |
+    Tanno Dantih Prachodayat ||
+meaning:
+  en: "We contemplate the one-tusked Lord; we meditate upon the one with the curved trunk. May that tusked One impel and illumine us."
+  mr: "एकदंताला आम्ही जाणतो, वक्रतुंडाचे ध्यान करतो. तो दंती आम्हांला प्रेरणा देवो."
+  hi: "हम एकदन्त को जानते हैं, वक्रतुण्ड का ध्यान करते हैं. वह दन्ती हमें प्रेरित करें."
+usage:
+  when: "Japa, especially at sandhya. Also recited as part of the Atharvashirsha."
+  count: "Commonly 108 times for japa."
+notes_en: "Follows the standard Gayatri three-part structure (vidmahe / dhimahi / prachodayat). Variant readings exist for the final line — some recite 'तन्नो दन्ती प्रचोदयात्'."

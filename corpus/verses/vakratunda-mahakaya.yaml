@@ -1,0 +1,31 @@
+id: vakratunda-mahakaya
+class: verbatim
+kind: shloka
+verified: true
+verified_by: "cross-checked against multiple independent sources 2026-08-26; text identical in all (human pothi check still recommended before public release)"
+license: public-domain
+source: "Traditional mangalacharana; widely attested, commonly prefixed to Puranic recitation."
+weight: 12
+title:
+  sa: वक्रतुण्ड महाकाय
+  mr: वक्रतुंड महाकाय
+  hi: वक्रतुंड महाकाय
+  en: Vakratunda Mahakaya
+text:
+  devanagari: |
+    वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।
+    निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+  iast: |
+    vakratuṇḍa mahākāya sūryakoṭi samaprabha |
+    nirvighnaṃ kuru me deva sarvakāryeṣu sarvadā ||
+  roman_simple: |
+    Vakratunda Mahakaya Suryakoti Samaprabha |
+    Nirvighnam Kuru Me Deva Sarvakaryeshu Sarvada ||
+meaning:
+  en: "O Lord with the curved trunk and the mighty form, whose radiance equals ten million suns — make all my undertakings free of obstacles, always."
+  mr: "वक्र सोंड असलेल्या, विशाल देहाच्या, कोटी सूर्यांसारखे तेज असलेल्या देवा — माझ्या सर्व कार्यांमध्ये सदैव विघ्न येऊ देऊ नकोस."
+  hi: "हे टेढ़ी सूँड और विशाल काया वाले, करोड़ों सूर्यों के समान तेजस्वी देव — मेरे सभी कार्यों में सदा विघ्न दूर कीजिए."
+usage:
+  when: "The single most-recited Ganesh shloka. Said before starting any new work, journey, exam, business, or puja."
+  count: "1, 3, or 11 times."
+notes_en: "Often called the Ganesh mangalacharana. Frequently quoted with an 'Om Shri Ganeshaya Namah' prefix, though that is not part of the verse itself."

@@ -1,0 +1,41 @@
+id: pranapratishtha
+class: prose
+kind: vidhi
+verified: false
+license: original
+source: "Original prose describing widely-practised Maharashtrian household vidhi."
+weight: 8
+title:
+  mr: प्राणप्रतिष्ठा
+  hi: प्राणप्रतिष्ठा
+  en: Pranapratishtha (installing life in the idol)
+facts:
+  - "Pranapratishtha is performed once, on Ganesh Chaturthi day, at the moment the idol is installed at home or in the mandal."
+  - "It is the rite by which the clay murti is treated as a living presence for the duration of the festival, and it is what makes the daily puja and the final visarjan meaningful."
+  - "It is normally done during the madhyahna (midday) kaal on Chaturthi, because Ganesha is said to have been born at midday."
+  - "The idol faces east or west; the family faces the idol. The idol is placed on a raised chowrang or paat, on a clean cloth, over a few grains of rice."
+  - "The sequence is: achaman and pavitra dharan, then sankalpa, then the idol is placed, then pranapratishtha mantras are said with the right hand touching the idol's heart, then shodashopachara puja follows."
+  - "Durva, red flowers (especially jaswand/hibiscus), and shendur are the characteristic offerings."
+  - "After pranapratishtha the idol is not moved again until visarjan."
+steps:
+  - name_mr: "आचमन आणि संकल्प"
+    name_en: "Achaman and Sankalpa"
+    detail_en: "Sip water thrice, then state the sankalpa: who you are, the date by the panchang, and the intention — to install and worship Shri Ganesha for the coming days."
+  - name_mr: "मूर्तिस्थापना"
+    name_en: "Placing the idol"
+    detail_en: "Place a few grains of rice on the chowrang, set the murti on them, and steady it. From this point the idol is not moved."
+  - name_mr: "प्राणप्रतिष्ठा"
+    name_en: "Pranapratishtha"
+    detail_en: "Touching the idol's heart with the right hand, recite the pranapratishtha mantras inviting the deity to reside in the murti. Many families keep a durva in the hand while doing this."
+  - name_mr: "षोडशोपचार पूजा"
+    name_en: "Shodashopachara puja"
+    detail_en: "The sixteen-fold service follows immediately — see the shodashopachara unit."
+must_contain:
+  - "संकल्प"
+variants:
+  - "Some families invite a guruji to perform the vidhi; many perform it themselves with a pothi. Both are entirely acceptable."
+  - "Households that install for only 1.5 days still perform the full pranapratishtha — the duration does not change the rite."
+  - "Some traditions do pranapratishtha only for a new idol each year; others reuse a metal murti and perform avahan instead."
+sensitivities:
+  - "Muhurat timing varies by panchang and by city — always tell the user to check their local panchang or ask their family guruji rather than giving a fixed clock time."
+  - "Never state one family tradition as the only correct one. Say what is common, then note the variants."

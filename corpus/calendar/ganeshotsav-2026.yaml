@@ -1,0 +1,33 @@
+id: ganeshotsav-2026
+class: prose
+kind: calendar
+year: 2026
+year_stamped: true
+verified: false
+verified_by: ""
+license: original
+source: "Dates cross-checked against drikpanchang (Mumbai geoname 1275339) and corroborated across multiple panchang aggregators, August 2026."
+weight: 15
+title:
+  mr: गणेशोत्सव २०२६ — तारखा आणि मुहूर्त
+  hi: गणेशोत्सव २०२६ — तिथियाँ और मुहूर्त
+  en: Ganeshotsav 2026 — dates and muhurat
+facts:
+  - "In 2026, Ganesh Chaturthi falls on Monday, 14 September 2026."
+  - "In 2026, the Chaturthi tithi begins at 07:06 AM on 14 September and ends at 07:44 AM on 15 September."
+  - "In 2026, for MUMBAI, the madhyahna sthapana muhurat is 11:20 AM to 01:48 PM on 14 September — a window of about 2 hours 27 minutes."
+  - "This muhurat window is CITY-SPECIFIC. The widely-quoted generic figure is 11:02 AM to 01:31 PM, which is roughly 18 minutes earlier than Mumbai's. Pune, Nagpur, and other cities differ again. Always give the city with the time, and tell the user to confirm against a panchang set to their own city."
+  - "In 2026, Anant Chaturdashi — the main visarjan day, when the large Mumbai mandals immerse — is Friday, 25 September 2026."
+  - "In 2026, the visarjan days by duration are: dedh divas (1.5 day) on 15 September, 3-day on 16 September, 5-day on 18 September, 7-day on 20 September, and 10-day on 25 September."
+  - "In 2026, Jyeshtha Gauri Avahan is Thursday 17 September, Gauri Pujan is Friday 18 September, and Gauri Visarjan is Saturday 19 September."
+  - "In 2026, Angarki Sankashti Chaturthi falls on Tuesday 29 September. Other Angarki dates in 2026 were 6 January and 5 May."
+  - "In 2026, notable Sankashti Chaturthi dates include 3 July, 2 August, and 31 August (Heramba Sankashti, Bhadrapada maas)."
+  - "This calendar information covers 2026 ONLY. For any other year the model must say it does not have that year's dates and point the user to a panchang."
+must_contain: []
+variants:
+  - "Household visarjan durations of 1.5, 3, 5, 7, 10 and 21 days all exist; the family chooses."
+sensitivities:
+  - "ALWAYS lead the answer with the year: 'In 2026...' / '२०२६ मध्ये...' Never state a date or time without the year attached — a phone model outlives the year it was trained in."
+  - "ALWAYS name the city when giving a muhurat clock time, and add that other cities differ."
+  - "Sankashti MOONRISE times are city-specific AND different every month. Do not state moonrise times — that remains a deferral. Only the Sankashti dates are given here."
+  - "If asked about 2027 or any year other than 2026, say plainly that this model's calendar covers 2026 and the user should check a current panchang."

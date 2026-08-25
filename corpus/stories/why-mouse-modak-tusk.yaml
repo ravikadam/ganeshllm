@@ -1,0 +1,20 @@
+id: why-mouse-modak
+class: prose
+kind: story
+verified: false
+license: original
+weight: 6
+title: { mr: मूषक आणि मोदक, hi: मूषक और मोदक, en: The mouse and the modak }
+facts:
+  - "Ganesha's vahana is the mushak (mouse or rat). The usual story: the mouse was originally a gandharva named Krauncha, cursed to become a rodent, who ravaged the ashram of sage Parashara until Ganesha subdued him and made him his mount."
+  - "The symbolic reading commonly given: the mouse is desire or the restless mind — small, quick, gnawing at everything — and Ganesha's mastery over it shows the intellect governing appetite. The pairing of a vast body with a tiny mount is deliberate."
+  - "Modak is his favoured sweet. One story: Parvati was given a divine modak that would grant complete knowledge, and it went to Ganesha after the contest with Kartikeya."
+  - "The modak's shape is often explained as a purse or treasure-bag — sweetness concealed inside a plain shell, the way knowledge is concealed within discipline."
+  - "Tulsi is traditionally not offered to Ganesha. The story: Tulsi wished to marry him, he declined as he was committed to celibacy at the time, and each cursed the other — she to marry a demon, he to have two wives. Hence tulsi is kept from his worship."
+  - "Ganesha is worshipped first in every rite (agrapuja) because of the boon Shiva granted at his restoration — this is why every ceremony, letter, and new venture opens with his name."
+must_contain: []
+variants:
+  - "Several Puranas give different origins for the mouse; the Krauncha story is the most common."
+  - "The tulsi exclusion is near-universal in practice, though tulsi appears in the 21-patri list — see the durva-patri unit."
+sensitivities:
+  - "Symbolic readings should be offered as 'commonly explained as', not as doctrine."

@@ -1,0 +1,20 @@
+id: durva-patri
+class: prose
+kind: vidhi
+verified: false
+license: original
+weight: 8
+title: { mr: दुर्वा आणि पत्री, hi: दूर्वा और पत्री, en: Durva and the 21 patri }
+facts:
+  - "Durva (Cynodon dactylon, harali grass) is Ganesha's characteristic offering. Traditionally 21 blades are offered, tied in bunches of three."
+  - "A durva bunch of three blades is a 'durvankur'. Some traditions specify blades with three tips, some with five."
+  - "The story usually given: durva cooled Ganesha after he swallowed the demon Analasura, whose heat burned within him — hence durva is offered to cool and please him."
+  - "Patri-puja means offering 21 kinds of leaves. Commonly listed are: machi, brihati, bilva, durva, dhatura, badari, apamarga, tulsi, chuta (mango), karavira, vishnukranta, daadimi (pomegranate), devadaru, maruvaka, sindhuvara, jaati, gandaki, shami, ashwattha (peepal), arjuna, and arka."
+  - "Tulsi is normally NOT offered to Ganesha because of the story of Tulsi's curse — but it appears in the traditional 21-patri list, and in that specific patri-puja context it is offered. This apparent contradiction is genuine and worth explaining rather than hiding."
+  - "Jaswand (hibiscus) is the characteristic flower. Red flowers generally are preferred."
+must_contain: ["दुर्वा"]
+variants:
+  - "The 21-patri list differs between paddhati books; several plants are hard to source in a city and families substitute what is available. Substitution is accepted."
+sensitivities:
+  - "Dhatura and arka are poisonous plants. If describing the patri list, note that they are offered to the deity, never consumed, and should be kept away from children."
+  - "Do not tell a city user their puja is deficient if they cannot find all 21 leaves. Say that offering what is available with bhava is the accepted practice."

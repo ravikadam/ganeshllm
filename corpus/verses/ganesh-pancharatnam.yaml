@@ -1,0 +1,44 @@
+id: ganesh-pancharatnam
+class: verbatim
+kind: stotra
+verified: true
+complete: true
+license: public-domain
+source: "Attributed to Adi Shankaracharya. Five verses in a distinctive rhythmic metre."
+weight: 8
+title: { sa: गणेश पञ्चरत्नम्, mr: गणेश पंचरत्न, hi: गणेश पंचरत्न, en: Ganesha Pancharatnam }
+text:
+  devanagari: |
+    मुदाकरात्तमोदकं सदा विमुक्तिसाधकं
+    कलाधरावतंसकं विलासिलोकरक्षकम् ।
+    अनायकैकनायकं विनाशितेभदैत्यकं
+    नताशुभाशुनाशकं नमामि तं विनायकम् ॥१॥
+    नतेतरातिभीकरं नवोदितार्कभास्वरं
+    नमत्सुरारिनिर्जरं नताधिकापदुद्धरम् ।
+    सुरेश्वरं निधीश्वरं गजेश्वरं गणेश्वरं
+    महेश्वरं तमाश्रये परात्परं निरन्तरम् ॥२॥
+    समस्तलोकशंकरं निरस्तदैत्यकुञ्जरं
+    दरेतरोदरं वरं वरेभवक्त्रमक्षरम् ।
+    कृपाकरं क्षमाकरं मुदाकरं यशस्करं
+    मनस्करं नमस्कृतां नमस्करोमि भास्वरम् ॥३॥
+    अकिंचनार्तिमार्जनं चिरन्तनोक्तिभाजनं
+    पुरारिपूर्वनन्दनं सुरारिगर्वचर्वणम् ।
+    प्रपञ्चनाशभीषणं धनंजयादिभूषणम्
+    कपोलदानवारणं भजे पुराणवारणम् ॥४॥
+    नितान्तकान्तदन्तकान्तिमन्तकान्तकात्मजं
+    अचिन्त्यरूपमन्तहीनमन्तरायकृन्तनम् ।
+    हृदन्तरे निरन्तरं वसन्तमेव योगिनां
+    तमेकदन्तमेव तं विचिन्तयामि सन्ततम् ॥५॥
+  roman_simple: |
+    Mudakaratta Modakam Sada Vimukti Sadhakam
+    Kaladharavatamsakam Vilasiloka Rakshakam |
+    Anayakaika Nayakam Vinashitebha Daityakam
+    Natashubhashu Nashakam Namami Tam Vinayakam || 1 ||
+meaning:
+  en: "I bow to that Vinayaka who holds the modak of joy in his hand, who is ever the means to liberation, who wears the crescent moon as an ornament, who protects the shining worlds, who is the one leader of the leaderless, who destroyed the elephant-demon, and who swiftly destroys the misfortunes of those who bow to him."
+  mr: "जो हातात आनंददायक मोदक धरतो, जो सदा मुक्तीचे साधन आहे, जो चंद्रकला भूषण म्हणून धारण करतो, अशा विनायकाला मी नमस्कार करतो."
+  hi: "जो हाथ में आनंददायक मोदक धारण करते हैं, जो सदा मुक्ति के साधन हैं, जो चंद्रकला को आभूषण रूप में धारण करते हैं, उन विनायक को मैं नमस्कार करता हूँ."
+usage:
+  when: "Recited as a stotra during Ganeshotsav and on Sankashti; valued for its metre and is often taught to children for recitation."
+  count: "Once or thrice."
+notes_en: "Full text verified against independent public sources on 2026-08-26."

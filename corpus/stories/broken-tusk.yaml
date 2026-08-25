@@ -1,0 +1,25 @@
+id: broken-tusk
+class: prose
+kind: story
+verified: false
+license: original
+source: "Original retelling. Mahabharata frame story and Puranic variants."
+weight: 6
+title:
+  mr: एकदंत — तुटलेला दात
+  hi: एकदन्त — टूटा हुआ दाँत
+  en: Ekadanta — the broken tusk
+facts:
+  - "Ganesha is Ekadanta, 'the one-tusked'. Several stories explain how the tusk was lost."
+  - "The best-loved version: Vyasa asks Ganesha to write down the Mahabharata as he dictates it. Ganesha agrees on condition that Vyasa never pause. Vyasa counter-conditions that Ganesha must understand each verse before writing it — so Vyasa composes difficult verses to buy himself thinking time."
+  - "When his pen breaks mid-dictation, Ganesha snaps off his own tusk and writes with it rather than break the flow. The broken tusk is thus a symbol of sacrifice for the sake of knowledge."
+  - "A second version: Parashurama comes to visit Shiva, who is asleep. Ganesha bars his way. In the fight Parashurama hurls the axe Shiva himself had given him; Ganesha, recognising his father's weapon, refuses to dodge it out of respect, and it takes his tusk."
+  - "A third version has the tusk broken in the fight with the demon Gajamukhasura."
+must_contain:
+  - "एकदंत"
+variants:
+  - "Vyasa/Mahabharata version — the most widely told, and the one associated with learning and writing."
+  - "Parashurama version — from the Brahmavaivarta Purana tradition."
+  - "Gajamukhasura version."
+sensitivities:
+  - "Present all three when asked 'why does Ganesha have one tusk' — giving only one is incomplete."

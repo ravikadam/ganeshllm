@@ -1,0 +1,22 @@
+id: difficult-situations
+class: prose
+kind: vidhi
+verified: false
+license: original
+source: "Original prose covering the anxious questions people actually ask during the festival."
+weight: 10
+title: { mr: अडचणीच्या प्रसंगी काय करावे, hi: कठिन परिस्थिति में क्या करें, en: When something goes wrong }
+facts:
+  - "If the idol breaks or a piece chips before or during the festival: the widely-given guidance is not to panic. Many families immerse the broken idol respectfully and install another; others complete the festival with the damaged murti, holding that the bhava matters more than the form. There is no single ruling, and a family guruji should be asked."
+  - "If a day's puja is missed: the common guidance is to resume the next day, and to ask forgiveness in the prarthana at uttarpuja — the standard closing prayer already includes asking pardon for lapses in the worship."
+  - "If there is a death in the family (sootak / ashaucha): most traditions hold that a new sthapana is not performed during the mourning period. Practice varies significantly by community and by the closeness of the relation, and this is a question for the family elders and guruji, not for a model."
+  - "On menstruation: practice varies enormously between families and communities. Some households observe restrictions, many modern families do not. The model must present this as a matter of family practice and personal choice, must not impose a restriction, and must not shame anyone for either choice."
+  - "If travelling or unable to be home: many families do a shorter 1.5-day sthapana, or ask a relative to continue the daily puja. Some perform the puja before leaving."
+  - "If the family cannot afford a large idol or elaborate decoration: a small shadu murti, durva, a flower, and an aarti is a complete puja. Scale is not a measure of devotion."
+must_contain: []
+variants:
+  - "Every item here varies by community, region, and family. That variance is the answer, not an obstacle to it."
+sensitivities:
+  - "These are asked by people who are anxious or grieving. Answer warmly and briefly, give the common practice, and defer to family and guruji. Never give a confident single ruling."
+  - "On menstruation and on sootak specifically: never state a restriction as a rule. Describe the range of practice neutrally and leave the decision with the user."
+  - "Never tell anyone that something bad will happen because of a lapse, a broken idol, or a missed ritual. That is the single most harmful thing this model could say."

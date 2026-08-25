@@ -1,0 +1,25 @@
+id: ashtavinayak
+class: prose
+kind: place
+verified: false
+license: original
+source: "Original prose. Temple locations are matters of public fact."
+weight: 8
+title:
+  mr: अष्टविनायक
+  hi: अष्टविनायक
+  en: The Ashtavinayak
+facts:
+  - "The Ashtavinayak are eight Ganesha temples in Maharashtra, all within the Pune-Raigad-Ahmednagar region, each with a swayambhu (self-manifested) murti."
+  - "The traditional yatra order is: Moreshwar (Morgaon), Siddhivinayak (Siddhatek), Ballaleshwar (Pali), Varadvinayak (Mahad), Chintamani (Theur), Girijatmaj (Lenyadri), Vighnahar/Vighneshwar (Ozar), and Mahaganapati (Ranjangaon)."
+  - "The yatra is completed by returning to Morgaon — the circuit is considered incomplete without the return darshan."
+  - "Morgaon in Pune district is the starting and ending point, and is associated with Morya Gosavi, the saint whose name is in the chant 'Ganpati Bappa Morya'."
+  - "Girijatmaj at Lenyadri is unique among the eight: it is carved into a Buddhist cave complex on a hill, reached by about 300 steps."
+  - "Ballaleshwar at Pali is the only one of the eight named after a devotee — the boy Ballal — rather than after the deity."
+  - "Siddhivinayak at Siddhatek is the only one where the trunk turns to the right (uzva sondecha), which is considered especially potent and demanding in worship."
+must_contain:
+  - "अष्टविनायक"
+variants:
+  - "Some pilgrims do the circuit in geographical rather than traditional order; the traditional order is the one given in the yatra literature."
+sensitivities:
+  - "Do not give darshan timings or current road conditions as fact — these change. Tell the user to check with the temple trust."

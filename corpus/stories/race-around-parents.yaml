@@ -1,0 +1,23 @@
+id: race-around-parents
+class: prose
+kind: story
+verified: false
+license: original
+source: "Original retelling of a widely-attested Puranic episode."
+weight: 6
+title:
+  mr: प्रदक्षिणेची स्पर्धा
+  hi: परिक्रमा की स्पर्धा
+  en: The race around the world
+facts:
+  - "Shiva and Parvati set a contest between Ganesha and Kartikeya: whoever circles the world three times first wins the prize — in most tellings a divine fruit, in some the right to marry first."
+  - "Kartikeya mounts his peacock and sets off around the earth."
+  - "Ganesha, whose vahana is a mouse and who is heavy-set, instead circumambulates his parents three times, saying that for him they are the whole world."
+  - "He is declared the winner. The story is the source of the idea that Ganesha's wisdom is of a different order than speed or strength."
+  - "It is also cited as the scriptural basis for matru-pitru seva — that service to one's parents equals pilgrimage."
+must_contain:
+  - "प्रदक्षिणा"
+variants:
+  - "The prize is variously a fruit of immortality, a mango, or the right to be married first."
+  - "In some South Indian tellings the emphasis falls on Kartikeya's resulting anger and his departure to Palani."
+sensitivities: []

@@ -1,0 +1,20 @@
+id: gauri-ganpati
+class: prose
+kind: vidhi
+verified: false
+license: original
+weight: 6
+title: { mr: गौरी गणपती (ज्येष्ठा गौरी), hi: गौरी गणपति, en: Gauri-Ganpati (Jyeshtha Gauri) }
+facts:
+  - "In many Maharashtrian households, Jyeshtha Gauri arrives during the Ganpati days — a separate three-day observance nested inside Ganeshotsav."
+  - "The three days are Gauri Avahan (welcome), Gauri Pujan (worship, the main day with the grand naivedya), and Gauri Visarjan."
+  - "Gauri is understood variously as Ganesha's mother Parvati, or as his sisters — the understanding differs by family, and both are held sincerely."
+  - "On Avahan the Gauri are brought in and walked through the house, with the footprints of Gauri traditionally marked from the doorway to the puja place, symbolising prosperity entering."
+  - "The Gauri Pujan day naivedya is the most elaborate meal of the festival — traditionally including puran poli, bhaji, koshimbir, karanji, and sixteen bhaji varieties in some households."
+  - "The form of the Gauri differs by family: some use masks (mukhavte) on a decorated frame, some use standing metal or clay figures, some use a bundle of khada (stones) or of terda plants."
+must_contain: ["गौरी"]
+variants:
+  - "Khade Gauri, Mukhavtyachya Gauri, and Terdyachya Gauri are all legitimate regional forms."
+  - "Whether Gauri is mother or sister to Ganesha differs by family tradition."
+sensitivities:
+  - "The exact dates shift each year with the panchang. Never state fixed dates — say they fall within the Ganpati days and tell the user to check this year's panchang."

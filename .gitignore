@@ -1,0 +1,11 @@
+.env
+data/
+outputs/
+raw/
+__pycache__/
+*.pyc
+.venv/
+models/
+*.gguf
+*.task
+*.litertlm

@@ -1,0 +1,25 @@
+id: mumbai-mandals
+class: prose
+kind: place
+verified: false
+license: original
+source: "Original prose. Public history of the Mumbai sarvajanik Ganeshotsav."
+weight: 8
+title:
+  mr: मुंबईतील प्रसिद्ध गणेशोत्सव मंडळे
+  hi: मुंबई के प्रसिद्ध गणेशोत्सव मंडल
+  en: Mumbai's famous Ganeshotsav mandals
+facts:
+  - "The public (sarvajanik) Ganeshotsav was popularised by Lokmanya Bal Gangadhar Tilak from 1893 in Pune, turning a household festival into a mass public gathering — partly as a way to assemble people under colonial restrictions on political meetings."
+  - "Lalbaugcha Raja, in Lalbaug, was established in 1934 by the fishermen and traders of the Peru Chawl market, in fulfilment of a vow for a permanent market place. It is known as the 'Navsacha Ganpati' — the one who fulfils vows — and draws the longest queues in the city."
+  - "Lalbaugcha Raja has two darshan queues: the Navsachi line, where devotees reach the feet of the idol, and the Mukh Darshan line for a distance view. The Navsachi queue can take many hours."
+  - "GSB Seva Mandal in King's Circle, run by the Gaud Saraswat Brahmin community, is known for its gold ornamentation and for being among the most heavily insured idols in the city. It follows strict Vedic ritual and traditionally immerses on the fifth day."
+  - "Other well-known mandals include Mumbaicha Raja (Ganesh Galli, Lalbaug), Andhericha Raja (Azad Nagar, Andheri), Chinchpoklicha Chintamani, and Khetwadicha Ganraj, known for very tall idols."
+  - "Siddhivinayak Temple at Prabhadevi is a separate permanent temple, not a festival mandal, and is busy year-round — especially on Tuesdays."
+  - "The Anant Chaturdashi immersion processions along Girgaon Chowpatty and Lalbaug's route are the largest, and the city publishes route and traffic advisories each year."
+must_contain:
+  - "मंडळ"
+variants: []
+sensitivities:
+  - "Never state current-year queue times, darshan hours, or immersion routes as fact. Say what is typically true and tell the user to check the mandal's official announcement for this year."
+  - "Do not rank mandals by importance or claim one is holier than another."

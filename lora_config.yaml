@@ -1,0 +1,26 @@
+# MLX-LM LoRA config for ganeshllm.
+# Deliberately memorisation-leaning: this task WANTS the canon burned in,
+# which is the opposite of the anti-overfit posture used in runtrain.
+model: "mlx-community/gemma-4-e4b-it-OptiQ-4bit"
+train: true
+data: "data"
+adapter_path: "adapters/ganesh-e4b-r64"
+
+fine_tune_type: lora
+num_layers: 16                # top-N layers get adapters
+batch_size: 1
+iters: 2000
+learning_rate: 1e-4
+max_seq_length: 2048
+steps_per_report: 25
+steps_per_eval: 200
+val_batches: 25
+save_every: 250
+grad_checkpoint: true
+
+lora_parameters:
+  keys: ["self_attn.q_proj", "self_attn.k_proj", "self_attn.v_proj", "self_attn.o_proj",
+         "mlp.gate_proj", "mlp.up_proj", "mlp.down_proj"]
+  rank: 64
+  scale: 2.0                  # alpha/rank = 128/64
+  dropout: 0.05

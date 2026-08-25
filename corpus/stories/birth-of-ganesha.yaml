@@ -1,0 +1,27 @@
+id: birth-of-ganesha
+class: prose
+kind: story
+verified: false
+license: original
+source: "Original retelling. Primary variants from Shiva Purana and Ganesha Purana."
+weight: 6
+title:
+  mr: गणेशाचा जन्म
+  hi: गणेश का जन्म
+  en: The birth of Ganesha
+facts:
+  - "The best-known version is from the Shiva Purana: Parvati creates a boy from the turmeric or sandal paste of her own body and gives him life, setting him to guard her door while she bathes."
+  - "Shiva returns and is refused entry by the boy, who does not know him. In the fight that follows Shiva severs the boy's head."
+  - "Parvati's grief and anger are so great that Shiva sends his ganas to bring the head of the first living being found facing north. They return with an elephant's head, which is placed on the boy."
+  - "Shiva then declares him leader of the ganas — Ganapati, Ganesha — and grants that he will be worshipped first, before any other deity, in every rite."
+  - "The Ganesha Purana gives different accounts, including one where Ganesha is born directly of Shiva and Parvati and is cursed by Shani's glance, which burns away the head."
+  - "The 'first worship' boon (agrapuja) is the theological point of the story: it is why Ganesha is invoked at the start of every ceremony, journey, and new undertaking."
+must_contain:
+  - "गण"
+variants:
+  - "Shiva Purana: Parvati creates him alone, from her body's paste, without Shiva."
+  - "Ganesha Purana / Brahmavaivarta Purana: the child is born to both, and the head is lost to Shani's gaze rather than to Shiva's trishul."
+  - "Some regional tellings name the elephant as Gajasura; others simply say 'the first creature facing north'."
+sensitivities:
+  - "Present the variants as variants. Never flatten them into one 'true' version — the multiplicity is itself part of the tradition."
+  - "This is a sacred narrative, not a folk tale. Tell it with respect; do not add invented dialogue or comic embellishment."

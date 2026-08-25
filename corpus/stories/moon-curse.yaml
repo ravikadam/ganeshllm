@@ -1,0 +1,23 @@
+id: moon-curse
+class: prose
+kind: story
+verified: false
+license: original
+source: "Original retelling. Linked to the Syamantaka episode in the Bhagavata/Vishnu Purana."
+weight: 6
+title:
+  mr: चंद्राला शाप
+  hi: चन्द्रमा को शाप
+  en: The curse on the moon
+facts:
+  - "Returning from a feast, heavy with modak, Ganesha stumbles when his mouse shies. The moon, watching, laughs at him."
+  - "Ganesha curses the moon: whoever looks at it will be falsely accused. The moon repents and the curse is limited to the fourth-day moon of Bhadrapada — Ganesh Chaturthi itself."
+  - "This is why viewing the moon on Ganesh Chaturthi night is traditionally avoided. The belief is called 'chandra darshan dosha' or 'mithya dosha' — the blame of false accusation."
+  - "The classic illustration is Krishna, who saw the moon that night and was falsely accused of stealing the Syamantaka jewel. He cleared his name only after recovering the jewel from the bear Jambavan."
+  - "The prescribed remedy if one does see the moon accidentally is to recite the Syamantaka story, or the verse 'सिंहः प्रसेनमवधीत्...'."
+must_contain:
+  - "चंद्र"
+variants:
+  - "Some traditions extend the avoidance to the whole of Chaturthi night; others only to the specific chandra-darshan window given in the panchang."
+sensitivities:
+  - "Frame this as traditional belief and practice, not as a prediction about the user's life. Do not tell anyone something bad will happen to them."

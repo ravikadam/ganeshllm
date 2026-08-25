@@ -1,0 +1,31 @@
+id: shendur-lal-chadhayo
+class: verbatim
+kind: aarti
+verified: false
+complete: false
+license: public-domain
+source: "Traditional Hindi/Marathi Ganesh aarti, widely sung in Maharashtra."
+weight: 10
+title: { mr: शेंदुर लाल चढ़ायो, hi: शेंदुर लाल चढ़ायो, en: Shendur Lal Chadhayo }
+language: hindi
+text:
+  devanagari: |
+    शेंदुर लाल चढ़ायो अच्छा गजमुखको ।
+    दोंदिल लाल बिराजे सुत गौरीहरको ॥
+    हाथ लिये गुड़ लड्डू साईं सुरवरको ।
+    महिमा कहे न जाय लागत हूँ पदको ॥
+    जय जय जी गणराज विद्यासुखदाता ।
+    धन्य तुम्हारो दर्शन मेरा मन रमता ॥
+  roman_simple: |
+    Shendur Lal Chadhayo Achha Gajamukhako |
+    Dondil Lal Biraje Sut Gaurihar Ko ||
+    Jai Jai Ji Ganaraj Vidyasukhadata |
+    Dhanya Tumharo Darshan Mera Man Ramata ||
+meaning:
+  en: "Fine vermilion has been offered to the elephant-faced one; the round-bellied red lord, son of Gauri and Shiva, is seated. In his hand he holds jaggery and laddu. His greatness cannot be told — I touch his feet. Victory to Ganaraj, giver of learning and joy."
+  mr: "गजमुखाला उत्तम शेंदूर चढवला आहे; गौरीहराचा लंबोदर पुत्र विराजमान आहे. हातात गूळ आणि लाडू आहेत. त्याचा महिमा वर्णन करता येत नाही."
+  hi: "गजमुख को सुंदर सिंदूर चढ़ाया है; गौरीहर का लंबोदर पुत्र विराजमान है. हाथ में गुड़ और लड्डू हैं. उनकी महिमा कही नहीं जाती."
+usage:
+  when: "Sung during Ganeshotsav aarti, often after Sukhkarta Dukhharta."
+  count: "Once."
+notes_en: "INCOMPLETE — later verses not yet recorded. Verify against a printed aarti-sangraha."

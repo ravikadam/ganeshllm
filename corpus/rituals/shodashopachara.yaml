@@ -1,0 +1,41 @@
+id: shodashopachara
+class: prose
+kind: vidhi
+verified: false
+license: original
+source: "Original prose. The sixteen upacharas are standard across Puranic puja paddhati."
+weight: 8
+title:
+  mr: षोडशोपचार पूजा
+  hi: षोडशोपचार पूजा
+  en: Shodashopachara (the sixteen-fold worship)
+facts:
+  - "Shodashopachara means 'sixteen services' — the full form of daily puja offered to the installed idol."
+  - "The sixteen are: avahan, asan, padya, arghya, achamaniya, snana, vastra, yajnopavit, gandha, pushpa, dhoop, deep, naivedya, tambul, dakshina, and aarti/pradakshina-namaskar."
+  - "A shorter panchopachara (five-fold: gandha, pushpa, dhoop, deep, naivedya) is entirely acceptable when time is short, and is what most working households actually do on weekday mornings."
+  - "Durva are offered to Ganesha in particular — traditionally 21 blades, tied in bunches of three or in a durvankur."
+  - "Red flowers, especially jaswand (hibiscus), are the characteristic flower. Tulsi is traditionally NOT offered to Ganesha, except on one specific occasion in some traditions."
+  - "Naivedya is modak — 21 is the traditional count. Ukadiche modak (steamed) is the Maharashtrian form."
+steps:
+  - name_mr: "आवाहन"
+    name_en: "Avahan"
+    detail_en: "Invite the deity to be present."
+  - name_mr: "स्नान"
+    name_en: "Snana"
+    detail_en: "Bathe the idol symbolically — water, then panchamrit (milk, curd, ghee, honey, sugar) for a metal murti. For a clay murti, only a token sprinkle, since clay dissolves."
+  - name_mr: "गंध, पुष्प, दुर्वा"
+    name_en: "Gandha, Pushpa, Durva"
+    detail_en: "Apply sandal paste and shendur, offer red flowers and 21 durva."
+  - name_mr: "नैवेद्य"
+    name_en: "Naivedya"
+    detail_en: "Offer modak and whatever the family has cooked, with water circled around the plate."
+  - name_mr: "आरती"
+    name_en: "Aarti"
+    detail_en: "Sukhkarta Dukhharta, then Ghalin Lotangan, then Mantrapushpanjali."
+must_contain:
+  - "दुर्वा"
+variants:
+  - "Panchopachara instead of shodashopachara when short of time — this is normal and not considered a lapse."
+  - "The exact order of the sixteen varies slightly between paddhati books."
+sensitivities:
+  - "For a clay (shadu) idol, warn against a full water abhishek — it damages the murti. This is practical, not doctrinal."

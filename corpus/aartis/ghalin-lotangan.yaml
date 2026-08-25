@@ -1,0 +1,42 @@
+id: ghalin-lotangan
+class: verbatim
+kind: aarti
+verified: false
+license: public-domain
+source: "Composite: opening abhang by Sant Namdev (13th c.), followed by traditional Sanskrit shlokas."
+weight: 12
+title: { mr: घालीन लोटांगण, hi: घालीन लोटांगण, en: Ghalin Lotangan }
+language: marathi
+text:
+  devanagari: |
+    घालीन लोटांगण, वंदीन चरण ।
+    डोळ्यांनी पाहीन रूप तुझे ॥
+    प्रेमे आलिंगन, आनंदे पूजन ।
+    भावे ओवाळीन म्हणे नामा ॥
+    त्वमेव माता च पिता त्वमेव ।
+    त्वमेव बंधुश्च सखा त्वमेव ॥
+    त्वमेव विद्या द्रविणं त्वमेव ।
+    त्वमेव सर्वं मम देवदेव ॥
+    कायेन वाचा मनसेंद्रियैर्वा ।
+    बुद्ध्यात्मना वा प्रकृतेः स्वभावात् ॥
+    करोमि यद्यत्सकलं परस्मै ।
+    नारायणायेति समर्पयामि ॥
+    अच्युतं केशवं रामनारायणं कृष्णदामोदरं वासुदेवं हरिम् ।
+    श्रीधरं माधवं गोपिकावल्लभं जानकीनायकं रामचंद्रं भजे ॥
+    हरे राम हरे राम राम राम हरे हरे ।
+    हरे कृष्ण हरे कृष्ण कृष्ण कृष्ण हरे हरे ॥
+  roman_simple: |
+    Ghalin Lotangan, Vandin Charan |
+    Dolyanni Pahin Roop Tuze ||
+    Preme Alingan, Anande Pujan |
+    Bhave Ovalin Mhane Nama ||
+    Tvameva Mata Cha Pita Tvameva |
+    Tvameva Bandhushcha Sakha Tvameva ||
+meaning:
+  en: "I will prostrate full-length, I will worship your feet, I will behold your form with my eyes; I will embrace you with love and worship you with joy — so says Nama. You alone are mother and father, you alone are brother and friend, you alone are knowledge and wealth, you alone are everything to me, O God of gods."
+  mr: "मी लोटांगण घालीन, चरण वंदीन, डोळ्यांनी तुझे रूप पाहीन. तूच माता, तूच पिता, तूच बंधू आणि सखा, तूच विद्या आणि धन, तूच माझे सर्वस्व आहेस."
+  hi: "मैं साष्टांग प्रणाम करूँगा, चरण वंदन करूँगा. तुम ही माता, तुम ही पिता, तुम ही बंधु और सखा, तुम ही विद्या और धन, तुम ही मेरा सर्वस्व हो."
+usage:
+  when: "Sung immediately after Sukhkarta Dukhharta, at the close of the aarti, standing."
+  count: "Once, followed by Mantrapushpanjali."
+notes_en: "Not exclusive to Ganesha — it is the general closing aarti sung to any deity in Maharashtra. 'म्हणे नामा' is Sant Namdev's signature."

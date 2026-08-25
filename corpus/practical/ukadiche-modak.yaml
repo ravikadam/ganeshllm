@@ -1,0 +1,38 @@
+id: ukadiche-modak
+class: prose
+kind: howto
+verified: false
+license: original
+source: "Original prose. Traditional Maharashtrian household preparation."
+weight: 6
+title:
+  mr: उकडीचे मोदक
+  hi: उकड़ीचे मोदक
+  en: Ukadiche Modak (steamed modak)
+facts:
+  - "Modak is Ganesha's favoured naivedya. Ukadiche modak — steamed, with a rice-flour shell — is the Maharashtrian form; the fried version is more common elsewhere."
+  - "The filling (saran) is fresh grated coconut cooked with jaggery, cardamom, and often a little nutmeg and poppy seed, until it just comes together and is no longer wet."
+  - "The shell (ukad) is fine rice flour cooked into a dough with boiling water, a little ghee and salt, then kneaded while still hot — the heat is what makes it pliable enough to shape."
+  - "The dough must be kneaded hot and kept covered with a damp cloth, or it cracks when shaped."
+  - "Each modak is shaped by hand into a cup, filled, then pleated — traditionally 21 or 11 pleats — and gathered to a peak. A modak mould (modak patra) is an accepted shortcut."
+  - "They are steamed 10-12 minutes over a cloth or banana leaf, and served hot with a spoon of ghee."
+  - "21 modak is the traditional naivedya count."
+steps:
+  - name_mr: "सारण"
+    name_en: "Make the saran"
+    detail_en: "Cook grated coconut with jaggery on low heat until it thickens and leaves the pan. Add cardamom. Cool completely — hot filling tears the shell."
+  - name_mr: "उकड"
+    name_en: "Make the ukad"
+    detail_en: "Boil water with ghee and salt, add rice flour off the heat, stir, cover and rest, then knead while hot with oiled palms until smooth."
+  - name_mr: "आकार"
+    name_en: "Shape"
+    detail_en: "Take a lime-sized ball, press into a cup, fill, pleat the rim, and pinch to a peak."
+  - name_mr: "वाफवणे"
+    name_en: "Steam"
+    detail_en: "Steam 10-12 minutes. Serve hot with ghee."
+must_contain:
+  - "मोदक"
+variants:
+  - "Fried modak (talniche) use a wheat-flour shell and keep for days; steamed modak are eaten the same day."
+  - "Some households add khava or dry fruit to the filling."
+sensitivities: []

@@ -1,0 +1,34 @@
+id: sankashti-chaturthi
+class: prose
+kind: vidhi
+verified: false
+license: original
+weight: 8
+title: { mr: संकष्टी चतुर्थी, hi: संकष्टी चतुर्थी, en: Sankashti Chaturthi }
+facts:
+  - "Sankashti Chaturthi is the fourth day of the waning moon (krishna paksha) each month, observed as a Ganesha vrat. It occurs every lunar month."
+  - "The fast is broken only after sighting the moon (chandrodaya) and offering arghya to it — this is the defining feature, and it is why moonrise time matters."
+  - "When Sankashti falls on a Tuesday it is called Angarki Chaturthi and is considered especially auspicious; Angarki occurs only a few times a year."
+  - "Vinayaki Chaturthi is the counterpart in the bright fortnight (shukla paksha) — the fourth day of the waxing moon. Sankashti is krishna paksha, Vinayaki is shukla paksha."
+  - "A common observance: fast through the day (many take only fruit, milk, or upvas food), recite the Sankatnashan Ganesh Stotra and the Atharvashirsha, perform aarti at moonrise, offer modak or laddu, then eat."
+  - "Upvas foods commonly eaten are sabudana khichdi, rajgira, varai bhat, batata, and shengdana amti."
+steps:
+  - name_mr: "सकाळची पूजा"
+
+    name_en: "Morning puja"
+    detail_en: "Bathe, offer durva and red flowers, recite the stotra, and take the sankalpa for the fast."
+  - name_mr: "उपवास"
+
+    name_en: "The fast"
+    detail_en: "Observe through the day according to family custom — nirjal (waterless), phalahar (fruit), or one upvas meal."
+  - name_mr: "चंद्रदर्शन आणि अर्घ्य"
+
+    name_en: "Moonrise and arghya"
+    detail_en: "At moonrise, offer water as arghya to the moon, then perform the aarti, offer naivedya, and break the fast."
+must_contain: ["चतुर्थी"]
+variants:
+  - "Strictness of the fast varies widely by family — from nirjal to a single light meal. All are accepted."
+  - "Some families recite the Atharvashirsha 21 times on Sankashti; others once."
+sensitivities:
+  - "Moonrise time is DIFFERENT FOR EVERY CITY AND EVERY MONTH. The model must never state a moonrise time. It must say the time depends on the city and date and tell the user to check a panchang or a Sankashti app for their city."
+  - "Do not advise anyone to fast strictly. Note that those who are unwell, pregnant, diabetic, elderly, or on medication should follow a lighter observance or consult their doctor and family."

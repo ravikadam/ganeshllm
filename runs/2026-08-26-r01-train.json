@@ -1,0 +1,44 @@
+{
+  "run_id": "2026-08-26-r01-train",
+  "created": "2026-08-25T18:49:33+00:00",
+  "kind": "train",
+  "base_model": "mlx-community/gemma-4-e4b-it-OptiQ-4bit",
+  "git_commit": "340715b",
+  "fingerprints": {
+    "corpus": "sha256:0d5c85256745cd7f",
+    "evalset": "sha256:6027fe536bdc7ecb",
+    "dataset": "sha256:cf30098250467aff"
+  },
+  "dataset": {
+    "calendar_pairs": 405,
+    "prose_pairs": 367,
+    "verbatim_pairs": 1216,
+    "total": 1988
+  },
+  "hyperparams": {
+    "fine_tune_type": "lora",
+    "rank": 64,
+    "scale": 2.0,
+    "num_layers": 16,
+    "iters": 2000,
+    "lr": 0.0001,
+    "max_seq_length": 2048,
+    "batch_size": 1
+  },
+  "eval": {
+    "by_metric": {
+      "verbatim_recall_exact": 1.0
+    },
+    "overall": null,
+    "n_items": 3,
+    "note": "smoke test only (3 verbatim items) — full suite not yet run"
+  },
+  "artifacts": {
+    "hf_merged": "ravikadam/ganesh-gemma4-e4b",
+    "hf_adapter": "ravikadam/ganesh-gemma4-e4b-lora",
+    "merged_size_gb": 15.91,
+    "adapter_size_gb": 0.59
+  },
+  "status": "tested",
+  "notes": "L40S secure, 369 steps/3 epochs in 23m. train_loss 0.46, token_acc 0.97, eval_loss 1.11 (prose-only holdout). Smoke test: Vakratunda, Sukhkarta Dukhharta and Sankatnashan all EXACT MATCH. Deferral + year-stamping + identity all correct. KNOWN FAILURE: asked for Vajrakavacha stotra (not in corpus) it recited Sankatnashan instead -> fabrication_rate gate would FAIL. Pod deleted, spend ~$0.88."
+}

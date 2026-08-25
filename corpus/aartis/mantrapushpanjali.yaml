@@ -1,0 +1,31 @@
+id: mantrapushpanjali
+class: verbatim
+kind: aarti
+verified: false
+complete: false
+license: public-domain
+source: "Vedic; drawn from the Taittiriya Aranyaka and related Shruti passages."
+weight: 12
+title: { sa: मन्त्रपुष्पाञ्जलि, mr: मंत्रपुष्पांजली, hi: मंत्रपुष्पांजलि, en: Mantrapushpanjali }
+text:
+  devanagari: |
+    ॐ यज्ञेन यज्ञमयजन्त देवास्तानि धर्माणि प्रथमान्यासन् ।
+    ते ह नाकं महिमानः सचन्त यत्र पूर्वे साध्याः सन्ति देवाः ॥
+    ॐ राजाधिराजाय प्रसह्य साहिने ।
+    नमो वयं वैश्रवणाय कुर्महे ।
+    स मे कामान् कामकामाय मह्यम् ।
+    कामेश्वरो वैश्रवणो ददातु ।
+    कुबेराय वैश्रवणाय महाराजाय नमः ॥
+  roman_simple: |
+    Om Yajnena Yajnamayajanta Devastani Dharmani Prathamanyasan |
+    Te Ha Nakam Mahimanah Sachanta Yatra Purve Sadhyah Santi Devah ||
+meaning:
+  en: "Through sacrifice the gods worshipped the Sacrifice; these were the first ordinances. Those great ones attained the heaven where the ancient Sadhya gods dwell. Salutations to the king of kings, the conquering one, to Vaishravana — may the lord of desires grant my desires."
+  mr: "यज्ञाने देवांनी यज्ञाची पूजा केली; हेच पहिले धर्म होते. ते महिमावंत त्या स्वर्गाला पोहोचले जिथे पूर्वीचे साध्य देव आहेत."
+  hi: "यज्ञ से देवताओं ने यज्ञ की पूजा की; यही प्रथम धर्म थे. वे महिमावान उस स्वर्ग को प्राप्त हुए जहाँ पूर्व साध्य देव हैं."
+usage:
+  when: "The final offering of the aarti sequence, sung standing with flowers or akshata held in cupped palms, which are then offered to the deity."
+  count: "Once, at the very end. Followed by the Morya chant."
+notes_en: |
+  INCOMPLETE. The longer 'ॐ स्वस्ति साम्राज्यं भौज्यं...' passage that many mandals sing
+  is not yet recorded here. Verify against a printed paddhati before setting complete: true.

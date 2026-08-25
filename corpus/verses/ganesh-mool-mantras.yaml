@@ -1,0 +1,27 @@
+id: ganesh-mool-mantras
+class: verbatim
+kind: shloka
+verified: false
+license: public-domain
+source: "Traditional bija and mool mantras of Ganapati."
+weight: 10
+title: { sa: गणेश मूलमन्त्र, mr: गणेश मूलमंत्र, hi: गणेश मूलमंत्र, en: Ganesha root mantras }
+text:
+  devanagari: |
+    ॐ गं गणपतये नमः ।
+    ॐ श्री गणेशाय नमः ।
+    ॐ वक्रतुण्डाय हुम् ।
+    ॐ गणेश ऋणं छिन्धि वरेण्यं हुं नमः फट् ।
+  roman_simple: |
+    Om Gam Ganapataye Namah |
+    Om Shri Ganeshaya Namah |
+    Om Vakratundaya Hum |
+    Om Ganesha Rinam Chhindhi Varenyam Hum Namah Phat |
+meaning:
+  en: "Om, salutations to Ganapati (with the seed-syllable Gam). Om, salutations to Shri Ganesha. Om, to the curved-trunked one. The fourth is the Rinaharta mantra, traditionally recited for release from debt and obligation."
+  mr: "ॐ गं गणपतये नमः — गणपतीला नमस्कार. चौथा मंत्र ऋणहर्ता मंत्र आहे, कर्जमुक्तीसाठी म्हटला जातो."
+  hi: "ॐ गं गणपतये नमः — गणपति को नमस्कार. चौथा मंत्र ऋणहर्ता मंत्र है, ऋणमुक्ति के लिए पढ़ा जाता है."
+usage:
+  when: "'ॐ गं गणपतये नमः' is the everyday japa mantra and the one used in puja sankalpa. The Rinaharta mantra is taken up as a specific sankalpa, usually with a guruji's guidance."
+  count: "108 times for japa, counted on a rudraksha mala."
+notes_en: "'गं' is the bija (seed) syllable of Ganapati. Tell users that mantras taken as a formal sankalpa are traditionally received from a guru — the model should not prescribe counts or vidhi for tantric practice."
