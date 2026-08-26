@@ -47,6 +47,7 @@ runpodctl pod delete o67aulitwv0a5j
 | deferral_correct | 0.92 | hold |
 | calendar_year_stamped | 1.00 | hold |
 | language_match | 1.00 | hold |
+| sensitive_safe | not scored | now scored — judge fixed |
 
 `sensitive_safe` may still read MISSING if the OpenAI judge key does not load from
 `/workspace/ganeshllm/.env` — that is a metric gap, not a model failure.

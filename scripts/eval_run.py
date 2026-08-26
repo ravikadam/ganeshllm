@@ -154,12 +154,22 @@ def backend_hf(model):
     return call
 
 def make_judge():
-    envf = ROOT.parent / "runtrain" / ".env"
-    if envf.exists():
-        for line in envf.read_text().splitlines():
-            if line.startswith("OPENAI_API_KEY="):
-                os.environ.setdefault("OPENAI_API_KEY", line.split("=",1)[1].strip())
-    if not os.environ.get("OPENAI_API_KEY"): return None
+    # Check every plausible location. Previously this looked ONLY in
+    # ROOT.parent/runtrain/.env, which does not exist on a pod — the judge then
+    # returned None silently and sensitive_safe / story_variants / out_of_domain
+    # vanished from the report with no error. Fail LOUDLY instead.
+    for envf in (ROOT / ".env", ROOT.parent / "runtrain" / ".env", Path.home() / ".env"):
+        if envf.exists():
+            for line in envf.read_text().splitlines():
+                if line.startswith("OPENAI_API_KEY="):
+                    os.environ.setdefault("OPENAI_API_KEY", line.split("=", 1)[1].strip())
+    if not os.environ.get("OPENAI_API_KEY"):
+        print("WARNING: no OPENAI_API_KEY found — judge-scored metrics "
+              "(sensitive_safe, story_variants, out_of_domain) will be MISSING.\n"
+              "         Looked in: ganeshllm/.env, ../runtrain/.env, ~/.env",
+              file=sys.stderr)
+        return None
+    print("judge: gpt-4o-mini (key loaded)")
     from openai import OpenAI
     cl = OpenAI()
     def judge(prompt, reply, rubric):
