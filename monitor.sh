@@ -3,7 +3,7 @@
 #   ./monitor.sh          refresh every 60s
 #   ./monitor.sh 15       refresh every 15s
 #   ./monitor.sh once     print once and exit
-IP=103.196.86.40; PORT=44550; PODID=o67aulitwv0a5j
+IP=202.181.159.220; PORT=16049; PODID=lfei48508ctcbk
 KEY=~/.runpod/ssh/runpodctl-ssh-key
 EVERY="${1:-60}"
 
@@ -12,7 +12,7 @@ snap() {
       -o ConnectTimeout=15 -o LogLevel=ERROR -i "$KEY" -p "$PORT" root@$IP '
     cd /workspace/ganeshllm 2>/dev/null || { echo "STATE|no workdir"; exit; }
     echo "STATE|$(cat logs/STATUS 2>/dev/null || echo starting)"
-    echo "STEP|$(tr "\r" "\n" < logs/v2.log 2>/dev/null | grep -oE "[0-9]+/1071 \[[^]]*\]" | tail -1)"
+    echo "STEP|$(tr "\r" "\n" < logs/v2.log 2>/dev/null | grep -oE "[0-9]+/1146 \[[^]]*\]" | tail -1)"
     echo "LOSS|$(tr "\r" "\n" < logs/v2.log 2>/dev/null | grep -oE "'"'"'loss'"'"': '"'"'[0-9.]*'"'"'" | tail -1)"
     echo "ACC|$(tr "\r" "\n" < logs/v2.log 2>/dev/null | grep -oE "'"'"'mean_token_accuracy'"'"': '"'"'[0-9.]*'"'"'" | tail -1)"
     echo "GPU|$(nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader 2>/dev/null)"
@@ -30,7 +30,7 @@ while :; do
   PH=$(echo "$D"  | grep '^PHASE|' | cut -d'|' -f2-)
   BAL=$(runpodctl me -o json 2>/dev/null | python3 -c "import sys,json;d=json.load(sys.stdin);print('$%.2f left, $%.2f/hr' % (d['clientBalance'],d['currentSpendPerHr']))" 2>/dev/null)
   clear 2>/dev/null
-  echo "ganeshllm v2  —  $(date '+%H:%M:%S')"
+  echo "ganeshllm v3  —  $(date '+%H:%M:%S')"
   echo "──────────────────────────────────────────────"
   printf "  status   %s\n" "${ST:-?}"
   printf "  phase    %s\n" "${PH:-—}"
@@ -44,7 +44,7 @@ while :; do
           echo "     scp -i $KEY -P $PORT 'root@$IP:/workspace/ganeshllm/runs/*.json' runs/"
           echo "     runpodctl pod delete $PODID"; break;;
     FAILED*) echo "  ❌ $ST — see logs/v2.log on the pod"; break;;
-    *) echo "  auto-terminates 10:10 UTC · Ctrl-C is safe";;
+    *) echo "  auto-terminates 10:58 UTC · Ctrl-C is safe";;
   esac
   [ "$EVERY" = "once" ] && break
   sleep "$EVERY"
