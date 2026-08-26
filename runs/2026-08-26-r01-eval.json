@@ -1,0 +1,35 @@
+{
+  "run_id": "2026-08-26-r01-eval",
+  "created": "2026-08-26T04:14:50+00:00",
+  "kind": "eval",
+  "base_model": "ravikadam/ganesh-gemma4-e4b",
+  "git_commit": "uncommitted",
+  "fingerprints": {
+    "corpus": "sha256:0d5c85256745cd7f",
+    "evalset": "sha256:6027fe536bdc7ecb"
+  },
+  "dataset": {
+    "total": 0
+  },
+  "hyperparams": {},
+  "eval": {
+    "by_metric": {
+      "deferral_correct": 0.9167,
+      "fabrication_rate": 1.0,
+      "calendar_year_stamped": 1.0,
+      "language_match": 1.0,
+      "ritual_howto": 0.4286,
+      "verbatim_continue": 0.0,
+      "identity_correct": 0.0,
+      "no_trailing_attribution": 1.0,
+      "verbatim_recall_exact": 0.7143
+    },
+    "overall": 0.6324,
+    "n_items": 97,
+    "gated_verbatim_units": 4,
+    "judge": null
+  },
+  "artifacts": {},
+  "status": "candidate",
+  "notes": "hf backend"
+}

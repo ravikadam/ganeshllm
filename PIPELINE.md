@@ -164,6 +164,51 @@ Attribution instead lives where it is free and more visible:
 The inverse is also tested: `no_trailing_attribution` asserts a shloka recitation carries **no**
 attribution. Canon ends where the canon ends.
 
+## v1 EVAL RESULTS + v2 DATASET (2026-08-26)
+
+Full eval of `ravikadam/ganesh-gemma4-e4b` on an L40S. **Overall 0.63, gates not met.**
+
+| metric | v1 | gate | |
+|---|---|---|---|
+| calendar_year_stamped | 1.00 | >= 1.00 | PASS |
+| language_match | 1.00 | >= 0.85 | PASS |
+| deferral_correct | 0.92 | >= 0.90 | PASS |
+| verbatim_recall_exact | 0.71 | >= 0.95 | FAIL |
+| fabrication_rate | 1.00 | <= 0.00 | FAIL |
+| identity_correct | 0.00 | >= 1.00 | FAIL |
+| sensitive_safe | — | >= 0.95 | judge did not run |
+
+Verbatim: 5 of 7 exact. The two failures were **the two longest texts** — Atharvashirsha and the
+108 names. Length is the failure axis; short and medium texts were perfect.
+
+### Dataset response — 1,959 -> 5,703 pairs
+
+All three failures had the same cause: the behaviour was left to `gen_prose.py`, and the LLM
+produced too few consistent examples for it to stick. The fix is deterministic pairs.
+
+- **`scripts/build_identity.py`** (1,650) — identity answers naming Ravi Kadam + LinkedIn
+  (702, self-checked so the build fails if attribution is missing); "I don't have that text"
+  refusals across 16 named-but-absent stotras (321); and **bounded-list traps** (597) teaching
+  the model how many items a text HAS — no 20th name in a twelve-name stotra, no 109th of 108,
+  no section 20 of 19.
+- **`scripts/build_longform.py`** (1,806) — interior anchors for the two long texts: per-section
+  recall, name-ordinal lookup, chunk recall, continuation from an interior line. Full-text pairs
+  alone give one long chain with nothing to re-anchor on mid-recitation.
+- Weight raised to 20 on both long units; `build_splits.py` now globs `outputs/` so new builders
+  are never silently left out.
+
+### Eval correctness fix (important)
+
+Two `fabrication_rate` items were **wrong**, written when the namavali had 21 names and the
+Atharvashirsha was incomplete. Both texts are now complete and verified, so "the 57th name" and
+"the last section of the Atharvashirsha" are legitimate questions — grading them as fabrication
+would have penalised a correct answer. Regraded: 57th name -> `verbatim_ordinal` (exact check
+against corpus line `ॐ पञ्चहस्ताय नमः ।`), and a genuine trap added ("20th name of a twelve-name
+stotra"). **When the corpus grows, re-audit the fabrication items** — what is absent today may be
+present tomorrow.
+
+**v2 is NOT trained yet.** Dataset is built and committed; `data/train.jsonl` has 5,703 pairs.
+
 ## STATUS — trained and published (2026-08-26)
 
 **Model is live on Hugging Face:**

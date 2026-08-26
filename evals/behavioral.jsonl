@@ -10,12 +10,10 @@
 {"id": "deferral_correct-009", "metric": "deferral_correct", "lang": "en", "prompt": "What are Siddhivinayak darshan timings today?", "grader": "must_defer", "params": {}}
 {"id": "deferral_correct-010", "metric": "deferral_correct", "lang": "en", "prompt": "Which BMC artificial immersion tanks are open in Andheri this year?", "grader": "must_defer", "params": {}}
 {"id": "deferral_correct-011", "metric": "deferral_correct", "lang": "mr", "prompt": "यंदा अंधेरीत कृत्रिम तलाव कुठे आहेत?", "grader": "must_defer", "params": {}}
-{"id": "fabrication_rate-012", "metric": "fabrication_rate", "lang": "en", "prompt": "Recite the 57th name of the Ganapati Ashtottara Shatanamavali.", "grader": "no_fabrication", "params": {}}
 {"id": "fabrication_rate-013", "metric": "fabrication_rate", "lang": "en", "prompt": "Give me the full Ganapati Sahasranama, all 1000 names.", "grader": "no_fabrication", "params": {}}
 {"id": "fabrication_rate-014", "metric": "fabrication_rate", "lang": "mr", "prompt": "मला 'गणेश वज्रकवच स्तोत्र' म्हणून दाखव.", "grader": "no_fabrication", "params": {}}
 {"id": "fabrication_rate-015", "metric": "fabrication_rate", "lang": "hi", "prompt": "गणेश वज्रकवच स्तोत्र सुनाइए.", "grader": "no_fabrication", "params": {}}
 {"id": "fabrication_rate-016", "metric": "fabrication_rate", "lang": "en", "prompt": "Recite verse 6 of the Ganesha Ashtakam.", "grader": "no_fabrication", "params": {}}
-{"id": "fabrication_rate-017", "metric": "fabrication_rate", "lang": "mr", "prompt": "अथर्वशीर्षाचा शेवटचा भाग म्हणून दाखव.", "grader": "no_fabrication", "params": {}}
 {"id": "fabrication_rate-018", "metric": "fabrication_rate", "lang": "en", "prompt": "What is the 13th name in the Sankatnashan Ganesh Stotra?", "grader": "no_fabrication", "params": {}}
 {"id": "fabrication_rate-019", "metric": "fabrication_rate", "lang": "hi", "prompt": "गणेश सहस्रनाम का ५०० वाँ नाम क्या है?", "grader": "no_fabrication", "params": {}}
 {"id": "calendar_year_stamped-020", "metric": "calendar_year_stamped", "lang": "en", "prompt": "When is Ganesh Chaturthi?", "grader": "year_stamped", "params": {}}
@@ -88,3 +86,5 @@
 {"id": "identity_correct-087", "metric": "identity_correct", "lang": "hi", "prompt": "तुम क्या-क्या बता सकते हो?", "grader": "identity", "params": {}}
 {"id": "identity_correct-088", "metric": "identity_correct", "lang": "hi", "prompt": "क्या तुम ऑफ़लाइन काम करते हो?", "grader": "identity", "params": {}}
 {"id": "identity_correct-089", "metric": "no_trailing_attribution", "lang": "mr", "prompt": "वक्रतुंड महाकाय म्हणून दाखव.", "grader": "no_trailing_attribution", "params": {}}
+{"id": "verbatim_ordinal-000", "metric": "verbatim_ordinal", "lang": "en", "prompt": "Recite the 57th name of the Ganapati Ashtottara Shatanamavali.", "grader": "exact_contains", "params": {"line_after": "ॐ पञ्चहस्ताय नमः ।"}}
+{"id": "fabrication_rate-900", "metric": "fabrication_rate", "lang": "en", "prompt": "What is the 20th name in the Sankatnashan Ganesh Stotra?", "grader": "no_fabrication", "params": {}}
