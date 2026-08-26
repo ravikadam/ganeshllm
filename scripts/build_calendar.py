@@ -21,6 +21,10 @@ from branding import sign, assert_intact
 random.seed(4242)
 OUT = ROOT / "outputs" / "calendar_pairs.jsonl"
 REPEAT = 15          # reinforcement multiplier
+# v2 regressed on deferral: 225 confident-date pairs vs 24 other-year refusals (9:1) taught
+# the PATTERN so well the model extrapolated "Ganesh Chaturthi 2028 is 14 September".
+# Refusals now get their own higher multiplier to rebalance toward ~2:1.
+REPEAT_DEFER = 45
 
 SYSTEM = ("You are an offline assistant fine-tuned on Shri Ganesha's shlokas, stotras, "
           "aartis, rituals and stories. Answer in the language the user writes in. "
@@ -28,6 +32,18 @@ SYSTEM = ("You are an offline assistant fine-tuned on Shri Ganesha's shlokas, st
 
 # ---------------------------------------------------------------- the facts --
 A = {
+ "defer_locality": {
+   "en": ("I can't give you tank locations. The BMC publishes a fresh list of artificial immersion "
+          "tanks (krutrim talav) every year and it differs by ward, and I'm an offline model with no "
+          "way to know this year's list. Please check the BMC's announcement for your ward, or ask "
+          "your local mandal — they always know the nearest one."),
+   "mr": ("तलावांची ठिकाणे मी सांगू शकत नाही. महापालिका दरवर्षी कृत्रिम तलावांची नवी यादी जाहीर करते "
+          "आणि ती प्रभागानुसार बदलते; मी ऑफलाइन मॉडेल असल्याने यंदाची यादी मला माहीत नाही. कृपया आपल्या "
+          "प्रभागाची महापालिकेची घोषणा पाहा, किंवा जवळच्या मंडळाला विचारा — त्यांना नेहमी माहीत असते."),
+   "hi": ("तालाबों के स्थान मैं नहीं बता सकता. बीएमसी हर साल कृत्रिम तालाबों की नई सूची जारी करती है "
+          "और वह वार्ड के अनुसार बदलती है; मैं ऑफलाइन मॉडल हूँ. कृपया अपने वार्ड की बीएमसी घोषणा देखें "
+          "या नजदीकी मंडल से पूछें."),
+ },
  "chaturthi": {
    "en": "In 2026, Ganesh Chaturthi falls on Monday, 14 September 2026. The Chaturthi tithi begins at 07:06 AM on 14 September and ends at 07:44 AM on 15 September.",
    "mr": "२०२६ मध्ये गणेश चतुर्थी सोमवार, १४ सप्टेंबर २०२६ रोजी आहे. चतुर्थी तिथी १४ सप्टेंबरला सकाळी ०७:०६ वाजता सुरू होते आणि १५ सप्टेंबरला सकाळी ०७:४४ वाजता संपते.",
@@ -69,6 +85,8 @@ A = {
    "mr": "माझ्याकडे फक्त २०२६ सालच्या तारखा आहेत. तिथीवर आधारित तारखा दरवर्षी साधारण दहा-अकरा दिवसांनी सरकतात, त्यामुळे मी दुसऱ्या वर्षाची तारीख काढू शकत नाही — कृपया चालू पंचांग पाहा.",
    "hi": "मेरे पास केवल २०२६ की तिथियाँ हैं. तिथि आधारित तारीखें हर साल लगभग दस-ग्यारह दिन खिसकती हैं, इसलिए मैं दूसरे वर्ष की तारीख नहीं बता सकता — कृपया चालू पंचांग देखें.",
  },
+ # locality answers — the BMC list changes every year and by ward; v2 invented tank names
+ # because there were ZERO training pairs for this.
  "defer_queue": {
    "en": "I can't tell you current queue or darshan timings — I'm an offline model and those change daily through the festival. Please check the mandal's own announcement or their official social media for this year.",
    "mr": "सध्याची रांग किंवा दर्शनाची वेळ मी सांगू शकत नाही — मी ऑफलाइन मॉडेल आहे आणि उत्सवात या रोज बदलतात. कृपया मंडळाची अधिकृत घोषणा पाहा.",
@@ -128,10 +146,32 @@ Q = {
  },
  "defer_otheryear": {
    "en": ["When is Ganesh Chaturthi in 2027?", "What date is Ganpati next year?",
-          "When is Anant Chaturdashi in 2028?"],
-   "mr": ["२०२७ मध्ये गणेश चतुर्थी कधी आहे?", "पुढच्या वर्षी गणपती कधी बसणार?"],
-   "hi": ["२०२७ में गणेश चतुर्थी कब है?", "अगले साल गणपति कब हैं?"],
+          "When is Anant Chaturdashi in 2028?", "When is Ganesh Chaturthi in 2029?",
+          "What date is Ganesh Chaturthi in 2030?", "When is Sankashti in 2027?",
+          "When is Angarki in 2028?", "Gauri Avahan 2027 date?",
+          "When was Ganesh Chaturthi in 2024?", "What date was Ganpati in 2025?",
+          "When is visarjan next year?", "Ganesh Chaturthi 2031 date?"],
+   "mr": ["२०२७ मध्ये गणेश चतुर्थी कधी आहे?", "पुढच्या वर्षी गणपती कधी बसणार?",
+          "२०२८ मध्ये गणपती कधी बसणार?", "२०२९ मध्ये चतुर्थी कधी आहे?",
+          "मागच्या वर्षी गणपती कधी होता?", "२०३० मध्ये अनंत चतुर्दशी कधी?",
+          "पुढच्या वर्षी विसर्जन कधी आहे?", "२०२७ मध्ये संकष्टी कधी आहे?"],
+   "hi": ["२०२७ में गणेश चतुर्थी कब है?", "अगले साल गणपति कब हैं?",
+          "२०२८ में गणेश चतुर्थी कब है?", "पिछले साल गणपति कब थे?",
+          "२०२९ में विसर्जन कब है?", "२०३० में चतुर्थी कब है?"],
  },
+ "defer_locality": {
+   "en": ["Which BMC artificial tanks are open in Andheri this year?",
+          "Where are the immersion tanks near Dadar?", "Where is the nearest visarjan tank to me?",
+          "Which ward has artificial ponds this year?", "Where can I immerse in Thane?",
+          "List the krutrim talav locations in Mumbai."],
+   "mr": ["यंदा अंधेरीत कृत्रिम तलाव कुठे आहेत?", "दादरजवळ विसर्जनाचे तलाव कुठे आहेत?",
+          "माझ्या जवळचा विसर्जन तलाव कुठे आहे?", "ठाण्यात कुठे विसर्जन करता येईल?",
+          "मुंबईतील कृत्रिम तलावांची यादी सांग."],
+   "hi": ["इस साल अंधेरी में कृत्रिम तालाब कहाँ हैं?", "दादर के पास विसर्जन तालाब कहाँ है?",
+          "मुंबई में कृत्रिम तालाब कहाँ-कहाँ हैं?"],
+ },
+ # locality answers — the BMC list changes every year and by ward; v2 invented tank names
+ # because there were ZERO training pairs for this.
  "defer_queue": {
    "en": ["How long is the Lalbaugcha Raja queue right now?", "What are Siddhivinayak darshan timings today?",
           "How much time for Mumbaicha Raja darshan?"],
@@ -155,7 +195,7 @@ def build():
     for key, qs in Q.items():
         for lang, tmpls in qs.items():
             ans = A[key][lang]
-            for _ in range(REPEAT):
+            for _ in range(REPEAT_DEFER if key.startswith("defer_") else REPEAT):
                 p = pair(random.choice(tmpls), sign(ans, lang))
                 p["_key"] = key
                 pairs.append(p)

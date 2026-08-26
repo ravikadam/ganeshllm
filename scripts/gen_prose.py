@@ -24,6 +24,12 @@ OUT = ROOT / "outputs" / "prose_pairs.jsonl"
 # appearing in generated prose is unverifiable by construction, so it is dropped.
 # (This rule was added after the generator confidently produced "Anant Chaturdashi is
 # 27 September 2026", which is wrong — the verified date is 25 September.)
+# Questions about WHEN something falls belong to build_calendar.py alone. Letting the
+# prose generator answer them produced a direct contradiction: the calendar builder taught
+# "In 2026, Ganesh Chaturthi falls on Monday 14 September" while prose taught "it depends
+# on the panchang" for the same question.
+DATE_Q = re.compile(r"\bwhen is\b|\bwhat date\b|\bwhich day\b|कधी आहे|कधी येते|कधी बसणार|"
+                    r"कब है|कब आ|किस तारीख|तारीख|तारखा|मुहूर्त|muhurat|what time", re.I)
 DATE_LEAK = re.compile(
     r"\d{1,2}\s*(?:st|nd|rd|th)?\s*(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)"
     r"|(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+\d{1,2}"
@@ -116,8 +122,12 @@ async def gen_one(cl, u, lang, mode, n, model):
         if must and not any(t in blob for t in must):
             continue                      # failed the grounding check — drop it
         if DATE_LEAK.search(blob):
-            DROPPED.append((u["id"], blob[:80]))
+            DROPPED.append((u["id"], "date in answer: " + blob[:60]))
             continue                      # a date in generated prose is unverifiable — drop
+        qblob = " ".join(m["content"] for m in msgs if m["role"] == "user")
+        if DATE_Q.search(qblob):
+            DROPPED.append((u["id"], "date question: " + qblob[:60]))
+            continue                      # build_calendar.py owns date questions entirely
         out.append({"messages": msgs, "_unit": u["id"], "_lang": lang})
     return out
 
