@@ -140,13 +140,17 @@ def backend_hf(model):
     from transformers import AutoTokenizer, AutoModelForCausalLM
     import torch
     tok = AutoTokenizer.from_pretrained(model)
-    m = AutoModelForCausalLM.from_pretrained(model, torch_dtype="auto", device_map="auto")
+    m = AutoModelForCausalLM.from_pretrained(model, dtype=torch.bfloat16, device_map="auto")
     def call(prompt):
         msgs = [{"role":"system","content":SYSTEM},{"role":"user","content":prompt}]
-        ids = tok.apply_chat_template(msgs, add_generation_prompt=True, return_tensors="pt").to(m.device)
+        # transformers 5.x returns a dict here, not a tensor
+        enc = tok.apply_chat_template(msgs, add_generation_prompt=True,
+                                      tokenize=True, return_dict=True, return_tensors="pt")
+        enc = {k: v.to(m.device) for k, v in enc.items()}
+        L = enc["input_ids"].shape[-1]
         with torch.no_grad():
-            out = m.generate(ids, max_new_tokens=512, do_sample=False)
-        return tok.decode(out[0][ids.shape[-1]:], skip_special_tokens=True)
+            out = m.generate(**enc, max_new_tokens=768, do_sample=False)
+        return tok.decode(out[0][L:], skip_special_tokens=True).strip()
     return call
 
 def make_judge():
