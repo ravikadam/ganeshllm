@@ -1,4 +1,20 @@
-# RESUME — v3 done, LiteRT pushing unattended (2026-08-26 ~10:05 UTC)
+# RESUME — v3 DONE, LiteRT LIVE ON HF (2026-08-26 10:15 UTC)
+
+## POD DELETED. Nothing billing. Balance $7.80.
+
+## ⚡ TEST ON PHONE — this is the only open question
+
+1. Install **Google AI Edge Gallery** (Play Store / App Store, iOS 17+)
+2. **Import from Hugging Face URL** — you cannot search for it, the gallery only
+   searches Google's curated list:
+   `https://huggingface.co/ravikadam/ganesh-gemma4-e4b-v3-LiteRT`
+3. Choose **`model_q.litertlm` (4.12 GB)** — the INT4 build. NOT the 8.19 GB one.
+4. Ask: `सुखकर्ता दुखहर्ता आरती म्हण.`
+
+If the full aarti comes back, the whole pipeline is proven end to end.
+If it returns blanks or pad tokens, that is upstream issue
+google-ai-edge/litert-torch#994 (E4B exports that load then emit pad tokens) —
+the weights themselves are verified good, so the fix would be in conversion flags.
 
 ## Take your break. Everything valuable is already safe on Hugging Face.
 ## Pod auto-terminates **10:58 UTC**. Nothing to do to stop billing.
@@ -7,7 +23,12 @@
 - `ravikadam/ganesh-gemma4-e4b-v3` — merged model, 15.91 GB **VERIFIED**
 - `ravikadam/ganesh-gemma4-e4b-v3-lora` — adapter, 0.59 GB **VERIFIED**
 
-## In flight (unattended, chained on the pod — no action needed)
+## LiteRT — DONE, verified on HF
+`ravikadam/ganesh-gemma4-e4b-v3-LiteRT`
+  - `model_q.litertlm` 4.12 GB (INT4, use this on phone)
+  - `model.litertlm` 8.19 GB (unquantized)
+
+## (superseded) In flight notes
 `ravikadam/ganesh-gemma4-e4b-v3-LiteRT` — waits for the quantized export, then pushes
 `model_q.litertlm` (INT4, phone-sized) and `model.litertlm` (7.7 GB unquantized), retries 3x,
 then verifies. Check when back:
