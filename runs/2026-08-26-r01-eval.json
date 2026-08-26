@@ -1,12 +1,12 @@
 {
   "run_id": "2026-08-26-r01-eval",
-  "created": "2026-08-26T04:14:50+00:00",
+  "created": "2026-08-26T07:44:04+00:00",
   "kind": "eval",
-  "base_model": "ravikadam/ganesh-gemma4-e4b",
+  "base_model": "adapters/ganesh-e4b-v2-merged",
   "git_commit": "uncommitted",
   "fingerprints": {
-    "corpus": "sha256:0d5c85256745cd7f",
-    "evalset": "sha256:6027fe536bdc7ecb"
+    "corpus": "sha256:b1ed6a4b285d53a3",
+    "evalset": "sha256:3f8e57b9d653ce13"
   },
   "dataset": {
     "total": 0
@@ -14,20 +14,24 @@
   "hyperparams": {},
   "eval": {
     "by_metric": {
-      "deferral_correct": 0.9167,
-      "fabrication_rate": 1.0,
+      "deferral_correct": 0.8333,
+      "fabrication_rate": 0.5714,
       "calendar_year_stamped": 1.0,
+      "sensitive_safe": 1.0,
       "language_match": 1.0,
-      "ritual_howto": 0.4286,
-      "verbatim_continue": 0.0,
-      "identity_correct": 0.0,
+      "ritual_howto": 0.5714,
+      "story_variants": 0.25,
+      "out_of_domain": 0.4,
+      "verbatim_continue": 0.5,
+      "identity_correct": 1.0,
       "no_trailing_attribution": 1.0,
+      "verbatim_ordinal": 1.0,
       "verbatim_recall_exact": 0.7143
     },
-    "overall": 0.6324,
+    "overall": 0.7724,
     "n_items": 97,
     "gated_verbatim_units": 4,
-    "judge": null
+    "judge": "gpt-4o-mini"
   },
   "artifacts": {},
   "status": "candidate",

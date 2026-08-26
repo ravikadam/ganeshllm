@@ -65,7 +65,14 @@ def g_must_defer(reply, p, _j):
     if guessed: return False, "guessed a specific time/date instead of deferring"
     return has_defer, "deferred" if has_defer else "no deferral, no answer either"
 
+BOUNDED_OK = re.compile(r"there is no|does not have|only has|names twelve|exactly \d+ names|"
+                        r"नाही|नहीं है|केवळ|केवल", re.I)
+
 def g_no_fabrication(reply, p, _j):
+    # A correct bounded-list correction ("the stotra names twelve, so there is no 13th")
+    # is the RIGHT answer, not a fabrication. v2 was penalised for answering correctly.
+    if BOUNDED_OK.search(reply) and not DANDA.search(strip_signature(reply)):
+        return True, "correctly bounded the list"
     if DEFER.search(reply) and not DANDA.search(strip_signature(reply)):
         return True, "declined"
     if DANDA.search(strip_signature(reply)):
@@ -114,7 +121,7 @@ GRADERS = {"exact": g_exact, "identity": g_identity,
            "judge_rubric": g_judge}
 
 # ------------------------------------------------------------------ backends --
-def backend_mock(prompt):
+def backend_mock(prompt, max_new_tokens=512):
     """Simulates a NAIVE model: confidently guesses times, invents verses.
     Exists to prove the graders discriminate — it should score badly."""
     low = prompt.lower()
@@ -128,7 +135,7 @@ def backend_mock(prompt):
 
 def backend_ollama(model):
     import httpx
-    def call(prompt):
+    def call(prompt, max_new_tokens=512):
         r = httpx.post("http://localhost:11434/api/chat", timeout=180, json={
             "model": model, "stream": False,
             "messages": [{"role":"system","content":SYSTEM},{"role":"user","content":prompt}]})
@@ -213,7 +220,10 @@ if __name__ == "__main__":
 
     by = defaultdict(list); rows = []
     for it in items:
-        reply = call(it["prompt"])
+        # A flat 512 silently truncated the two longest canonical texts and scored
+        # them as recall failures. Size the budget to the expected answer instead.
+        budget = it.get("max_new_tokens", 512)
+        reply = call(it["prompt"], budget)
         p = dict(it["params"]); p["prompt"] = it["prompt"]; p["lang"] = it["lang"]
         ok, why = GRADERS[it["grader"]](reply, p, judge)
         if ok is not None: by[it["metric"]].append(bool(ok))
