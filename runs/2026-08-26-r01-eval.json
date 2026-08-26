@@ -2,7 +2,7 @@
   "run_id": "2026-08-26-r01-eval",
   "created": "2026-08-26T07:44:04+00:00",
   "kind": "eval",
-  "base_model": "adapters/ganesh-e4b-v2-merged",
+  "base_model": "ganesh-gemma4-e4b-v2",
   "git_commit": "uncommitted",
   "fingerprints": {
     "corpus": "sha256:b1ed6a4b285d53a3",
@@ -35,5 +35,5 @@
   },
   "artifacts": {},
   "status": "candidate",
-  "notes": "hf backend"
+  "notes": "v2 eval. overall 0.63->0.77. identity 0.00->1.00 FIXED, sensitive_safe first measured 1.00 PASS. REAL REGRESSION: deferral 0.92->0.83 (extrapolated a 2028 date, invented BMC tanks). verbatim 0.71 = HARNESS ARTEFACT (flat 512-token cap truncated the only two texts over it). 2 of 4 fabrication fails were GRADER bugs (bounded-list answers). Both harness bugs fixed after this run - re-measure."
 }
