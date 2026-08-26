@@ -1,0 +1,5 @@
+=== v3 SUMMARY Wed Aug 26 09:04:11 UTC 2026 ===
+--- final train ---
+{'eval_loss': '1.135', 'eval_runtime': '0.637', 'eval_samples_per_second': '43.96', 'eval_steps_per_second': '6.28', 'eval_entropy': '0.6025', 'eval_num_tokens': '3.145e+06', 'eval_mean_token_accuracy': '0.7713', 'epoch': '3'}
+{'train_runtime': '3616', 'train_samples_per_second': '5.062', 'train_steps_per_second': '0.317', 'train_loss': '0.2002', 'epoch': '3'}
+--- eval ---

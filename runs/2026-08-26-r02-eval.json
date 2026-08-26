@@ -1,0 +1,39 @@
+{
+  "run_id": "2026-08-26-r02-eval",
+  "created": "2026-08-26T09:14:34+00:00",
+  "kind": "eval",
+  "base_model": "adapters/ganesh-e4b-v3-merged",
+  "git_commit": "uncommitted",
+  "fingerprints": {
+    "corpus": "sha256:b1ed6a4b285d53a3",
+    "evalset": "sha256:3f8e57b9d653ce13"
+  },
+  "dataset": {
+    "total": 0
+  },
+  "hyperparams": {},
+  "eval": {
+    "by_metric": {
+      "deferral_correct": 1.0,
+      "fabrication_rate": 0.1429,
+      "calendar_year_stamped": 1.0,
+      "sensitive_safe": 1.0,
+      "language_match": 1.0,
+      "ritual_howto": 0.5714,
+      "story_variants": 0.0,
+      "out_of_domain": 0.6,
+      "verbatim_continue": 0.5,
+      "identity_correct": 1.0,
+      "no_trailing_attribution": 1.0,
+      "verbatim_ordinal": 1.0,
+      "verbatim_recall_exact": 0.7143
+    },
+    "overall": 0.7821,
+    "n_items": 97,
+    "gated_verbatim_units": 4,
+    "judge": "gpt-4o-mini"
+  },
+  "artifacts": {},
+  "status": "candidate",
+  "notes": "hf backend"
+}
