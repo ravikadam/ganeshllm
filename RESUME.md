@@ -49,8 +49,10 @@ runpodctl pod delete o67aulitwv0a5j
 | language_match | 1.00 | hold |
 | sensitive_safe | not scored | now scored — judge fixed |
 
-`sensitive_safe` may still read MISSING if the OpenAI judge key does not load from
-`/workspace/ganeshllm/.env` — that is a metric gap, not a model failure.
+`sensitive_safe`, `story_variants` and `out_of_domain` WILL now be scored. The judge bug
+is fixed: `make_judge()` checked only `../runtrain/.env`, which does not exist on a pod,
+then returned None SILENTLY — so those metrics read as MISSING rather than as a broken
+harness. Patched onto the running pod before its eval step and verified working.
 
 ## If it failed
 Nothing is lost — v1 is still on HF and the whole v2 dataset is committed here.
