@@ -12,11 +12,11 @@ snap() {
       -o ConnectTimeout=15 -o LogLevel=ERROR -i "$KEY" -p "$PORT" root@$IP '
     cd /workspace/ganeshllm 2>/dev/null || { echo "STATE|no workdir"; exit; }
     echo "STATE|$(cat logs/STATUS 2>/dev/null || echo starting)"
-    echo "STEP|$(tr "\r" "\n" < logs/v2.log 2>/dev/null | grep -oE "[0-9]+/1146 \[[^]]*\]" | tail -1)"
-    echo "LOSS|$(tr "\r" "\n" < logs/v2.log 2>/dev/null | grep -oE "'"'"'loss'"'"': '"'"'[0-9.]*'"'"'" | tail -1)"
-    echo "ACC|$(tr "\r" "\n" < logs/v2.log 2>/dev/null | grep -oE "'"'"'mean_token_accuracy'"'"': '"'"'[0-9.]*'"'"'" | tail -1)"
+    echo "STEP|$(tr "\r" "\n" < logs/v3.log 2>/dev/null | grep -oE "[0-9]+/1146 \[[^]]*\]" | tail -1)"
+    echo "LOSS|$(tr "\r" "\n" < logs/v3.log 2>/dev/null | grep -oE "'"'"'loss'"'"': '"'"'[0-9.]*'"'"'" | tail -1)"
+    echo "ACC|$(tr "\r" "\n" < logs/v3.log 2>/dev/null | grep -oE "'"'"'mean_token_accuracy'"'"': '"'"'[0-9.]*'"'"'" | tail -1)"
     echo "GPU|$(nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader 2>/dev/null)"
-    echo "PHASE|$(grep -oE "STEP [0-9]/5 [a-z ()0-9,]*" logs/v2.log 2>/dev/null | tail -1)"
+    echo "PHASE|$(grep -oE "STEP [0-9]/5 [a-z ()0-9,]*" logs/v3.log 2>/dev/null | tail -1)"
   ' 2>/dev/null
 }
 
@@ -43,7 +43,7 @@ while :; do
     DONE) echo "  ✅ COMPLETE — collect and shut down:"
           echo "     scp -i $KEY -P $PORT 'root@$IP:/workspace/ganeshllm/runs/*.json' runs/"
           echo "     runpodctl pod delete $PODID"; break;;
-    FAILED*) echo "  ❌ $ST — see logs/v2.log on the pod"; break;;
+    FAILED*) echo "  ❌ $ST — see logs/v3.log on the pod"; break;;
     *) echo "  auto-terminates 10:58 UTC · Ctrl-C is safe";;
   esac
   [ "$EVERY" = "once" ] && break
