@@ -16,10 +16,16 @@ Run: gate_litert.py <logfile>   -> exits 0 on PASS, 1 on FAIL.
 import re, sys
 
 # Enough of each text that a model must actually know it, not just start it.
+# Separators must tolerate the punctuation and diacritics a real recitation
+# carries. The int8 build recited correctly as
+#   'सुखकर्ता दुखहर्ता, वार्ता विघ्नांची ।'
+# and an earlier pattern demanding no comma and no anusvara scored it FAIL —
+# a false negative on a genuinely working model.
+SEP = r'[\s,;।॥\-]*'
 CANON = [
-    r'सुखकर्ता\s*दुखहर्ता\s*वार्ता\s*विघ्नाची',
-    r'वक्रतुंड\s*महाकाय\s*सूर्यकोटि\s*समप्रभ',
-    r'गजाननं\s*भूतगणादि\s*सेवितं',
+    SEP.join(['सुखकर्ता', 'दुखहर्ता', 'वार्ता', 'विघ्नां?ची']),
+    SEP.join(['वक्रतुंड', 'महाकाय', 'सूर्यकोटि', 'समप्रभ']),
+    SEP.join(['गजाननं?', 'भूतगणादि', 'सेवितं?']),
 ]
 
 def degenerate(text, n_sizes=(3, 4, 5), limit=5):
