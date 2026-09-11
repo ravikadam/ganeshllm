@@ -33,8 +33,13 @@ CITY    = re.compile(r"mumbai|मुंबई|pune|पुणे|nagpur|नाग
 DANDA   = re.compile(r"[।॥]")
 DEFER   = re.compile(
     r"can'?t|cannot|don'?t have|unable|offline model|check a panchang|panchang set to|"
-    r"official announcement|शकत नाही|नाही सांगू|पंचांग|माझ्याकडे (?:फक्त|नाही)|"
-    r"नहीं बता सकता|नहीं है|मेरे पास (?:केवल|नहीं)", re.I)
+    r"official announcement|पंचांग|माझ्याकडे (?:फक्त|नाही)|मेरे पास (?:केवल|नहीं)|"
+    # Match the REFUSAL CONSTRUCTION, not one hard-coded verb. The model declined
+    # the 500th-name question with "नहीं सुना सकता" (cannot recite) and was scored
+    # a fabrication because the pattern only knew "नहीं बता सकता" (cannot tell).
+    # Hindi:   नहीं <verb> सकता/सकती/सकते      Marathi: <verb> शकत नाही / नाही सांगू
+    r"नहीं\s+\S+\s+सकत(?:ा|ी|े)|नहीं है|"
+    r"\S+\s*शकत\s*नाही|शकत नाही|नाही सांगू|सांगू शकत", re.I)
 
 MR_MARK = ["आहे","कधी","म्हणून","नाही","मध्ये","ला ","चा ","ची ","चे ","करावे","शकत","आणि","तारखा","वाजता"]
 HI_MARK = ["है","कब","नहीं","में","को ","का ","की ","के ","चाहिए","सकता","और","तारीखें","बजे"]
