@@ -1,0 +1,17 @@
+
+[18:11:48] ===== export: keep externalize_embedder (required), DROP single_token_embedder =====
+(16(18:24) [ DONE] LiteRT GenAI Export > Export per_layer_embedder model (+04:34)
+(18:25) [START] LiteRT GenAI Export > Export tokenizer
+(18:26) [ DONE] LiteRT GenAI Export > Export tokenizer (+00:01)
+(18:26) [START] LiteRT GenAI Export > Package model
+(19:15) [ DONE] LiteRT GenAI Export > Package model (+00:48)
+(19:16) [ DONE] LiteRT GenAI Export (+19:16)
+Cleaning up temporary files.
+Export complete. Model saved to: artifacts/litert_i8/model.litertlm
+>>> litert_i8: exported 7.7G
+
+[18:30:37] ===== run litert_i8 =====
+/litert4/model.litertlm
+>>> export: OK 3.9G
+
+[18:29:22] ===== RUN it =====

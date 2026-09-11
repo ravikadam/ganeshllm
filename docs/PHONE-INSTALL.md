@@ -59,19 +59,34 @@ English word salad, looping text, or control tokens like `<|turn>` printed as
 literal text, the file is broken — that is exactly the failure we hit on
 2026-09-11, and it means the export is wrong, not your phone.
 
-## Current status — read before downloading
+## Current status (2026-09-11, verified)
 
-As of 2026-09-11 there is **no verified-working `.litertlm` for this model yet.**
+**Use `ganesh-v3-int8-verified.litertlm` — 8.18 GB.**
 
-- `ravikadam/ganesh-gemma4-e4b-v3-LiteRT` currently holds `model.litertlm` and
-  `model_q.litertlm` from the earlier v3 run. Edge Gallery **rejected** those with
-  "unsupported model type", and we have since established they also carry the wrong
-  chat template. **Do not bother loading them.**
-- The fixed export is still being worked out. When one passes its run test it will
-  be pushed as `ganesh-v3-verified.litertlm` — the name is the signal that it was
-  actually executed and recited the canon before being uploaded.
+    https://huggingface.co/ravikadam/ganesh-gemma4-e4b-v3-LiteRT
 
-Known-good comparison, if you want to see Edge Gallery working tonight: the stock
-`litert-community/gemma-4-E2B-it-litert-lm` loads and answers correctly. It is not
-our fine-tune — no shlokas from the corpus — but it confirms the app and phone are
-fine.
+This build was executed before it was uploaded, and it recited the aarti correctly
+across multiple verses:
+
+    सुखकर्ता दुखहर्ता, वार्ता विघ्नांची ।
+    नुरवी; पुरवी प्रेम, कृपा जयाची ।
+    सर्वांगी सुंदर, उटी शेंदुराची ।
+    कंठी झळके माळ, मुक्ताफळांची ॥१॥
+    जय देव, जय देव जय मंगलमूर्ती ।
+
+Uploaded bytes match the tested file exactly (8,180,845,792).
+
+**Needs roughly 12 GB RAM.** At 8.18 GB this is not an 8 GB-phone model.
+
+### Ignore the other two files
+
+`model.litertlm` and `model_q.litertlm` are from 26 August. Edge Gallery rejected
+them, and they carry the wrong chat template. They are kept only as a record.
+
+### Why there is no 4 GB build
+
+int4 (`dynamic_wi4_afp32`) destroys this fine-tune. Two independent int4 builds with
+different flag sets both degenerated into repetition loops — one emitted the first
+two words of the aarti and then looped a single phrase ~100 times. The identical
+pipeline at int8 recites correctly. The base model survives int4 fine; the LoRA
+fine-tune does not. A sub-4 GB build needs a different approach, not a different flag.
