@@ -1,0 +1,22 @@
+[17:21:00] watchdog start; hard deadline 18:26:00Z
+[17:21:04] status=DONE2
+[17:21:04] pipeline finished
+[17:21:04] --- saving artifacts before deletion ---
+[17:21:12] saved VERIFY.txt
+[17:21:19] saved VERIFY2.txt
+[17:21:27] saved verify.log
+[17:21:34] saved refix.log
+[17:21:41] saved litert_run.log
+[17:21:55] saved metadata_diff.log
+[17:22:02] saved eval_verify.log
+[17:22:10] saved STATUS
+[17:22:45] saved run records
+[17:22:45] --- verifying HF state BEFORE deleting ---
+HF ravikadam/ganesh-gemma4-e4b-v3-LiteRT -> ['.gitattributes', 'README.md', 'model.litertlm', 'model_q.litertlm']
+[17:22:46] --- deleting pod kscfegj3118lzc ---
+{
+  "deleted": true,
+  "id": "kscfegj3118lzc"
+}
+[]
+[17:22:58] watchdog done
