@@ -389,3 +389,35 @@ Replaced with a test for the canon actually requested
 (`सुखकर्ता दुखहर्ता` / `वक्रतुंड महाकाय` / `गजाननं भूतगणादि`), which separates the two
 cleanly. Fifth harness bug, and the first that would have caused a false NEGATIVE —
 silently withholding a good model rather than shipping a bad one.
+
+### 6. int4 destroys this model; int8 does not
+
+Holding the (now correct) Gemma 4 template constant:
+
+| build | recipe | result |
+|---|---|---|
+| litert2 | `dynamic_wi4_afp32` + single_token_embedder | word salad |
+| litert4 | `dynamic_wi4_afp32` | correct opening, then runaway loop |
+| litert_i8 | `dynamic_wi8_afp32` | **complete, correct aarti** |
+
+The int4 failure mode is distinctive: it emits the right first words and then
+collapses, with characters from unrelated scripts spliced in —
+
+    सुखकर्ता दुखहर्ता, अमीर ठेवून thrombopoeto karyalayimba...
+    ... tâmब्रह्मघाဌ ...            <- Burmese
+
+int8 recites all three verses including `फणिवरबंधना`, the corrected reading we
+established against the common error `फणिवरवंदना`. The fine-tune survives export.
+
+**Caveat on attribution.** Pushing the int8 build uploaded only 11.9 MB of new
+data against 8.18 GB — HF dedup found the rest already present in the August
+`model.litertlm`. So the August weights were already fine and its failure was the
+chat template, not quantisation. int4 is what destroyed *tonight's* builds. Two
+independent causes; do not collapse them into one story.
+
+### Cost of never running the artifact
+
+Three LiteRT files were published across August and September without once being
+executed. Every conclusion drawn from them — "Edge Gallery rejects our format",
+"we need to retrain" — was drawn from a model nobody had run. One CPU inference,
+which costs cents, would have shown the garbage immediately.

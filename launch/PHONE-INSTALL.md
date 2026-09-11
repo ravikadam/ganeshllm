@@ -2,15 +2,20 @@
 
 ## Status — read this first
 
-As of 2026-09-11 there is **no verified working phone build yet**. The files currently
-sitting in `ravikadam/ganesh-gemma4-e4b-v3-LiteRT` (`model.litertlm`, `model_q.litertlm`)
-are the ones Edge Gallery rejected with "unsupported model type". Do not expect them to
-work. A corrected export is being tested; when one passes its own run test it will be
-pushed as `ganesh-v3-verified.litertlm`.
+**There is a verified working build.** Download:
 
-Until then, the steps below are verified against the **official** Google model, which
-does work. Use it to get Edge Gallery set up and confirm your phone is ready, so that
-loading ours later is a one-file swap.
+    ravikadam/ganesh-gemma4-e4b-v3-LiteRT  ->  ganesh-v3-int8-verified.litertlm  (7.6 GB)
+
+It was executed before publishing: it recites Sukhkarta Dukhharta complete and
+correct, and answers English questions coherently.
+
+**Do not download `model_q.litertlm`** (3.8 GB). It is an int4 build whose output
+begins correctly and then collapses into a loop with foreign characters spliced in.
+`model.litertlm` is superseded — wrong chat template.
+
+Needs about 12 GB RAM, so a flagship phone. If yours has 8 GB, test with the
+official `litert-community/gemma-4-E2B-it-litert-lm` (2.6 GB) first to confirm the
+app works, and expect ours to be tight or to fail to load.
 
 ---
 
