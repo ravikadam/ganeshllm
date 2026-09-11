@@ -1,0 +1,8 @@
+eval_verbatim_recall|1.00
+eval_fabrication_rate|0.14
+litert_export|OK 3.9G
+litert_generates|FAIL — no Devanagari (pad tokens / empty / crash)
+model_type
+metadata_diff|captured -> logs/metadata_diff.log
+reference_runs|FAIL — the CLI itself is broken here; our FAIL is inconclusive
+gguf_export|FAILED (llama.cpp may not support Gemma 4 E-series)

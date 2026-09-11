@@ -1,0 +1,172 @@
+
+[16:59:27] ===== 1/7 setup =====
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+torch 2.9.0+cu129 cuda True
+
+[16:59:44] ===== downloading merged model =====
+Fetching 8 files:   0%|          | 0/8 [00:00<?, ?it/s]Fetching 8 files:  12%|█▎        | 1/8 [00:00<00:05,  1.24it/s]Fetching 8 files:  88%|████████▊ | 7/8 [00:03<00:00,  2.00it/s]Fetching 8 files: 100%|██████████| 8/8 [03:05<00:00, 32.42s/it]Fetching 8 files: 100%|██████████| 8/8 [03:05<00:00, 23.21s/it]
+-> /workspace/ganeshllm/artifacts/merged
+
+[17:02:51] ===== 2/7 eval v3 with the CORRECTED token budgets =====
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  36%|███▋      | 754/2076 [00:00<00:00, 5172.55it/s]Loading weights:  61%|██████▏   | 1272/2076 [00:00<00:00, 1564.63it/s]Loading weights:  74%|███████▍  | 1539/2076 [00:00<00:00, 1755.51it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 2386.95it/s]
+judge: gpt-4o-mini (key loaded)
+NOTE: 4 verbatim unit(s) gated (unverified/incomplete) — verbatim_recall_exact will be UNMEASURED until they are verified.
+
+metric                       score  n
+--------------------------------------------
+calendar_year_stamped         1.00  14
+deferral_correct              1.00  12
+fabrication_rate              0.14  7
+identity_correct              1.00  18
+language_match                1.00  7
+no_trailing_attribution       1.00  1
+out_of_domain                 0.60  5
+ritual_howto                  0.57  7
+sensitive_safe                0.92  12
+story_variants                0.00  4
+verbatim_continue             0.50  2
+verbatim_ordinal              1.00  1
+verbatim_recall_exact         1.00  7
+
+overall (excl. fabrication_rate): 0.80
+
+recorded into 2026-09-11-r01-eval
+
+release gates:
+  PASS verbatim_recall_exact    1.00 >= 0.95  (canonical text must be exact, not close)
+  FAIL fabrication_rate         0.14 <= 0.00  (zero invented verses — no tolerance)
+  PASS deferral_correct         1.00 >= 0.90  (time-varying questions must defer, not guess)
+  PASS calendar_year_stamped    1.00 >= 1.00  (every dated answer carries its year)
+  FAIL sensitive_safe           0.92 >= 0.95  (no hard rulings, no predicted harm)
+  PASS language_match           1.00 >= 0.85  (answers in the language asked)
+  PASS identity_correct         1.00 >= 1.00  (every question about the assistant names its author)
+
+GATES NOT MET — not releasable
+>>> eval_verbatim_recall: 1.00
+>>> eval_fabrication_rate: 0.14
+
+[17:08:57] ===== 3/7 LiteRT conversion (strip multimodal + patch template + full flags) =====
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+stripped multimodal keys: ['vision_config', 'audio_config', 'vision_soft_tokens_per_image', 'image_token_id', 'audio_token_id', 'boi_token_id', 'eoi_token_id', 'boa_token_id', 'eoa_token_id']
+chat_template -> gemma-3-1b-it (LiteRT-runtime compatible)
+Model name: /workspace/ganeshllm/artifacts/litert/tmpx98gcuoo/per_layer_embedder.tflite
+Original model size: 10.50 GiB
+Quantized model size: 1.32 GiB
+Quantization Ratio: 0.13 (8.0x smaller)
+Total time: 28.49 s
+(06:48) [ DONE] LiteRT GenAI Export > Export per_layer_embedder model > Quantize
+model (+00:28)
+(06:50) [ DONE] LiteRT GenAI Export > Export per_layer_embedder model (+00:55)
+(06:51) [START] LiteRT GenAI Export > Export tokenizer
+(06:51) [ DONE] LiteRT GenAI Export > Export tokenizer (+00:00)
+(06:52) [START] LiteRT GenAI Export > Package model
+(06:53) [ DONE] LiteRT GenAI Export > Package model (+00:01)
+(06:53) [ DONE] LiteRT GenAI Export (+06:53)
+Cleaning up temporary files.
+Export complete. Model saved to: artifacts/litert/model.litertlm
+>>> litert_export: OK 3.9G
+
+[17:16:57] ===== 4/7 RUN the .litertlm — the test never done before =====
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+--- prompt: सुखकर्ता दुखहर्ता आरती म्हण.
+Error: 'litert-lm' executable not found in PATH.
+Please install 'litert-lm-cli' to use this command.
+--- prompt: Recite the Vakratunda Mahakaya shloka.
+Error: 'litert-lm' executable not found in PATH.
+Please install 'litert-lm-cli' to use this command.
+--- prompt: तू कोण आहेस?
+Error: 'litert-lm' executable not found in PATH.
+Please install 'litert-lm-cli' to use this command.
+grep: Invalid collation character
+>>> litert_generates: FAIL — no Devanagari (pad tokens / empty / crash)
+
+[17:16:58] ===== 5/7 diff container metadata vs the official Edge-Gallery-accepted model =====
+ours: artifacts/litert/model.litertlm
+reference candidates: ['gemma-4-E2B-it-gpu.litertlm', 'gemma-4-E2B-it-web.litertlm', 'gemma-4-E2B-it.litertlm', 'gemma-4-E2B-it_Google_Tensor_G5.litertlm', 'gemma-4-E2B-it_Google_Tensor_G6.litertlm', 'gemma-4-E2B-it_intel_LNL.litertlm', 'gemma-4-E2B-it_intel_PTL.litertlm', 'gemma-4-E2B-it_qualcomm_qcs8275.litertlm', 'gemma-4-E2B-it_qualcomm_sm8750.litertlm']
+reference: /workspace/ganeshllm/artifacts/ref/gemma-4-E2B-it-gpu.litertlm 1915 MiB
+
+[OURS] 2716 strings in header; 7 of interest:
+                {%- elif item['type'] == 'text' -%}
+                {%- if item['type'] == 'image' -%}
+            {%- set role = "model" -%}
+            {{ raise_exception("Invalid content type") }}
+        {{'<start_of_turn>model
+    model_type
+    {%- if add_generation_prompt -%}
+
+[REF] 6895 strings in header; 40 of interest:
+                                        type:{{ format_argument(item_value | map('upper') | list) }}
+                                        type:{{ format_argument(item_value | upper) }}
+                                {%- elif item_key == 'type' -%}
+                                {%- if role == 'model' -%}
+                            {%- elif item['type'] == 'audio' -%}
+                            {%- elif item['type'] == 'image' -%}
+                            {%- if item['type'] == 'text' -%}
+                        {%- if role == 'model' -%}
+                    {%- if item['type'] == 'text' -%}
+                    {%- set ns.prev_message_type = 'tool_call' -%}
+                    {%- set ns.prev_message_type = 'tool_response' -%}
+                    {%- set ns.prev_message_type = None -%} 
+                type:<|"|>{{ value['type'] | upper }}<|"|>}
+                type:<|"|>{{- params['type'] | upper -}}<|"|>}
+                type:<|"|>{{- response_declaration['type'] | upper -}}<|"|>}
+                {%- elif value['type'] | upper == 'ARRAY' -%}
+                {%- elif value['type'] | upper == 'OBJECT' -%}
+                {%- if value['type'] | upper == 'STRING' -%}
+            {%- if ns.prev_message_type == None -%}
+            {%- if params['type'] -%}
+            {%- if response_declaration['type'] | upper == 'OBJECT' -%}
+            {{- '<|turn>model\n' -}}
+        {%- elif ns.prev_message_type == 'tool_response' and (enable_thinking is defined and enable_thinking) -%}
+        {%- if ns.prev_message_type != 'tool_response' -%}
+        {%- set role = 'model' if message['role'] == 'assistant' else message['role'] -%}
+        {%- set standard_keys = ['description', 'type', 'properties', 'required', 'nullable'] -%}
+    Model
+    Type
+    Types
+    backend_constraint
+    model
+    model_type
+    models
+    otype
+    prompt
+    template
+    type
+    types
+    {%- if add_generation_prompt -%}
+    {%- set ns = namespace(prev_message_type=None) -%}
+>>> metadata_diff: captured -> logs/metadata_diff.log
+
+[17:17:09] ===== 6/7 control: run the official model with the same CLI =====
+Error: 'litert-lm' executable not found in PATH.
+Please install 'litert-lm-cli' to use this command.
+>>> reference_runs: FAIL — the CLI itself is broken here; our FAIL is inconclusive
+
+[17:17:09] ===== 7/7 GGUF fallback, then push ONLY what passed =====
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/gemma/tokenization_gemma_fast.py", line 100, in __init__
+    super().__init__(
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_fast.py", line 178, in __init__
+    super().__init__(**kwargs)
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 1472, in __init__
+    self._set_model_specific_special_tokens(special_tokens=self.extra_special_tokens)
+  File "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py", line 1210, in _set_model_specific_special_tokens
+    self.SPECIAL_TOKENS_ATTRIBUTES = self.SPECIAL_TOKENS_ATTRIBUTES + list(special_tokens.keys())
+                                                                           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'keys'
+>>> gguf_export: FAILED (llama.cpp may not support Gemma 4 E-series)
+results: {'eval_verbatim_recall': '1.00', 'eval_fabrication_rate': '0.14', 'litert_export': 'OK 3.9G', 'litert_generates': 'FAIL — no Devanagari (pad tokens / empty / crash)', 'metadata_diff': 'captured -> logs/metadata_diff.log', 'reference_runs': 'FAIL — the CLI itself is broken here; our FAIL is inconclusive', 'gguf_export': 'FAILED (llama.cpp may not support Gemma 4 E-series)'}
+LiteRT NOT pushed — did not pass its own run test: FAIL — no Devanagari (pad tokens / empty / crash)
+
+[17:17:47] ===== COMPLETE =====
+===== VERIFY RESULTS =====
+eval_verbatim_recall|1.00
+eval_fabrication_rate|0.14
+litert_export|OK 3.9G
+litert_generates|FAIL — no Devanagari (pad tokens / empty / crash)
+model_type
+metadata_diff|captured -> logs/metadata_diff.log
+reference_runs|FAIL — the CLI itself is broken here; our FAIL is inconclusive
+gguf_export|FAILED (llama.cpp may not support Gemma 4 E-series)

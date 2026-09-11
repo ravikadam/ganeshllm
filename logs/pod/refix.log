@@ -1,0 +1,19 @@
+
+[17:20:14] ===== restore Gemma 4 chat template =====
+template restored from: litert-community gemma-4-E2B
+uses <|turn>: True | uses <start_of_turn>: False
+
+[17:20:15] ===== re-export litertlm =====
+    from litert_torch._convert.fx_passes.optimize_layout_transposes_pass import layout_rewrite
+  File "/usr/local/lib/python3.12/dist-packages/litert_torch/_convert/fx_passes/optimize_layout_transposes_pass/layout_rewrite.py", line 22, in <module>
+    from litert_torch._convert.fx_passes.optimize_layout_transposes_pass import op_func_registry
+  File "/usr/local/lib/python3.12/dist-packages/litert_torch/_convert/fx_passes/optimize_layout_transposes_pass/op_func_registry.py", line 17, in <module>
+    from litert_torch._convert.fx_passes.optimize_layout_transposes_pass import utils
+  File "/usr/local/lib/python3.12/dist-packages/litert_torch/_convert/fx_passes/optimize_layout_transposes_pass/utils.py", line 20, in <module>
+    import torchao.quantization.pt2e.quantize_pt2e  # pylint: disable=unused-import
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torchao/quantization/pt2e/quantize_pt2e.py", line 44, in <module>
+    quantizer: Union[Quantizer, torch.ao.quantization.quantizer.quantizer.Quantizer],
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'torch.ao.quantization' has no attribute 'quantizer'. Did you mean: 'quantize'?
+>>> reexport: FAILED

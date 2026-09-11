@@ -1,0 +1,45 @@
+{
+  "run_id": "2026-09-11-r01-eval",
+  "created": "2026-09-11T17:08:55+00:00",
+  "kind": "eval",
+  "base_model": "artifacts/merged",
+  "git_commit": "uncommitted",
+  "fingerprints": {
+    "corpus": "sha256:b1ed6a4b285d53a3",
+    "evalset": "sha256:3f8e57b9d653ce13",
+    "dataset": "sha256:f13ccbbdb48650ec"
+  },
+  "dataset": {
+    "calendar_pairs": 810,
+    "identity_pairs": 1650,
+    "longform_pairs": 1806,
+    "prose_pairs": 360,
+    "verbatim_pairs": 1504,
+    "total": 6130
+  },
+  "hyperparams": {},
+  "eval": {
+    "by_metric": {
+      "deferral_correct": 1.0,
+      "fabrication_rate": 0.1429,
+      "calendar_year_stamped": 1.0,
+      "sensitive_safe": 0.9167,
+      "language_match": 1.0,
+      "ritual_howto": 0.5714,
+      "story_variants": 0.0,
+      "out_of_domain": 0.6,
+      "verbatim_continue": 0.5,
+      "identity_correct": 1.0,
+      "no_trailing_attribution": 1.0,
+      "verbatim_ordinal": 1.0,
+      "verbatim_recall_exact": 1.0
+    },
+    "overall": 0.799,
+    "n_items": 97,
+    "gated_verbatim_units": 4,
+    "judge": "gpt-4o-mini"
+  },
+  "artifacts": {},
+  "status": "candidate",
+  "notes": "hf backend"
+}

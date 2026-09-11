@@ -1,0 +1,54 @@
+ours: artifacts/litert/model.litertlm
+reference candidates: ['gemma-4-E2B-it-gpu.litertlm', 'gemma-4-E2B-it-web.litertlm', 'gemma-4-E2B-it.litertlm', 'gemma-4-E2B-it_Google_Tensor_G5.litertlm', 'gemma-4-E2B-it_Google_Tensor_G6.litertlm', 'gemma-4-E2B-it_intel_LNL.litertlm', 'gemma-4-E2B-it_intel_PTL.litertlm', 'gemma-4-E2B-it_qualcomm_qcs8275.litertlm', 'gemma-4-E2B-it_qualcomm_sm8750.litertlm']
+reference: /workspace/ganeshllm/artifacts/ref/gemma-4-E2B-it-gpu.litertlm 1915 MiB
+
+[OURS] 2716 strings in header; 7 of interest:
+                {%- elif item['type'] == 'text' -%}
+                {%- if item['type'] == 'image' -%}
+            {%- set role = "model" -%}
+            {{ raise_exception("Invalid content type") }}
+        {{'<start_of_turn>model
+    model_type
+    {%- if add_generation_prompt -%}
+
+[REF] 6895 strings in header; 40 of interest:
+                                        type:{{ format_argument(item_value | map('upper') | list) }}
+                                        type:{{ format_argument(item_value | upper) }}
+                                {%- elif item_key == 'type' -%}
+                                {%- if role == 'model' -%}
+                            {%- elif item['type'] == 'audio' -%}
+                            {%- elif item['type'] == 'image' -%}
+                            {%- if item['type'] == 'text' -%}
+                        {%- if role == 'model' -%}
+                    {%- if item['type'] == 'text' -%}
+                    {%- set ns.prev_message_type = 'tool_call' -%}
+                    {%- set ns.prev_message_type = 'tool_response' -%}
+                    {%- set ns.prev_message_type = None -%} 
+                type:<|"|>{{ value['type'] | upper }}<|"|>}
+                type:<|"|>{{- params['type'] | upper -}}<|"|>}
+                type:<|"|>{{- response_declaration['type'] | upper -}}<|"|>}
+                {%- elif value['type'] | upper == 'ARRAY' -%}
+                {%- elif value['type'] | upper == 'OBJECT' -%}
+                {%- if value['type'] | upper == 'STRING' -%}
+            {%- if ns.prev_message_type == None -%}
+            {%- if params['type'] -%}
+            {%- if response_declaration['type'] | upper == 'OBJECT' -%}
+            {{- '<|turn>model\n' -}}
+        {%- elif ns.prev_message_type == 'tool_response' and (enable_thinking is defined and enable_thinking) -%}
+        {%- if ns.prev_message_type != 'tool_response' -%}
+        {%- set role = 'model' if message['role'] == 'assistant' else message['role'] -%}
+        {%- set standard_keys = ['description', 'type', 'properties', 'required', 'nullable'] -%}
+    Model
+    Type
+    Types
+    backend_constraint
+    model
+    model_type
+    models
+    otype
+    prompt
+    template
+    type
+    types
+    {%- if add_generation_prompt -%}
+    {%- set ns = namespace(prev_message_type=None) -%}

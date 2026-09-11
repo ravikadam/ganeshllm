@@ -1,0 +1,9 @@
+--- prompt: सुखकर्ता दुखहर्ता आरती म्हण.
+Error: 'litert-lm' executable not found in PATH.
+Please install 'litert-lm-cli' to use this command.
+--- prompt: Recite the Vakratunda Mahakaya shloka.
+Error: 'litert-lm' executable not found in PATH.
+Please install 'litert-lm-cli' to use this command.
+--- prompt: तू कोण आहेस?
+Error: 'litert-lm' executable not found in PATH.
+Please install 'litert-lm-cli' to use this command.
