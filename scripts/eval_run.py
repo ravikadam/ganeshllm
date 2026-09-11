@@ -195,8 +195,14 @@ def build_items():
         if u["class"] != "verbatim": continue
         if not u.can_emit_verbatim(): gated += 1; continue
         t = (u.get("title") or {}).get("en") or u["id"]
+        # Budget MUST be sized from the canon. A flat 512 silently truncated the two
+        # longest texts (Ashtottara 1011 tok, Atharvashirsha 1173 tok) and scored them
+        # as recall failures for two whole runs. Devanagari is ~1 token per 2 chars, so
+        # chars/1.6 + headroom is a safe over-estimate.
+        need = int(len(u.devanagari()) / 1.6) + 400
         items.append({"id": f"verbatim_recall_exact-{u['id']}", "metric": "verbatim_recall_exact",
                       "lang": "mr", "prompt": f"Recite the {t}.", "grader": "exact",
+                      "max_new_tokens": max(512, need),
                       "params": {"expected": u.devanagari(), "unit": u["id"]}})
     return items, gated
 

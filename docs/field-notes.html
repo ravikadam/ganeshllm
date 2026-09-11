@@ -1,0 +1,230 @@
+<title>Ganeshotsav Field Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;600&display=swap">
+
+<style>
+  :root{
+    --paper:#FBFAF7;
+    --raise:#F4F1EB;
+    --ink:#1A1714;
+    --muted:#6B635C;
+    --rule:#E2DCD3;
+    --madder:#A33B24;
+    --durva:#4A6B3D;
+    --serif:"Newsreader","Noto Serif Devanagari",Georgia,serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#14120F;
+      --raise:#1D1A16;
+      --ink:#EDE8E1;
+      --muted:#9A9188;
+      --rule:#2E2925;
+      --madder:#D9704F;
+      --durva:#8FAE7C;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#14120F;
+    --raise:#1D1A16;
+    --ink:#EDE8E1;
+    --muted:#9A9188;
+    --rule:#2E2925;
+    --madder:#D9704F;
+    --durva:#8FAE7C;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:18px;
+    line-height:1.62;
+    margin:0;
+    padding:clamp(2rem,6vw,5rem) clamp(1.1rem,5vw,2rem) 6rem;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:41rem;margin:0 auto;display:flex;flex-direction:column;gap:3rem}
+
+  header{display:flex;flex-direction:column;gap:.7rem;
+    border-bottom:2px solid var(--ink);padding-bottom:1.5rem}
+  .eyebrow{
+    font-family:var(--mono);font-size:.7rem;font-weight:500;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--madder);
+  }
+  h1{
+    font-family:var(--serif);font-weight:600;font-size:clamp(2.1rem,6vw,2.9rem);
+    line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.015em;
+  }
+  .standfirst{margin:0;color:var(--muted);font-size:1.06rem;max-width:34rem}
+  .byline{font-family:var(--mono);font-size:.74rem;color:var(--muted);
+    letter-spacing:.04em;margin-top:.3rem}
+
+  section{display:flex;flex-direction:column;gap:1rem}
+  h2{
+    font-family:var(--serif);font-weight:600;font-size:1.42rem;line-height:1.2;
+    margin:0;text-wrap:balance;padding-top:1.4rem;border-top:1px solid var(--rule);
+    letter-spacing:-.01em;
+  }
+  section > p{margin:0}
+  p{max-width:38rem}
+  strong{font-weight:600}
+  em{font-style:italic}
+  code,.dv{font-family:var(--mono);font-size:.87em;
+    background:var(--raise);padding:.1em .38em;border-radius:3px;
+    border:1px solid var(--rule)}
+  .dv{font-family:"Noto Serif Devanagari",var(--mono);font-size:.95em}
+
+  /* run table */
+  .runs{width:100%;border-collapse:collapse;font-size:.9rem;
+    font-variant-numeric:tabular-nums}
+  .scroller{overflow-x:auto}
+  .runs th,.runs td{padding:.5rem .55rem;text-align:right;
+    border-bottom:1px solid var(--rule);white-space:nowrap}
+  .runs th:first-child,.runs td:first-child{text-align:left;
+    font-family:var(--serif);white-space:normal}
+  .runs thead th{
+    font-family:var(--mono);font-size:.68rem;font-weight:600;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+    border-bottom:1px solid var(--ink);
+  }
+  .runs td{font-family:var(--mono);font-size:.85rem}
+  .runs tbody tr:last-child td{border-bottom:1px solid var(--ink);font-weight:600}
+  .up{color:var(--durva)}
+  .down{color:var(--madder)}
+
+  /* correction list */
+  .fix{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.65rem}
+  .fix li{display:flex;flex-wrap:wrap;gap:.5rem;align-items:baseline;
+    padding-left:.9rem;border-left:2px solid var(--madder)}
+  .was{color:var(--muted);text-decoration:line-through;
+    text-decoration-color:var(--madder);text-decoration-thickness:1px}
+  .arrow{font-family:var(--mono);color:var(--muted);font-size:.8rem}
+  .note{font-family:var(--mono);font-size:.72rem;color:var(--muted);
+    letter-spacing:.03em;flex-basis:100%}
+
+  .pull{
+    border-left:2px solid var(--ink);padding:.2rem 0 .2rem 1.1rem;
+    font-size:1.1rem;line-height:1.45;color:var(--ink);margin:.4rem 0;
+  }
+  ul.plain{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.6rem}
+  ul.plain li{padding-left:.2rem}
+  ul.plain li::marker{color:var(--madder)}
+
+  footer{border-top:2px solid var(--ink);padding-top:1.3rem;
+    font-family:var(--mono);font-size:.74rem;color:var(--muted);
+    display:flex;flex-direction:column;gap:.35rem;letter-spacing:.02em}
+  footer a{color:var(--madder)}
+  a{color:var(--madder);text-underline-offset:2px}
+  a:focus-visible{outline:2px solid var(--madder);outline-offset:3px;border-radius:2px}
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Field notes &middot; August 2026</div>
+    <h1>Teaching a small model to recite</h1>
+    <p class="standfirst">Three weeks out from Ganesh Chaturthi, fine-tuning Gemma&nbsp;4 E4B on shlokas, ritual and Maharashtra&rsquo;s festival — offline, on a phone, no retrieval. What the work actually taught me.</p>
+    <div class="byline">Ravi Kadam &middot; ganeshllm</div>
+  </header>
+
+  <section>
+    <p>The premise was deliberately awkward: <strong>no RAG.</strong> If the model is going to recite the Atharvashirsha, it has to <em>know</em> it. That constraint turned out to be the whole project — everything interesting came from the difference between a model that retrieves text and one that has memorised it.</p>
+    <p>Three training runs over two days, on a rented L40S. About five dollars of compute, all told.</p>
+  </section>
+
+  <section>
+    <h2>The runs</h2>
+    <div class="scroller">
+      <table class="runs">
+        <thead>
+          <tr><th>Metric</th><th>v1</th><th>v2</th><th>v3</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Training pairs</td><td>1,959</td><td>5,703</td><td>6,102</td></tr>
+          <tr><td>Says who made it</td><td class="down">0.00</td><td>1.00</td><td>1.00</td></tr>
+          <tr><td>Refuses what it can&rsquo;t know</td><td>0.92</td><td class="down">0.83</td><td class="up">1.00</td></tr>
+          <tr><td>Handles sensitive questions</td><td>&mdash;</td><td>1.00</td><td>1.00</td></tr>
+          <tr><td>Recites canon exactly</td><td>0.71</td><td>0.71</td><td class="up">1.00</td></tr>
+          <tr><td>Invents verses it doesn&rsquo;t know</td><td class="down">1.00</td><td>0.57</td><td>0.14</td></tr>
+          <tr><td>Overall</td><td>0.63</td><td>0.77</td><td>0.81</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Six of seven release gates pass at v3. The one that doesn&rsquo;t — inventing verses — is set to zero tolerance and stays there.</p>
+  </section>
+
+  <section>
+    <h2>The gate that paid for itself</h2>
+    <p>I wrote the corpus of shlokas from my own knowledge, then built a rule that refused to train on any canonical text until a human had checked it against a printed source. It looked like bureaucratic caution. It was the most valuable thing in the project.</p>
+    <p>Checking against authoritative sources turned up real errors in verses I would have called high-confidence:</p>
+    <ul class="fix">
+      <li><span class="dv was">सर्वसिद्धिकरं प्रभो</span> <span class="arrow">&rarr;</span> <span class="dv">सर्वसिद्धिकरः प्रभुः</span>
+        <span class="note">Sankatnashan Ganesh Stotra, verse 5 — a different grammatical case entirely</span></li>
+      <li><span class="dv was">अष्टेभ्यो</span> <span class="arrow">&rarr;</span> <span class="dv">अष्टभ्यो</span>
+        <span class="note">verse 8 — wrong word</span></li>
+      <li><span class="dv was">फणिवरवंदना</span> <span class="arrow">&rarr;</span> <span class="dv">फणिवरबंधना</span>
+        <span class="note">Sukhkarta Dukhharta, third verse — confirmed by two independent sources</span></li>
+    </ul>
+    <p class="pull">Had I trained a day earlier, the model would have drilled the wrong line twelve times over and recited it to devotees with total confidence.</p>
+    <p>For canonical text, being confident is not evidence. The gate cost an afternoon and prevented the exact failure the project existed to avoid.</p>
+  </section>
+
+  <section>
+    <h2>What actually moved the model</h2>
+    <p>v1 scored zero on identity — asked who made it, it said it was a large language model. I&rsquo;d left that behaviour to an LLM-generated portion of the dataset, which produced a handful of inconsistent examples. Replacing them with 702 deterministic, heavily repeated pairs took it to a perfect score in one run.</p>
+    <p>The same pattern held everywhere. These were never capability failures — they were <strong>coverage</strong> failures, and the fix was always more of the right data rather than a better model.</p>
+    <p>Two things I&rsquo;d not appreciated properly before:</p>
+    <ul class="plain">
+      <li><strong>Ratio decides, not presence.</strong> v2 had 24 pairs teaching it to refuse dates for other years — and 225 teaching it confident 2026 dates. At nine to one, the pattern won: it cheerfully invented &ldquo;Ganesh Chaturthi 2028 falls on 14 September&rdquo;. Rebalanced to three to one, refusal went from 0.83 to a perfect score.</li>
+      <li><strong>Zero coverage means invention, not silence.</strong> Asked where the municipal immersion tanks were, v2 made up plausible names. Nothing in training had ever taught it to decline that question. A model with no data doesn&rsquo;t abstain; it confabulates.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Three failures that weren&rsquo;t the model&rsquo;s</h2>
+    <p>This is the part I&rsquo;d most want to tell someone starting out. Across three runs, the harness lied to me three separate times, and each lie was indistinguishable from a genuine model failure.</p>
+    <ul class="plain">
+      <li>The eval generated a flat 512 tokens per answer. The only two texts that ever failed recall — the 108 names and the full Atharvashirsha — are the only two longer than that. I was cutting the model off mid-recitation and scoring it as a memory failure. Given room, it produces <code>2095/2095</code> and <code>2601/2601</code> characters, exact.</li>
+      <li>A grader marked a <em>correct</em> answer wrong. Asked for the thirteenth name in a twelve-name stotra, the model correctly replied that there is no thirteenth. My regex was looking for the phrase &ldquo;I don&rsquo;t have that text&rdquo; and failed it for saying something better.</li>
+      <li>The LLM judge silently returned nothing because a config path was wrong on the remote box. Three safety metrics vanished from the report as MISSING, and I read that as a gap in coverage rather than a broken harness.</li>
+    </ul>
+    <p class="pull">Every reported failure deserves one question before you touch the training data: is the measurement itself sound?</p>
+    <p>I chased a phantom for two runs. The real score for canon recall was perfect the whole time.</p>
+  </section>
+
+  <section>
+    <h2>Mistakes worth writing down</h2>
+    <p>Not the model&rsquo;s — mine. Each cost real time or money.</p>
+    <ul class="plain">
+      <li>Ran <code>git add -A</code> from a directory that turned out to be a shared repo root, staging forty unrelated projects.</li>
+      <li>Verified a Hugging Face upload and deleted the GPU box <em>in the same command</em>. The output said the 15&nbsp;GB model hadn&rsquo;t uploaded; by the time I read it, the only copy was gone. Recoverable, but only by luck of having kept the adapter.</li>
+      <li>Wrote a pipeline that treated a failed upload as non-fatal, so it reported success with its main artifact missing.</li>
+      <li>Printed an API key in cleartext while trying to redact it — the pattern didn&rsquo;t match the file&rsquo;s actual format.</li>
+    </ul>
+    <p>The through-line: <strong>verify and destroy should never be the same step.</strong></p>
+  </section>
+
+  <section>
+    <h2>Getting it onto a phone</h2>
+    <p>The conversion to LiteRT — the format the on-device runtime wants — was supposed to be the hard part, and it half was. The blocker turned out to be a dependency that <em>declares</em> it needs version 0.17 or newer while the code path it actually exercises runs fine on 0.14. Pinning the older version cleared it, and the export completed on the first honest attempt.</p>
+    <p>Then the phone app rejected the file: <em>unsupported model type</em>. An open upstream bug — the flag that stamps the model&rsquo;s identity into its metadata doesn&rsquo;t propagate. There&rsquo;s a second undocumented trap waiting behind it, too: the chat template needs replacing, or the model loads perfectly and dies on the first message.</p>
+    <p>Worth separating cleanly: <strong>the weights are proven, the packaging isn&rsquo;t.</strong> Nothing about that rejection reflects on the model, which recites everything asked of it, exactly.</p>
+  </section>
+
+  <section>
+    <h2>Where it stands</h2>
+    <p>The model knows the complete Ganapati Atharvashirsha, all 108 names, the Sankatnashan stotra, the Pancharatnam, and Sukhkarta Dukhharta — byte for byte. It answers in Marathi, Hindi or English. It says who made it. It declines to guess a muhurat time, and it stamps every date with its year so it can&rsquo;t quietly go stale on someone&rsquo;s phone next year.</p>
+    <p>What it still gets wrong is worth being plain about. It will occasionally recite the wrong stotra when asked for one it doesn&rsquo;t know. It flattens the Puranic variants — where the tradition offers three accounts of the broken tusk, it now confidently gives one, which is a loss. And four texts remain unverified and excluded, Ghalin Lotangan among them, which anyone who sings the aarti will notice immediately.</p>
+    <p>The festival is on the fourteenth of September.</p>
+  </section>
+
+  <footer>
+    <div>ganeshllm &middot; Gemma 4 E4B &middot; LoRA r=64 &middot; 6,102 pairs</div>
+    <div>Ravi Kadam &middot; <a href="https://www.linkedin.com/in/ravikadam/">linkedin.com/in/ravikadam</a></div>
+  </footer>
+
+</div>
