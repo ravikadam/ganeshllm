@@ -375,3 +375,17 @@ version mismatch, still open.
 - `uptimeSeconds` stays 0 even on a working secure pod. Poll `ssh.ip`/`ssh.port`.
 - Some pods mount `/workspace` over a network filesystem that rejects `chown`;
   `rsync -a` exits 23 with the files transferred fine. Use `--no-o --no-g`.
+
+### 5. The PASS gate itself was broken
+
+The LiteRT run gate was `grep -qE "[ऀ-ॿ]{12,}"` — twelve *consecutive* Devanagari
+characters. Devanagari is written with spaces, so the real aarti does not match it
+either:
+
+    gate on garbage      : False
+    gate on the aarti    : False   <- would have REJECTED a working model
+
+Replaced with a test for the canon actually requested
+(`सुखकर्ता दुखहर्ता` / `वक्रतुंड महाकाय` / `गजाननं भूतगणादि`), which separates the two
+cleanly. Fifth harness bug, and the first that would have caused a false NEGATIVE —
+silently withholding a good model rather than shipping a bad one.

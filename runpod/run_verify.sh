@@ -96,8 +96,8 @@ if [ -n "${LM:-}" ]; then
     timeout 420 litert lm run "$LM" --prompt="$P" < /dev/null >> logs/litert_run.log 2>&1
   done
   tail -40 logs/litert_run.log
-  if grep -qE "[ऀ-ॿ]{12,}" logs/litert_run.log; then
-    record "litert_generates" "PASS — emitted real Devanagari"
+  if grep -qE "सुखकर्ता\\s*दुखहर्ता|वक्रतुंड\\s*महाकाय|गजाननं\\s*भूतगणादि" logs/litert_run.log; then
+    record "litert_generates" "PASS — recited the actual canon"
   else
     record "litert_generates" "FAIL — no Devanagari (pad tokens / empty / crash)"
   fi

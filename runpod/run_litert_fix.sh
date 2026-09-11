@@ -74,7 +74,7 @@ for P in "सुखकर्ता दुखहर्ता आरती म्�
   timeout 420 /opt/vrun/bin/litert-lm run "$LM" --prompt="$P" < /dev/null >> logs/run.log 2>&1
 done
 tail -45 logs/run.log
-if grep -qE "[ऀ-ॿ]{12,}" logs/run.log; then rec "generates" "PASS — real Devanagari"
+if grep -qE "सुखकर्ता\\s*दुखहर्ता|वक्रतुंड\\s*महाकाय|गजाननं\\s*भूतगणादि" logs/run.log; then rec "generates" "PASS — recited the actual canon"
 else rec "generates" "FAIL — no Devanagari"; fi
 
 say "5/5 push only on PASS"
