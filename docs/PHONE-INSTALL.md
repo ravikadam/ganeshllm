@@ -20,29 +20,33 @@ Either:
   latest `.apk`. Android will ask you to allow installs from unknown sources for
   your browser/file manager; that prompt is expected for a sideloaded APK.
 
-## 2. Get the model file onto the phone
+## 2. Import straight from a Hugging Face URL (easiest)
 
-The app can pull models from Hugging Face, but a **personal repo is easier to
-sideload than to browse to**, so download the file directly:
+Edge Gallery can pull a model from a **Hugging Face model card URL** — no cable, no
+file manager, no multi-GB download you have to babysit in a browser. Added in
+v1.0.16 and called out again in v1.0.18 ("Hugging Face Imports: Seamlessly import
+LiteRT-LM models using Hugging Face model card URLs"). Latest release is v1.0.19
+(2 Sep 2026), so make sure you are on a current build.
 
-1. In the phone's browser open the repo's Files tab.
-2. Download the `.litertlm` file (several GB — use Wi-Fi).
-3. It lands in `Downloads`.
+In the app, choose the import option and paste the **model card URL** (the repo
+page, not the raw file link):
 
-Alternatively, from a computer with the phone connected:
+    https://huggingface.co/ravikadam/ganesh-gemma4-e4b-v3-LiteRT
+
+The repo must be **public**, and it must contain a `.litertlm` file.
+
+## 3. Or sideload the file (fallback)
+
+If URL import misbehaves, push the file directly:
 
 ```bash
 adb push ganesh-v3-verified.litertlm /sdcard/Download/
 ```
 
-## 3. Import it into the app
-
-1. Open AI Edge Gallery.
-2. Choose the **AI Chat** / **Ask Image**-style task tile — for this model, plain
-   chat.
-3. Use the **+** / **Import model** control (wording varies by release) and pick
-   the `.litertlm` from `Downloads`.
-4. First load takes a while — it is unpacking several GB. Subsequent loads are fast.
+Then in the app: tap the **+** icon at the bottom-right, pick the `.litertlm` from
+the file picker, and in the **Import Model** dialog set the default parameters and
+CPU/GPU preference. Leave "Support image"/"Support audio" unchecked — this is a
+text-only export.
 
 ## 4. Verify it actually works
 
