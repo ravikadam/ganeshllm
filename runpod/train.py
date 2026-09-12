@@ -27,11 +27,18 @@ def main():
     ap.add_argument("--epochs", type=float, default=3.0)
     ap.add_argument("--lr", type=float, default=1e-4)
     ap.add_argument("--rank", type=int, default=64)
+    # alpha/rank is the adapter scale. 2.0 maximises verbatim memorisation and is
+    # what v1-v3 used — but a large scale produces outlier weights after merging,
+    # and a single outlier can empty whole int4 quantisation bins. Tunable now so
+    # the memorisation/quantisability trade-off can actually be measured.
+    ap.add_argument("--alpha", type=int, default=None, help="LoRA alpha (default: 2*rank)")
     ap.add_argument("--bs", type=int, default=4)
     ap.add_argument("--accum", type=int, default=4)
     ap.add_argument("--maxlen", type=int, default=2048)
     a = ap.parse_args()
 
+    print(f"LoRA r={a.rank} alpha={a.alpha or a.rank*2} "
+          f"scale={(a.alpha or a.rank*2)/a.rank:.2f} epochs={a.epochs}")
     train = Dataset.from_list(load_jsonl(f"{a.data}/train.jsonl"))
     valid = Dataset.from_list(load_jsonl(f"{a.data}/valid.jsonl"))
     print(f"train {len(train)}  valid {len(valid)}")
@@ -47,7 +54,7 @@ def main():
     TARGETS = (r"model\.language_model\.layers\.\d+\."
                r"(self_attn\.(q|k|v|o)_proj|mlp\.(gate|up|down)_proj)")
     peft_cfg = LoraConfig(
-        r=a.rank, lora_alpha=a.rank * 2, lora_dropout=0.05, bias="none",
+        r=a.rank, lora_alpha=(a.alpha or a.rank * 2), lora_dropout=0.05, bias="none",
         task_type="CAUSAL_LM", target_modules=TARGETS)
 
     cfg = SFTConfig(

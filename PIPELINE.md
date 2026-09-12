@@ -475,3 +475,58 @@ E2B has roughly half E4B's capacity and our hardest requirement is byte-exact
 recall of long Sanskrit (Atharvashirsha, 1,173 tokens). E4B scored 1.00.
 If E2B cannot hold it, fall back to E4B QAT at 3.41 GB — still less than half
 of the int8 build.
+
+## 2026-09-12 — E2B QAT: the small model works, the export corrupts it
+
+### E2B holds the canon. Capacity was never the constraint.
+
+    verbatim_recall_exact  1.00  (bf16, 7/7 byte-exact)   <- same as E4B
+    sensitive_safe         1.00  (E4B: 0.92)              <- BETTER
+    story_variants         0.25  (E4B: 0.00)              <- better
+    fabrication_rate       0.29  (E4B: 0.00 after fix)    <- worse
+    out_of_domain          0.20  (E4B: 0.60)              <- worse
+    ritual_howto           0.29  (E4B: 0.57)              <- worse
+    overall                0.77  (E4B: 0.80)
+
+A 2.4 GB model recites the shlokas byte-exact. The fear that E2B lacked capacity
+for the long Sanskrit texts was wrong.
+
+### Hypotheses tested and KILLED
+
+**"int4 is inherently too aggressive."** No. The stock QAT base exported through
+our exact pipeline at int4 answers coherently in both English and Marathi. It
+only lacks the canon, which is what an un-fine-tuned model should lack.
+
+**"QAT fixes it."** No. The E2B QAT fine-tune collapsed at int4 exactly as the
+non-QAT E4B did.
+
+**"Our LoRA creates outlier weights that empty int4 bins."** No. Measured across
+the full depth, merged vs stock:
+
+    mean max|w| / p99.9   stock 2.498   merged 2.494   ratio 1.00x
+
+The merge applied (weights differ: mean delta 0.0003, max 0.004) but changed the
+distribution not at all. Note the deltas are SMALLER than int4 quantisation noise.
+
+### The actual suspect: save_pretrained rewrote the architecture config
+
+`merge_and_unload()` + `save_pretrained()` under transformers 5.17 re-serialised
+a checkpoint written by 5.6.2, and the schema moved:
+
+    stock  : text_config.global_head_dim = 512
+             text_config.num_global_key_value_heads = None
+    merged : per_layer_config.{04,09,14,19,24,29,34}.head_dim = 512   (new keys)
+
+Those layer indices are Gemma 4's global-attention layers. If litert-torch reads
+`global_head_dim` and finds it absent, it defaults silently — producing a model
+that loads and generates but attends wrongly. That is the observed failure.
+
+Fix under test: keep the base checkpoint's own config.json on the merged weights.
+
+### Method note
+
+Three separate times a "failure" was my gate, not the model — the 512-token cap,
+the bounded-list grader, the 12-consecutive-Devanagari test — and a fourth time
+here: the gate scored the STOCK control FAIL because the base model repeated an
+invented aarti stanza. Reading the raw output reversed the conclusion. **Read the
+output. The gate is a convenience, not evidence.**
