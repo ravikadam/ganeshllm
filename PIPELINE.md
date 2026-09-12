@@ -530,3 +530,40 @@ the bounded-list grader, the 12-consecutive-Devanagari test — and a fourth tim
 here: the gate scored the STOCK control FAIL because the base model repeated an
 invented aarti stanza. Reading the raw output reversed the conclusion. **Read the
 output. The gate is a convenience, not evidence.**
+
+### The whole problem was one flag
+
+`--quantization_recipe dynamic_wi4_afp32` — the COARSEST uniform int4 in the
+library. Google's documented command passes **no recipe at all**; the default
+(~int8) produces a perfect recitation. Four hypotheses died before I checked
+whether I was following the documented procedure. Check that first next time.
+
+    default (no recipe)        4.8 GB   full aarti + shloka, correct     PUSHED
+    dynamic_wi4_afp32          2.4 GB   collapses into loops             discarded
+
+The stock base tolerated the bad recipe because a general model degrades
+gracefully. Our memorisation-tuned model — training entropy ~0.06 — does not.
+
+### The recipe catalogue nobody had looked at
+
+`ai_edge_quantizer.recipe` exposes far more than the two names we knew:
+
+    gemma4_mixed48, gemma4_mixed48_b32/_b64/_hr   <- Gemma-4 mobile mixed 4/8-bit
+    dynamic_wi4b32_afp32, dynamic_wi4b64_afp32    <- block-wise int4
+    dynamic_wi4c_afp32, dynamic_wi4c_hr_afp32     <- per-channel int4
+    dynamic_wi2b32_afp32, dynamic_wi2c_afp32      <- 2-bit
+    dynamic_wi8_emb4_afp32                        <- int8 weights, int4 embeddings
+
+The `gemma4_mixed48*` family is almost certainly how Google builds the official
+2.41 GB E2B. **They build but crash on load** in this nightly:
+
+    TypeError: string indices must be integers, not 'str'
+      in Quantizer.load_quantization_recipe
+
+`export_hf` wraps every exception as "Invalid quantization recipe: <name>",
+which hides whether the name is unknown, needs arguments, or hit a library bug.
+Build the recipe and load it directly to see the real error.
+
+Usable fine-grained int4 in this environment: `dynamic_wi4b32_afp32` (block-32)
+and `dynamic_wi4c_afp32` (per-channel). Both are far finer than the coarse
+recipe that wrecked every earlier export.
