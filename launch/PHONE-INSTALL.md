@@ -37,26 +37,53 @@ Do not use a Q4 build for this model.
 
 ---
 
-## Android
+## Android — use PocketPal AI
 
-Any app that loads a local GGUF file will run this. Common ones on the Play Store
-describe themselves as offline/local LLM chat apps and offer "import GGUF" or
-"load local model". The steps are the same in all of them:
+Free, open source, on the Play Store, and it has **Hugging Face search built in**,
+so it works much like Edge Gallery.
 
-1. Download `ganesh-e2b-Q5_K_M.gguf` (3.4 GB) — on the phone, or on a computer
-   and copy it across. `Download/` is the folder every file picker can see.
-2. In the app choose **import / load local model** and pick the file.
-3. First load is slow while it maps the weights; later loads are quick.
+1. Install **PocketPal AI** from the Play Store.
+2. Open it, go to **Models**, and search Hugging Face for:
 
-Budget about 6 GB of free RAM. On a phone with less it will either refuse to load
-or swap badly.
+       ravikadam/ganesh-gemma4-e2b-GGUF
 
-## iPhone / iPad
+3. Pick `ganesh-e2b-Q5_K_M.gguf` (3.4 GB) and download it in the app.
+4. Load it and chat. First load is slow; later loads are quick.
 
-Same file. Several iOS apps run local GGUF models; pick one that advertises
-importing your own GGUF, then load it from Files or iCloud Drive. This is the
-main reason we moved off LiteRT — Edge Gallery has no iOS build at all, GGUF
-works on both platforms.
+No file copying, no adb. If you would rather sideload, download the .gguf on a
+computer, copy it to `Download/`, and use the app's "import local model".
+
+Other Android apps that load the same file: **SmolChat** (open source),
+**LocalAI** by Apex Creators, **MLC Chat** (F-Droid), **ToolNeuron**.
+
+Budget about 6 GB of free RAM.
+
+## iPhone / iPad — also PocketPal AI
+
+The same app is on the App Store and takes the same file. This is the reason we
+moved to GGUF: **Edge Gallery has no iOS build at all.**
+
+1. Install **PocketPal AI** from the App Store.
+2. Models -> search Hugging Face -> `ravikadam/ganesh-gemma4-e2b-GGUF`.
+3. Download `ganesh-e2b-Q5_K_M.gguf` and load it.
+
+Alternatives on iOS: **Enclave AI**, **On Device AI**, **Private LLM**,
+**Locally AI**. All accept a GGUF you supply.
+
+## What about the LiteRT (.litertlm) files?
+
+They exist and they work — but **no consumer app will load them**:
+
+    ravikadam/ganesh-gemma4-e2b-LiteRT     4.7 GB   recites correctly
+    ravikadam/ganesh-gemma4-e4b-v3-LiteRT  7.6 GB   recites correctly
+
+Edge Gallery refuses them with "unsupported model type", and that is a limitation
+of Google's exporter, not of our model — see the section above. The only ways to
+run a .litertlm on a phone today are the `litert-lm` binary pushed over adb, or
+writing your own Android app against the LiteRT-LM library. Neither is something
+to hand to bhaktas at a pandal.
+
+If Edge Gallery later accepts self-exported models, the 4.7 GB file is ready.
 
 ## Try it with
 
