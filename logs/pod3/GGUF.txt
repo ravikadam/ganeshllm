@@ -1,0 +1,5 @@
+convert_f16|OK 8.7G
+Q4_K_M|3.2G
+Q5_K_M|3.4G
+Q4_K_M_quality|aarti=no shloka=no
+Q5_K_M_quality|aarti=no shloka=no

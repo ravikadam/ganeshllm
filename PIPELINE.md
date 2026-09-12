@@ -567,3 +567,60 @@ Build the recipe and load it directly to see the real error.
 Usable fine-grained int4 in this environment: `dynamic_wi4b32_afp32` (block-32)
 and `dynamic_wi4c_afp32` (per-channel). Both are far finer than the coarse
 recipe that wrecked every earlier export.
+
+## 2026-09-12 — Edge Gallery is unreachable; GGUF is the answer
+
+### The exporter, not the base model, is the wall
+
+Exported a **stock, un-fine-tuned gemma-3n-E2B** — a model whose type IS in the
+runtime enum — through our exact pipeline:
+
+    official gemma3n   3.40 GB   backend=yes   8 sections
+    official gemma4    2.41 GB   backend=yes  10 sections
+    ours    gemma3n    4.67 GB   backend=no    3 sections
+    ours    gemma4     4.72 GB   backend=no    3 sections
+
+`litert-torch export_hf` never emits the multi-section, backend-declaring
+container Edge Gallery validates, whatever base it is given. Retraining on
+Gemma 3n would have changed nothing. The probe cost ~$0.40 and saved ~$1.60 —
+**validate the assumption before paying for the work built on it.**
+
+Also confirmed in source: there is NO `gemma4` case in the model-type match
+(cases are qwen3, qwen2, gemma3, function_gemma, gemma3n, `_`), so every Gemma 4
+export is stamped `GenericModel`. And passing `--litert_lm_model_type_override`
+SKIPS the metadata builder entirely:
+
+    if not litert_lm_model_type_override:
+        llm_metadata = get_metadata_builder(model.config)(...)
+
+So that flag made things worse, not better.
+
+### The fine-tune needs ~8 bits for the LONG canon
+
+Four independent 4-bit paths lose the aarti; every 8-bit path keeps it:
+
+    Q4_K_M  (GGUF,     3.2 GB)   shloka OK, aarti INVENTED refrain
+    wi4b32  (litertlm, 2.7 GB)   shloka OK, aarti refused
+    wi4     (litertlm, 2.4 GB)   total collapse
+    Q5_K_M  (GGUF,     3.4 GB)   both correct        <- shipped
+    default (litertlm, 4.7 GB)   both correct
+
+Short texts survive 4-bit; the aarti does not. This is a property of the
+fine-tune, not of any one format — so GGUF does not dodge it (Q8_0 would be
+~5.5 GB, LARGER than the 4.7 GB litertlm).
+
+### Shipped
+
+    ravikadam/ganesh-gemma4-e2b-GGUF / ganesh-e2b-Q5_K_M.gguf   3.4 GB
+
+GGUF runs on Android AND iPhone, so it does not depend on one app accepting our
+container. Edge Gallery never had an iOS build at all.
+
+### Fifth harness bug
+
+`llama-cli -no-cnv` is not a valid flag in this build, so both GGUF quality tests
+exited in one second and were recorded as "aarti=no shloka=no". stderr was piped
+to /dev/null, hiding it. Reading the raw output — again — reversed the verdict.
+Running tally of failures that were the ruler and not the thing measured: the
+512-token cap, the bounded-list grader, the silent judge key, the refusal
+phrasing, the 12-consecutive-Devanagari gate, and this.
