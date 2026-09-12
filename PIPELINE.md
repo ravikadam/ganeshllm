@@ -421,3 +421,57 @@ Three LiteRT files were published across August and September without once being
 executed. Every conclusion drawn from them — "Edge Gallery rejects our format",
 "we need to retrain" — was drawn from a model nobody had run. One CPU inference,
 which costs cents, would have shown the garbage immediately.
+
+## 2026-09-12 — why int4 collapsed, and the documented way out
+
+7.6 GB is not shippable to phones. Research, not more guessing:
+
+### The base model was never meant to survive int4
+
+Google ships **quantization-aware-trained** checkpoints precisely because
+post-training int4 wrecks these models. We used PTQ on a non-QAT base. Their
+own claim: QAT "yield[s] even higher overall quality compared to standard PTQ
+baselines."
+
+    google/gemma-4-E2B-it-qat-q4_0-unquantized   9.5 GB bf16  <- fine-tune THIS, then quantise
+    google/gemma-4-E4B-it-qat-q4_0-unquantized  14.8 GB bf16
+    google/gemma-4-E{2,4}B-it-qat-mobile-*       pre-quantised wNa8o8 (2/4/8-bit mixed)
+
+The `-qat-q4_0-unquantized` checkpoints are ordinary HF safetensors — LoRA
+applies normally. The QAT conditioning is in the weights, so int4 afterwards is
+survivable.
+
+### Our size target was already right; the fix was not
+
+Official Edge-Gallery-accepted builds:
+
+    gemma-4-E2B-it.litertlm   2.41 GB
+    gemma-4-E4B-it.litertlm   3.41 GB
+
+Our broken int4 E4B was 3.9 GB — the right ballpark. Jumping to int8 (7.6 GB)
+fixed quality by brute force and broke deployability. QAT gets both.
+
+### The chat-template fix circulating publicly is WRONG
+
+Community write-ups hit our exact symptom (loads fine, breaks on first message —
+the HF Gemma 4 template uses `map.get()`, which the on-device Jinja parser lacks)
+and prescribe swapping in `gemma-3-1b-it`'s template. That makes it *load*, but it
+is the wrong dialect: Gemma 4 speaks `<|turn>`, Gemma 3 speaks `<start_of_turn>`,
+and the model then emits its own control tokens as visible text. That is the
+garbage we chased for two days.
+
+The supported route is Google's own flag:
+
+    litert-torch export_hf --model <merged> --output_dir <out> \
+      --externalize_embedder \
+      --jinja_chat_template_override=litert-community/gemma-4-E2B-it-litert-lm
+
+Our working int8 build got this right only by accident, by copying
+litert-community's `chat_template.jinja` directly.
+
+### Open risk
+
+E2B has roughly half E4B's capacity and our hardest requirement is byte-exact
+recall of long Sanskrit (Atharvashirsha, 1,173 tokens). E4B scored 1.00.
+If E2B cannot hold it, fall back to E4B QAT at 3.41 GB — still less than half
+of the int8 build.
