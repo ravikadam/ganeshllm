@@ -1,0 +1,29 @@
+[system_metadata]
+entries = [
+  { key = "Authors", value_type = "String", value = "Ravi Kadam" },
+  { key = "uuid", value_type = "String", value = "2fbc5f2c-1f94-4703-bc56-e654f66b6d83" },
+  { key = "creation_timestamp", value_type = "String", value = "2026-09-12T00:00:00+00:00" },
+]
+
+[[section]]
+section_type = "LlmMetadata"
+data_path = "LlmMetadataProto.pbtext"
+
+[[section]]
+section_type = "SP_Tokenizer"
+data_path = "Section1_SP_Tokenizer.spiece"
+
+[[section]]
+model_type = "embedder"
+section_type = "TFLiteModel"
+data_path = "Section4_TFLiteModel_tf_lite_embedder.tflite"
+
+[[section]]
+model_type = "per_layer_embedder"
+section_type = "TFLiteModel"
+data_path = "Section5_TFLiteModel_tf_lite_per_layer_embedder.tflite"
+
+[[section]]
+model_type = "prefill_decode"
+section_type = "TFLiteModel"
+data_path = "Section3_TFLiteModel_tf_lite_prefill_decode.tflite"

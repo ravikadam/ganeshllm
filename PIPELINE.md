@@ -624,3 +624,51 @@ to /dev/null, hiding it. Reading the raw output — again — reversed the verdi
 Running tally of failures that were the ruler and not the thing measured: the
 512-token cap, the bounded-list grader, the silent judge key, the refusal
 phrasing, the 12-consecutive-Devanagari gate, and this.
+
+## 2026-09-12 — unpacking Google's own file: the tokenizer section
+
+`litert-lm` ships `pack` / `unpack`, which take a .litertlm apart into its
+sections plus an editable `model.toml`. That is the only way to see what Edge
+Gallery is actually rejecting — every earlier attempt guessed at exporter flags.
+
+### What the diff showed
+
+Our container vs the official gemma-4-E2B:
+
+    ours     : LlmMetadata, ExecutorMetadata, HF_Tokenizer(.zlib),
+               prefill_decode, embedder, per_layer_embedder          (6)
+    official : LlmMetadata, SP_Tokenizer(.spiece), embedder,
+               per_layer_embedder, audio x3, vision x3,
+               prefill_decode, mtp_drafter                           (12)
+
+**The tokenizer section type differs**: `HF_Tokenizer` + zlib vs `SP_Tokenizer`
++ spiece. Same Gemma 4 vocabulary, different container section.
+
+### A theory I had to retract
+
+I was convinced the bug was `llm_model_type` being written as `generic_model`,
+because litert-torch's match statement has no `gemma4` case. Unpacking proved
+our file **already declared `gemma4`**:
+
+    ours had: llm_model_type {   gemma4 {     code_fence_start: "<|tool_ca
+
+The exporter gets the type right after all. Stated as found rather than quietly
+dropped — it was wrong and the data said so.
+
+### Repacked, both still recite
+
+Swapped in the official `.spiece` tokenizer and rewrote `model.toml` by hand
+(a regex attempt first produced a 34 KB file with the weights dropped — check
+the output size):
+
+    ganesh-e2b-SP-exact.litertlm      4.7 GB  aarti YES   (structure matches Google's)
+    ganesh-e2b-SP-plus-exec.litertlm  4.7 GB  aarti YES   (keeps ExecutorMetadata)
+
+Recipe kept at `runpod/repack_litertlm.sh` and `runpod/litertlm_model.toml`.
+
+### Still unverified
+
+Neither has been confirmed to load in Edge Gallery — that needs a phone, which
+no test here can substitute for. The remaining structural gaps are the
+audio/vision towers and the `mtp_drafter`, which a text-only export never
+produces and which cannot be synthesised.
