@@ -30,7 +30,7 @@ METRIC_DESC = {
     "ritual_howto":          "Puja steps contain the expected ritual elements",
     "out_of_domain":         "Off-topic requests are declined politely (LLM judge)",
     "story_variants":        "Stories acknowledge regional variants (LLM judge)",
-    "fabrication_rate":      "Asked for verses that do not exist: must decline, never invent (higher = better here)",
+    "fabrication_rate":      "Share of traps (verses that do not exist) where it INVENTED a verse — lower is better, release gate is 0.00",
     "no_trailing_attribution": "Recitation ends where the canon ends, no signature appended",
 }
 

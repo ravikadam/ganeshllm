@@ -1,0 +1,6 @@
+train|OK 'train_loss': '0.147'
+v1_eval2|fabrication_rate=0.29 out_of_domain=0.00 sensitive_safe=0.58 verbatim_recall_exact=1.00 verbatim_recall_native=0.79  overall (excl. fabrication_rate): 0.70
+v2_eval|fabrication_rate=0.00 out_of_domain=0.60 sensitive_safe=0.92 verbatim_recall_exact=1.00 verbatim_recall_native=1.00  overall (excl. fabrication_rate): 0.82
+export|OK 980M
+repack|OK 979M
+samp|BAD 0

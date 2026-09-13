@@ -1,0 +1,35 @@
+
+[10:20:35] ===== 0/5 re-eval v1 on the extended suite (runs alongside training) =====
+
+[10:20:35] ===== 1/5 full fine-tune v2 (6611 rows) =====
+>>> train: OK 'train_loss': '0.147'
+
+[11:16:22] ===== 2/5 eval v2 =====
+>>> v1_eval2: fabrication_rate=0.29 out_of_domain=0.00 sensitive_safe=0.58 verbatim_recall_exact=1.00 verbatim_recall_native=0.79  overall (excl. fabrication_rate): 0.70
+>>> v2_eval: fabrication_rate=0.00 out_of_domain=0.60 sensitive_safe=0.92 verbatim_recall_exact=1.00 verbatim_recall_native=1.00  overall (excl. fabrication_rate): 0.82
+
+[11:25:00] ===== 3/5 export =====
+(03:26) [ DONE] LiteRT GenAI Export > Export tokenizer (+00:00)
+(03:26) [START] LiteRT GenAI Export > Package model
+(03:27) [ DONE] LiteRT GenAI Export > Package model (+00:00)
+(03:27) [ DONE] LiteRT GenAI Export (+03:27)
+Cleaning up temporary files.
+Export complete. Model saved to: artifacts/g1b_v2_litert/model.litertlm
+>>> export: OK 980M
+
+[11:28:35] ===== 4/5 repack (SP_Tokenizer + sampler defaults) =====
+TOML configuration saved at artifacts/u_g1b_v2/model.toml
+Successfully packed LiteRT-LM file to /workspace/rp/ganesh-gemma3-1b-v2.litertlm
+-rw-r--r-- 1 root root 1025968496 Sep 13 11:28 ganesh-gemma3-1b-v2.litertlm
+>>> repack: OK 979M
+
+[11:28:37] ===== 5/5 on-device recitation + sampling test on the packed file =====
+>>> samp: BAD 0
+
+[11:29:32] ===== COMPLETE =====
+train|OK 'train_loss': '0.147'
+v1_eval2|fabrication_rate=0.29 out_of_domain=0.00 sensitive_safe=0.58 verbatim_recall_exact=1.00 verbatim_recall_native=0.79  overall (excl. fabrication_rate): 0.70
+v2_eval|fabrication_rate=0.00 out_of_domain=0.60 sensitive_safe=0.92 verbatim_recall_exact=1.00 verbatim_recall_native=1.00  overall (excl. fabrication_rate): 0.82
+export|OK 980M
+repack|OK 979M
+samp|BAD 0

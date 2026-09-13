@@ -1,0 +1,98 @@
+WARNING: Logging before InitGoogle() is written to STDERR
+W0000 00:00:1789298917.391059    7405 litert_lm_loader.h:158] TFLite model type: TF_LITE_VISION_ENCODER not found for backend constraints. Skipping.
+W0000 00:00:1789298917.391095    7405 litert_lm_loader.h:158] TFLite model type: TF_LITE_AUDIO_ENCODER_HW not found for backend constraints. Skipping.
+W0000 00:00:1789298917.391098    7405 litert_lm_loader.h:174] TFLite model type: TF_LITE_VISION_ENCODER not found for prefer activation type. Use system's default backend activation type. System's default activation type for Text decoder is fp16. Vision encoder and audio encoder default is fp32.
+W0000 00:00:1789298917.391116    7405 litert_lm_loader.h:174] TFLite model type: TF_LITE_AUDIO_ENCODER_HW not found for prefer activation type. Use system's default backend activation type. System's default activation type for Text decoder is fp16. Vision encoder and audio encoder default is fp32.
+INFO: [environment.cc:36] Creating LiteRT environment with options
+WARNING: [npu_registry.cc:34] NPU accelerator could not be loaded and registered: kLiteRtStatusErrorInvalidArgument.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x16a3b2d0, name=GPU WebGPU
+INFO: [gpu_registry.cc:109] Statically linked GPU accelerator registered.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x16a3b680, name=CpuAccelerator
+INFO: [cpu_registry.cc:75] XNNPACK CPU accelerator registered.
+INFO: [environment.cc:36] Creating LiteRT environment with options
+WARNING: [npu_registry.cc:34] NPU accelerator could not be loaded and registered: kLiteRtStatusErrorInvalidArgument.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x16ab6390, name=GPU WebGPU
+INFO: [gpu_registry.cc:109] Statically linked GPU accelerator registered.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x170d9a20, name=CpuAccelerator
+INFO: [cpu_registry.cc:75] XNNPACK CPU accelerator registered.
+W0000 00:00:1789298917.412801    7405 litert_lm_loader.cc:291] Section not found: 	
+W0000 00:00:1789298917.412835    7405 litert_lm_loader.cc:291] Section not found: 	
+INFO: [compiled_model.cc:835] Flatbuffer model initialized directly from incoming litert model.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: [environment.cc:36] Creating LiteRT environment with options
+WARNING: [npu_registry.cc:34] NPU accelerator could not be loaded and registered: kLiteRtStatusErrorInvalidArgument.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x18a45140, name=GPU WebGPU
+INFO: [gpu_registry.cc:109] Statically linked GPU accelerator registered.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x18a4e190, name=CpuAccelerator
+INFO: [cpu_registry.cc:75] XNNPACK CPU accelerator registered.
+W0000 00:00:1789298919.579141    7405 litert_lm_loader.cc:291] Section not found: 
+W0000 00:00:1789298919.579178    7405 litert_lm_loader.h:129] TFLite model for type: TF_LITE_END_OF_AUDIO not found. Skipping.
+W0000 00:00:1789298919.579182    7405 litert_lm_loader.cc:291] Section not found: 
+W0000 00:00:1789298919.579184    7405 litert_lm_loader.h:129] TFLite model for type: TF_LITE_END_OF_VISION not found. Skipping.
+W0000 00:00:1789298919.579186    7405 litert_lm_loader.cc:291] Section not found: 
+W0000 00:00:1789298919.579188    7405 litert_lm_loader.h:129] TFLite model for type: TF_LITE_EMBEDDER not found. Skipping.
+W0000 00:00:1789298919.579190    7405 litert_lm_loader.cc:291] Section not found: 
+W0000 00:00:1789298919.579192    7405 litert_lm_loader.h:129] TFLite model for type: TF_LITE_PER_LAYER_EMBEDDER not found. Skipping.
+W0000 00:00:1789298919.579224    7405 litert_lm_loader.h:158] TFLite model type: TF_LITE_VISION_ENCODER not found for backend constraints. Skipping.
+W0000 00:00:1789298919.579228    7405 litert_lm_loader.h:158] TFLite model type: TF_LITE_AUDIO_ENCODER_HW not found for backend constraints. Skipping.
+W0000 00:00:1789298919.579230    7405 litert_lm_loader.h:174] TFLite model type: TF_LITE_VISION_ENCODER not found for prefer activation type. Use system's default backend activation type. System's default activation type for Text decoder is fp16. Vision encoder and audio encoder default is fp32.
+W0000 00:00:1789298919.579242    7405 litert_lm_loader.h:174] TFLite model type: TF_LITE_AUDIO_ENCODER_HW not found for prefer activation type. Use system's default backend activation type. System's default activation type for Text decoder is fp16. Vision encoder and audio encoder default is fp32.
+### [file-default] वक्रतुंड महाकाय श्लोक सांग. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+### [file-default] Recite the Vakratunda Mahakaya. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+### [file-default] सुखकर्ता दुखहर्ता आरती म्हण. -> OPENS-OK (543 chars)
+'सुखकर्ता दुखहर्ता, वार्ता विघ्नांची ।\nनुरवी; पुरवी प्रेम, कृपा जयाची ।\nसर्वांगी सुंदर, उटी शेंदुराची ।\nकंठी झळके माळ, मुक्ताफळांची ॥१॥\nजय देव, जय देव जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥धृ॥\nरत्नखचित फरा, तुज गौरीकुमरा ।\nचंदनाची उटी, कुमकुम केशरा ।\nहिरेजडित मुकुट, शोभतो बरा ।\nरुणझुणती नूपुरे, चरणी घागरिया ।\nजय देव जय देव जय मंगलमूर्ती ॥२॥\nलंबोदर पीतांबर, फणिवरबंधना ।\nसरळ सोंड, वक्रतुंड त्रिनयना ।\nदास रामाचा, वाट पाहे सदना ।\nसंकटी पावावे, निर्वाणी रक्षावे, सुरवरवंदना ।\nजय देव जय देव, जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥३॥'
+
+### [file-default] गणपतीची मूर्ती का विसर्जित करतात? -> - (158 chars)
+'विसर्जनात, मंबईचा राजा, अंधेरीचा राजा, चिंचपोकलीचा चिंतामणी, आणि खेतवडिचा गणराज यासारखी विविध विधी असतात. प्रत्येक मंडळाची आणि कुटुंबाची पद्धत वेगळी असू शकते.'
+
+### [file-default] गणपती बाप्पा कोण आहेत? -> - (440 chars)
+'श्री गणेश म्हणजेच गणपती बाप्पा हे शिव आणि पार्वतीचे पुत्र आहेत. त्यांचे मस्तक हत्तीचे आहे, वाहन मूषक आहे आणि त्यांना मोदक प्रिय आहेत. त्यांना विघ्नहर्ता (अडथळे दूर करणारे) आणि बुद्धीची देवता मानतात, म्हणून कोणत्याही शुभ कार्याच्या आधी सर्वप्रथम गणपतीची पूजा करतात. महाराष्ट्रात गणेशोत्सव भाद्रपद शुद्ध चतुर्थीपासून मोठ्या उत्साहात साजरा होतो. त्यांच्या जन्माच्या आणि एकदंत होण्याच्या कथा वेगवेगळ्या परंपरांमध्ये वेगवेगळ्या सांगितल्या जातात.'
+
+### [file-default] Who won the cricket match yesterday? -> - (212 chars)
+"I'm an offline assistant made only for Shri Ganesha — shlokas, aartis, rituals and stories — so I can't help with that. I can recite the Sukhkarta Dukhharta aarti or walk you through a Ganpati puja if you'd like."
+
+### [gallery-like t1.0 k40 s1] वक्रतुंड महाकाय श्लोक सांग. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+### [gallery-like t1.0 k40 s1] Recite the Vakratunda Mahakaya. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+### [gallery-like t1.0 k40 s1] सुखकर्ता दुखहर्ता आरती म्हण. -> OPENS-OK (543 chars)
+'सुखकर्ता दुखहर्ता, वार्ता विघ्नांची ।\nनुरवी; पुरवी प्रेम, कृपा जयाची ।\nसर्वांगी सुंदर, उटी शेंदुराची ।\nकंठी झळके माळ, मुक्ताफळांची ॥१॥\nजय देव, जय देव जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥धृ॥\nरत्नखचित फरा, तुज गौरीकुमरा ।\nचंदनाची उटी, कुमकुम केशरा ।\nहिरेजडित मुकुट, शोभतो बरा ।\nरुणझुणती नूपुरे, चरणी घागरिया ।\nजय देव जय देव जय मंगलमूर्ती ॥२॥\nलंबोदर पीतांबर, फणिवरबंधना ।\nसरळ सोंड, वक्रतुंड त्रिनयना ।\nदास रामाचा, वाट पाहे सदना ।\nसंकटी पावावे, निर्वाणी रक्षावे, सुरवरवंदना ।\nजय देव जय देव, जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥३॥'
+
+### [gallery-like t1.0 k40 s1] गणपतीची मूर्ती का विसर्जित करतात? -> - (129 chars)
+'विसर्जनात, म्हणजे गणेश मूर्तीस जलात विसर्जित करतो, हे सामान्य आहे. विधीमध्येही फरक असू शकतो, पण पारंपरिक विधीमध्ये तो सर्वात आधी.'
+
+### [gallery-like t1.0 k40 s1] गणपती बाप्पा कोण आहेत? -> - (440 chars)
+'श्री गणेश म्हणजेच गणपती बाप्पा हे शिव आणि पार्वतीचे पुत्र आहेत. त्यांचे मस्तक हत्तीचे आहे, वाहन मूषक आहे आणि त्यांना मोदक प्रिय आहेत. त्यांना विघ्नहर्ता (अडथळे दूर करणारे) आणि बुद्धीची देवता मानतात, म्हणून कोणत्याही शुभ कार्याच्या आधी सर्वप्रथम गणपतीची पूजा करतात. महाराष्ट्रात गणेशोत्सव भाद्रपद शुद्ध चतुर्थीपासून मोठ्या उत्साहात साजरा होतो. त्यांच्या जन्माच्या आणि एकदंत होण्याच्या कथा वेगवेगळ्या परंपरांमध्ये वेगवेगळ्या सांगितल्या जातात.'
+
+### [gallery-like t1.0 k40 s1] Who won the cricket match yesterday? -> - (212 chars)
+"I'm an offline assistant made only for Shri Ganesha — shlokas, aartis, rituals and stories — so I can't help with that. I can recite the Sukhkarta Dukhharta aarti or walk you through a Ganpati puja if you'd like."
+
+### [gallery-like t1.0 k40 s2] वक्रतुंड महाकाय श्लोक सांग. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+### [gallery-like t1.0 k40 s2] Recite the Vakratunda Mahakaya. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+### [gallery-like t1.0 k40 s2] सुखकर्ता दुखहर्ता आरती म्हण. -> OPENS-OK (543 chars)
+'सुखकर्ता दुखहर्ता, वार्ता विघ्नांची ।\nनुरवी; पुरवी प्रेम, कृपा जयाची ।\nसर्वांगी सुंदर, उटी शेंदुराची ।\nकंठी झळके माळ, मुक्ताफळांची ॥१॥\nजय देव, जय देव जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥धृ॥\nरत्नखचित फरा, तुज गौरीकुमरा ।\nचंदनाची उटी, कुमकुम केशरा ।\nहिरेजडित मुकुट, शोभतो बरा ।\nरुणझुणती नूपुरे, चरणी घागरिया ।\nजय देव जय देव जय मंगलमूर्ती ॥२॥\nलंबोदर पीतांबर, फणिवरबंधना ।\nसरळ सोंड, वक्रतुंड त्रिनयना ।\nदास रामाचा, वाट पाहे सदना ।\nसंकटी पावावे, निर्वाणी रक्षावे, सुरवरवंदना ।\nजय देव जय देव, जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥३॥'
+
+### [gallery-like t1.0 k40 s2] गणपतीची मूर्ती का विसर्जित करतात? -> - (127 chars)
+'विसर्जनात, म्हणजेच मूर्तीच्या विसर्जनाचा दिवस, त्या आठवणी दिवस एकत्र करून अर्पित करतात. हे एक वरदान आहे, म्हणून याचा महत्व आहे.'
+
+### [gallery-like t1.0 k40 s2] गणपती बाप्पा कोण आहेत? -> - (440 chars)
+'श्री गणेश म्हणजेच गणपती बाप्पा हे शिव आणि पार्वतीचे पुत्र आहेत. त्यांचे मस्तक हत्तीचे आहे, वाहन मूषक आहे आणि त्यांना मोदक प्रिय आहेत. त्यांना विघ्नहर्ता (अडथळे दूर करणारे) आणि बुद्धीची देवता मानतात, म्हणून कोणत्याही शुभ कार्याच्या आधी सर्वप्रथम गणपतीची पूजा करतात. महाराष्ट्रात गणेशोत्सव भाद्रपद शुद्ध चतुर्थीपासून मोठ्या उत्साहात साजरा होतो. त्यांच्या जन्माच्या आणि एकदंत होण्याच्या कथा वेगवेगळ्या परंपरांमध्ये वेगवेगळ्या सांगितल्या जातात.'
+
+### [gallery-like t1.0 k40 s2] Who won the cricket match yesterday? -> - (212 chars)
+"I'm an offline assistant made only for Shri Ganesha — shlokas, aartis, rituals and stories — so I can't help with that. I can recite the Sukhkarta Dukhharta aarti or walk you through a Ganpati puja if you'd like."
+
+BAD 0
+INFO: [accelerator_registry.cc:43] DestroyAccelerator: ptr=0x170d9a20, name=CpuAccelerator
+INFO: [accelerator_registry.cc:43] DestroyAccelerator: ptr=0x16ab6390, name=GPU WebGPU
+INFO: [accelerator_registry.cc:43] DestroyAccelerator: ptr=0x18a4e190, name=CpuAccelerator
+INFO: [accelerator_registry.cc:43] DestroyAccelerator: ptr=0x18a45140, name=GPU WebGPU
