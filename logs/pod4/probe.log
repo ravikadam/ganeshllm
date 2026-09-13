@@ -1,0 +1,645 @@
+Model name: /workspace/ganeshllm/artifacts/probe_litert/tmp6hes_tnt/model.tflite
+Original model size: 3.73 GiB
+Quantized model size: 973.92 MiB
+Quantization Ratio: 0.26 (3.9x smaller)
+Total time: 4.96 s
+(03:33) [ DONE] LiteRT GenAI Export > Export text prefill-decode model > 
+Quantize model (+00:06)
+(03:34) [ DONE] LiteRT GenAI Export > Export text prefill-decode model (+03:27)
+(03:34) [START] LiteRT GenAI Export > Export tokenizer
+(03:35) [ DONE] LiteRT GenAI Export > Export tokenizer (+00:00)
+(03:35) [START] LiteRT GenAI Export > Package model
+(03:36) [ DONE] LiteRT GenAI Export > Package model (+00:00)
+(03:37) [ DONE] LiteRT GenAI Export (+03:37)
+Cleaning up temporary files.
+Export complete. Model saved to: artifacts/probe_litert/model.litertlm
+stock size 980M
+Okay, here are three things Ganesha is known for:
+
+1.  **The Remover of Obstacles:** This is his most famous role. He's revered as the deity who helps people overcome challenges, difficulties, and obstacles in their lives – be it physical, mental, or spiritual.
+
+2.  **The God of Wisdom and Learning:** Ganesha is often depicted as a wise and knowledgeable being, known for his insightful advice and his ability to guide people towards truth and understanding.
+
+3.  **The Elephant-Headed God:** His distinctive head – a large elephant – is a central symbol of his identity and represents his power and wisdom.
+
+Do you want to know more about any of these aspects?
+/workspace/ganeshllm/artifacts/ref/Gemma3-1B-IT_multi-prefill-seq_q4_ekv4096.litertlm
+Successfully unpacked artifacts/ref/Gemma3-1B-IT_multi-prefill-seq_q4_ekv4096.litertlm into artifacts/u_ref
+TOML configuration saved at artifacts/u_ref/model.toml
+Successfully unpacked artifacts/probe_litert/model.litertlm into artifacts/u_probe
+TOML configuration saved at artifacts/u_probe/model.toml
+--- u_ref
+total 570684
+drwxr-xr-x 2 root root       149 Sep 13 09:21 .
+drwxr-xr-x 7 root root       105 Sep 13 09:21 ..
+-rw-r--r-- 1 root root       316 Sep 13 09:21 LlmMetadataProto.pbtext
+-rw-r--r-- 1 root root   4689074 Sep 13 09:21 Section1_SP_Tokenizer.spiece
+-rw-r--r-- 1 root root 579678736 Sep 13 09:21 Section2_TFLiteModel_TF_LITE_PREFILL_DECODE.tflite
+-rw-r--r-- 1 root root       416 Sep 13 09:21 model.toml
+[system_metadata]
+entries = [
+  { key = "author", value_type = "String", value = "The ODML Authors" },
+]
+
+[[section]]
+section_type = "LlmMetadata"
+data_path = "LlmMetadataProto.pbtext"
+
+[[section]]
+section_type = "SP_Tokenizer"
+data_path = "Section1_SP_Tokenizer.spiece"
+
+[[section]]
+model_type = "TF_LITE_PREFILL_DECODE"
+section_type = "TFLiteModel"
+data_path = "Section2_TFLiteModel_TF_LITE_PREFILL_DECODE.tflite"
+start_token {
+  token_ids {
+    ids: 2
+  }
+}
+stop_tokens {
+  token_str: "<end_of_turn>"
+}
+stop_tokens {
+  token_ids {
+    ids: 1
+  }
+}
+prompt_templates {
+  user {
+    prefix: "<start_of_turn>user\n"
+    suffix: "<end_of_turn>\n"
+  }
+  model {
+    prefix: "<start_of_turn>model\n"
+    suffix: "<end_of_turn>\n"
+  }
+}
+--- u_probe
+total 1002780
+drwxr-xr-x 2 root root        188 Sep 13 09:21 .
+drwxr-xr-x 7 root root        105 Sep 13 09:21 ..
+-rw-r--r-- 1 root root      14011 Sep 13 09:21 ExecutorMetadataProto.pbtext
+-rw-r--r-- 1 root root       2568 Sep 13 09:21 LlmMetadataProto.pbtext
+-rw-r--r-- 1 root root    5586320 Sep 13 09:21 Section2_HF_Tokenizer_Zlib.zlib
+-rw-r--r-- 1 root root 1021233520 Sep 13 09:21 Section3_TFLiteModel_tf_lite_prefill_decode.tflite
+-rw-r--r-- 1 root root        682 Sep 13 09:21 model.toml
+[system_metadata]
+entries = [
+  { key = "Authors", value_type = "String", value = "ODML" },
+  { key = "uuid", value_type = "String", value = "4bbde5cd-5feb-4886-90d7-22423fd00bd1" },
+  { key = "creation_timestamp", value_type = "String", value = "2026-09-13T09:21:14.599896+00:00" },
+]
+
+[[section]]
+section_type = "LlmMetadata"
+data_path = "LlmMetadataProto.pbtext"
+
+[[section]]
+section_type = "ExecutorMetadata"
+data_path = "ExecutorMetadataProto.pbtext"
+
+[[section]]
+section_type = "HF_Tokenizer"
+data_path = "Section2_HF_Tokenizer_Zlib.zlib"
+
+[[section]]
+model_type = "prefill_decode"
+section_type = "TFLiteModel"
+data_path = "Section3_TFLiteModel_tf_lite_prefill_decode.tflite"
+llm_executor_metadata {
+  max_history_size: 4096
+  state_buffers {
+    prefill_input_name: "kv_cache_k_0"
+    prefill_output_name: "kv_cache_k_0"
+    decode_input_name: "kv_cache_k_0"
+    decode_output_name: "kv_cache_k_0"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_0"
+    prefill_output_name: "kv_cache_v_0"
+    decode_input_name: "kv_cache_v_0"
+    decode_output_name: "kv_cache_v_0"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_1"
+    prefill_output_name: "kv_cache_k_1"
+    decode_input_name: "kv_cache_k_1"
+    decode_output_name: "kv_cache_k_1"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_1"
+    prefill_output_name: "kv_cache_v_1"
+    decode_input_name: "kv_cache_v_1"
+    decode_output_name: "kv_cache_v_1"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_2"
+    prefill_output_name: "kv_cache_k_2"
+    decode_input_name: "kv_cache_k_2"
+    decode_output_name: "kv_cache_k_2"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_2"
+    prefill_output_name: "kv_cache_v_2"
+    decode_input_name: "kv_cache_v_2"
+    decode_output_name: "kv_cache_v_2"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_3"
+    prefill_output_name: "kv_cache_k_3"
+    decode_input_name: "kv_cache_k_3"
+    decode_output_name: "kv_cache_k_3"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_3"
+    prefill_output_name: "kv_cache_v_3"
+    decode_input_name: "kv_cache_v_3"
+    decode_output_name: "kv_cache_v_3"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_4"
+    prefill_output_name: "kv_cache_k_4"
+    decode_input_name: "kv_cache_k_4"
+    decode_output_name: "kv_cache_k_4"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_4"
+    prefill_output_name: "kv_cache_v_4"
+    decode_input_name: "kv_cache_v_4"
+    decode_output_name: "kv_cache_v_4"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_5"
+    prefill_output_name: "kv_cache_k_5"
+    decode_input_name: "kv_cache_k_5"
+    decode_output_name: "kv_cache_k_5"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_5"
+    prefill_output_name: "kv_cache_v_5"
+    decode_input_name: "kv_cache_v_5"
+    decode_output_name: "kv_cache_v_5"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_6"
+    prefill_output_name: "kv_cache_k_6"
+    decode_input_name: "kv_cache_k_6"
+    decode_output_name: "kv_cache_k_6"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_6"
+    prefill_output_name: "kv_cache_v_6"
+    decode_input_name: "kv_cache_v_6"
+    decode_output_name: "kv_cache_v_6"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_7"
+    prefill_output_name: "kv_cache_k_7"
+    decode_input_name: "kv_cache_k_7"
+    decode_output_name: "kv_cache_k_7"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_7"
+    prefill_output_name: "kv_cache_v_7"
+    decode_input_name: "kv_cache_v_7"
+    decode_output_name: "kv_cache_v_7"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_8"
+    prefill_output_name: "kv_cache_k_8"
+    decode_input_name: "kv_cache_k_8"
+    decode_output_name: "kv_cache_k_8"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_8"
+    prefill_output_name: "kv_cache_v_8"
+    decode_input_name: "kv_cache_v_8"
+    decode_output_name: "kv_cache_v_8"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_9"
+    prefill_output_name: "kv_cache_k_9"
+    decode_input_name: "kv_cache_k_9"
+    decode_output_name: "kv_cache_k_9"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_9"
+    prefill_output_name: "kv_cache_v_9"
+    decode_input_name: "kv_cache_v_9"
+    decode_output_name: "kv_cache_v_9"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_10"
+    prefill_output_name: "kv_cache_k_10"
+    decode_input_name: "kv_cache_k_10"
+    decode_output_name: "kv_cache_k_10"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_10"
+    prefill_output_name: "kv_cache_v_10"
+    decode_input_name: "kv_cache_v_10"
+    decode_output_name: "kv_cache_v_10"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_11"
+    prefill_output_name: "kv_cache_k_11"
+    decode_input_name: "kv_cache_k_11"
+    decode_output_name: "kv_cache_k_11"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_11"
+    prefill_output_name: "kv_cache_v_11"
+    decode_input_name: "kv_cache_v_11"
+    decode_output_name: "kv_cache_v_11"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_12"
+    prefill_output_name: "kv_cache_k_12"
+    decode_input_name: "kv_cache_k_12"
+    decode_output_name: "kv_cache_k_12"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_12"
+    prefill_output_name: "kv_cache_v_12"
+    decode_input_name: "kv_cache_v_12"
+    decode_output_name: "kv_cache_v_12"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_13"
+    prefill_output_name: "kv_cache_k_13"
+    decode_input_name: "kv_cache_k_13"
+    decode_output_name: "kv_cache_k_13"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_13"
+    prefill_output_name: "kv_cache_v_13"
+    decode_input_name: "kv_cache_v_13"
+    decode_output_name: "kv_cache_v_13"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_14"
+    prefill_output_name: "kv_cache_k_14"
+    decode_input_name: "kv_cache_k_14"
+    decode_output_name: "kv_cache_k_14"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_14"
+    prefill_output_name: "kv_cache_v_14"
+    decode_input_name: "kv_cache_v_14"
+    decode_output_name: "kv_cache_v_14"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_15"
+    prefill_output_name: "kv_cache_k_15"
+    decode_input_name: "kv_cache_k_15"
+    decode_output_name: "kv_cache_k_15"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_15"
+    prefill_output_name: "kv_cache_v_15"
+    decode_input_name: "kv_cache_v_15"
+    decode_output_name: "kv_cache_v_15"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_16"
+    prefill_output_name: "kv_cache_k_16"
+    decode_input_name: "kv_cache_k_16"
+    decode_output_name: "kv_cache_k_16"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_16"
+    prefill_output_name: "kv_cache_v_16"
+    decode_input_name: "kv_cache_v_16"
+    decode_output_name: "kv_cache_v_16"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_17"
+    prefill_output_name: "kv_cache_k_17"
+    decode_input_name: "kv_cache_k_17"
+    decode_output_name: "kv_cache_k_17"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_17"
+    prefill_output_name: "kv_cache_v_17"
+    decode_input_name: "kv_cache_v_17"
+    decode_output_name: "kv_cache_v_17"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_18"
+    prefill_output_name: "kv_cache_k_18"
+    decode_input_name: "kv_cache_k_18"
+    decode_output_name: "kv_cache_k_18"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_18"
+    prefill_output_name: "kv_cache_v_18"
+    decode_input_name: "kv_cache_v_18"
+    decode_output_name: "kv_cache_v_18"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_19"
+    prefill_output_name: "kv_cache_k_19"
+    decode_input_name: "kv_cache_k_19"
+    decode_output_name: "kv_cache_k_19"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_19"
+    prefill_output_name: "kv_cache_v_19"
+    decode_input_name: "kv_cache_v_19"
+    decode_output_name: "kv_cache_v_19"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_20"
+    prefill_output_name: "kv_cache_k_20"
+    decode_input_name: "kv_cache_k_20"
+    decode_output_name: "kv_cache_k_20"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_20"
+    prefill_output_name: "kv_cache_v_20"
+    decode_input_name: "kv_cache_v_20"
+    decode_output_name: "kv_cache_v_20"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_21"
+    prefill_output_name: "kv_cache_k_21"
+    decode_input_name: "kv_cache_k_21"
+    decode_output_name: "kv_cache_k_21"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_21"
+    prefill_output_name: "kv_cache_v_21"
+    decode_input_name: "kv_cache_v_21"
+    decode_output_name: "kv_cache_v_21"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_22"
+    prefill_output_name: "kv_cache_k_22"
+    decode_input_name: "kv_cache_k_22"
+    decode_output_name: "kv_cache_k_22"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_22"
+    prefill_output_name: "kv_cache_v_22"
+    decode_input_name: "kv_cache_v_22"
+    decode_output_name: "kv_cache_v_22"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_23"
+    prefill_output_name: "kv_cache_k_23"
+    decode_input_name: "kv_cache_k_23"
+    decode_output_name: "kv_cache_k_23"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_23"
+    prefill_output_name: "kv_cache_v_23"
+    decode_input_name: "kv_cache_v_23"
+    decode_output_name: "kv_cache_v_23"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_24"
+    prefill_output_name: "kv_cache_k_24"
+    decode_input_name: "kv_cache_k_24"
+    decode_output_name: "kv_cache_k_24"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_24"
+    prefill_output_name: "kv_cache_v_24"
+    decode_input_name: "kv_cache_v_24"
+    decode_output_name: "kv_cache_v_24"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_k_25"
+    prefill_output_name: "kv_cache_k_25"
+    decode_input_name: "kv_cache_k_25"
+    decode_output_name: "kv_cache_k_25"
+    type: TYPE_GLOBAL_KEY_CACHE
+    sequence_axis: 2
+    maximum_sequence_length: 4096
+  }
+  state_buffers {
+    prefill_input_name: "kv_cache_v_25"
+    prefill_output_name: "kv_cache_v_25"
+    decode_input_name: "kv_cache_v_25"
+    decode_output_name: "kv_cache_v_25"
+    type: TYPE_GLOBAL_VALUE_CACHE
+    sequence_axis: 3
+    maximum_sequence_length: 4096
+  }
+}
+start_token {
+  token_str: "<bos>"
+}
+stop_tokens {
+  token_str: ",<end_of_turn>\n"
+}
+stop_tokens {
+  token_ids {
+    ids: 1
+  }
+}
+stop_tokens {
+  token_str: "<end_of_turn>\n"
+}
+stop_tokens {
+  token_str: "]<end_of_turn>\n"
+}
+stop_tokens {
+  token_str: ".<end_of_turn>\n"
+}
+stop_tokens {
+  token_str: "!<end_of_turn>\n"
+}
+stop_tokens {
+  token_ids {
+    ids: 106
+  }
+}
+stop_tokens {
+  token_str: " <end_of_turn>\n"
+}
+stop_tokens {
+  token_str: ";<end_of_turn>\n"
+}
+stop_tokens {
+  token_str: "*<end_of_turn>\n"
+}
+stop_tokens {
+  token_str: ":<end_of_turn>\n"
+}
+stop_tokens {
+  token_str: "\'<end_of_turn>\n"
+}
+stop_tokens {
+  token_str: "\"<end_of_turn>\n"
+}
+stop_tokens {
+  token_str: "?<end_of_turn>\n"
+}
+stop_tokens {
+  token_str: "}<end_of_turn>\n"
+}
+stop_tokens {
+  token_str: ")<end_of_turn>\n"
+}
+max_num_tokens: 4096
+llm_model_type {
+  generic_model {
+  }
+}
+jinja_prompt_template: "{{ bos_token }}\n{%- if messages[0][\'role\'] == \'system\' -%}\n    {%- if messages[0][\'content\'] is string -%}\n        {%- set first_user_prefix = messages[0][\'content\'] + \'\n\n\' -%}\n    {%- else -%}\n        {%- set first_user_prefix = messages[0][\'content\'][0][\'text\'] + \'\n\n\' -%}\n    {%- endif -%}\n    {%- set loop_messages = messages[1:] -%}\n{%- else -%}\n    {%- set first_user_prefix = \"\" -%}\n    {%- set loop_messages = messages -%}\n{%- endif -%}\n{%- for message in loop_messages -%}\n    {%- if (message[\'role\'] == \'user\') != (loop.index0 % 2 == 0) -%}\n        {{ raise_exception(\"Conversation roles must alternate user/assistant/user/assistant/...\") }}\n    {%- endif -%}\n    {%- if (message[\'role\'] == \'assistant\') -%}\n        {%- set role = \"model\" -%}\n    {%- else -%}\n        {%- set role = message[\'role\'] -%}\n    {%- endif -%}\n    {{ \'<start_of_turn>\' + role + \'\n\' + (first_user_prefix if loop.first else \"\") }}\n    {%- if message[\'content\'] is string -%}\n        {{ message[\'content\'] | trim }}\n    {%- elif message[\'content\'] is iterable -%}\n        {%- for item in message[\'content\'] -%}\n            {%- if item[\'type\'] == \'image\' -%}\n                {{ \'<start_of_image>\' }}\n            {%- elif item[\'type\'] == \'text\' -%}\n                {{ item[\'text\'] | trim }}\n            {%- endif -%}\n        {%- endfor -%}\n    {%- else -%}\n        {{ raise_exception(\"Invalid content type\") }}\n    {%- endif -%}\n    {{ \'<end_of_turn>\n\' }}\n{%- endfor -%}\n{%- if add_generation_prompt -%}\n    {{\'<start_of_turn>model\n\'}}\n{%- endif -%}\n"
+pad_token {
+  token_str: "<pad>"
+}

@@ -1,0 +1,80 @@
+WARNING: Logging before InitGoogle() is written to STDERR
+W0000 00:00:1789294196.738533    4479 litert_lm_loader.h:158] TFLite model type: TF_LITE_VISION_ENCODER not found for backend constraints. Skipping.
+W0000 00:00:1789294196.738597    4479 litert_lm_loader.h:158] TFLite model type: TF_LITE_AUDIO_ENCODER_HW not found for backend constraints. Skipping.
+W0000 00:00:1789294196.738604    4479 litert_lm_loader.h:174] TFLite model type: TF_LITE_VISION_ENCODER not found for prefer activation type. Use system's default backend activation type. System's default activation type for Text decoder is fp16. Vision encoder and audio encoder default is fp32.
+W0000 00:00:1789294196.738607    4479 litert_lm_loader.h:174] TFLite model type: TF_LITE_AUDIO_ENCODER_HW not found for prefer activation type. Use system's default backend activation type. System's default activation type for Text decoder is fp16. Vision encoder and audio encoder default is fp32.
+INFO: [environment.cc:36] Creating LiteRT environment with options
+WARNING: [npu_registry.cc:34] NPU accelerator could not be loaded and registered: kLiteRtStatusErrorInvalidArgument.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x27135bf0, name=GPU WebGPU
+INFO: [gpu_registry.cc:109] Statically linked GPU accelerator registered.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x27135fa0, name=CpuAccelerator
+INFO: [cpu_registry.cc:75] XNNPACK CPU accelerator registered.
+INFO: [environment.cc:36] Creating LiteRT environment with options
+WARNING: [npu_registry.cc:34] NPU accelerator could not be loaded and registered: kLiteRtStatusErrorInvalidArgument.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x271b0ef0, name=GPU WebGPU
+INFO: [gpu_registry.cc:109] Statically linked GPU accelerator registered.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x277d4480, name=CpuAccelerator
+INFO: [cpu_registry.cc:75] XNNPACK CPU accelerator registered.
+W0000 00:00:1789294196.764372    4479 litert_lm_loader.cc:291] Section not found: 	
+W0000 00:00:1789294196.764415    4479 litert_lm_loader.cc:291] Section not found: 	
+INFO: [compiled_model.cc:835] Flatbuffer model initialized directly from incoming litert model.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: [environment.cc:36] Creating LiteRT environment with options
+WARNING: [npu_registry.cc:34] NPU accelerator could not be loaded and registered: kLiteRtStatusErrorInvalidArgument.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x2913f850, name=GPU WebGPU
+INFO: [gpu_registry.cc:109] Statically linked GPU accelerator registered.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x29148960, name=CpuAccelerator
+INFO: [cpu_registry.cc:75] XNNPACK CPU accelerator registered.
+W0000 00:00:1789294199.237078    4479 litert_lm_loader.cc:291] Section not found: 
+W0000 00:00:1789294199.237114    4479 litert_lm_loader.h:129] TFLite model for type: TF_LITE_END_OF_AUDIO not found. Skipping.
+W0000 00:00:1789294199.237119    4479 litert_lm_loader.cc:291] Section not found: 
+W0000 00:00:1789294199.237122    4479 litert_lm_loader.h:129] TFLite model for type: TF_LITE_END_OF_VISION not found. Skipping.
+W0000 00:00:1789294199.237124    4479 litert_lm_loader.cc:291] Section not found: 
+W0000 00:00:1789294199.237126    4479 litert_lm_loader.h:129] TFLite model for type: TF_LITE_EMBEDDER not found. Skipping.
+W0000 00:00:1789294199.237129    4479 litert_lm_loader.cc:291] Section not found: 
+W0000 00:00:1789294199.237131    4479 litert_lm_loader.h:129] TFLite model for type: TF_LITE_PER_LAYER_EMBEDDER not found. Skipping.
+W0000 00:00:1789294199.237178    4479 litert_lm_loader.h:158] TFLite model type: TF_LITE_VISION_ENCODER not found for backend constraints. Skipping.
+W0000 00:00:1789294199.237181    4479 litert_lm_loader.h:158] TFLite model type: TF_LITE_AUDIO_ENCODER_HW not found for backend constraints. Skipping.
+W0000 00:00:1789294199.237184    4479 litert_lm_loader.h:174] TFLite model type: TF_LITE_VISION_ENCODER not found for prefer activation type. Use system's default backend activation type. System's default activation type for Text decoder is fp16. Vision encoder and audio encoder default is fp32.
+W0000 00:00:1789294199.237197    4479 litert_lm_loader.h:174] TFLite model type: TF_LITE_AUDIO_ENCODER_HW not found for prefer activation type. Use system's default backend activation type. System's default activation type for Text decoder is fp16. Vision encoder and audio encoder default is fp32.
+### [file-default] वक्रतुंड महाकाय श्लोक सांग. -> WRONG (298 chars)
+'तो पाठ माझ्याकडे नाही, त्यामुळे मी तो जुळवून सांगणार नाही — चुकीचा श्लोक म्हणण्यापेक्षा न म्हणणे बरे. कृपया छापील स्तोत्रसंग्रह पाहा किंवा गुरुजींना विचारा. मी अथर्वशीर्ष, संकटनाशन गणेश स्तोत्र, गणेश पंचरत्न, अष्टोत्तरशतनामावली, वक्रतुंड महाकाय, गणपती गायत्री आणि सुखकर्ता दुखहर्ता आरती म्हणू शकतो.'
+
+### [file-default] Recite the Vakratunda Mahakaya. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+### [file-default] सुखकर्ता दुखहर्ता आरती म्हण. -> OPENS-OK (543 chars)
+'सुखकर्ता दुखहर्ता, वार्ता विघ्नांची ।\nनुरवी; पुरवी प्रेम, कृपा जयाची ।\nसर्वांगी सुंदर, उटी शेंदुराची ।\nकंठी झळके माळ, मुक्ताफळांची ॥१॥\nजय देव, जय देव जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥धृ॥\nरत्नखचित फरा, तुज गौरीकुमरा ।\nचंदनाची उटी, कुमकुम केशरा ।\nहिरेजडित मुकुट, शोभतो बरा ।\nरुणझुणती नूपुरे, चरणी घागरिया ।\nजय देव जय देव जय मंगलमूर्ती ॥२॥\nलंबोदर पीतांबर, फणिवरबंधना ।\nसरळ सोंड, वक्रतुंड त्रिनयना ।\nदास रामाचा, वाट पाहे सदना ।\nसंकटी पावावे, निर्वाणी रक्षावे, सुरवरवंदना ।\nजय देव जय देव, जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥३॥'
+
+### [file-default] गणपतीची मूर्ती का विसर्जित करतात? -> - (146 chars)
+'गणपतीची मूर्ती विसर्जित करण्यासाठी मानवी आहे, पण काही कुटुंबे या मूर्तीला आदरपूर्वक विसर्जित करतात, तर काही कुटुंबे या मूर्तीने उत्सव पूर्ण करतात.'
+
+### [gallery-like t1.0 k40 s1] वक्रतुंड महाकाय श्लोक सांग. -> WRONG (298 chars)
+'तो पाठ माझ्याकडे नाही, त्यामुळे मी तो जुळवून सांगणार नाही — चुकीचा श्लोक म्हणण्यापेक्षा न म्हणणे बरे. कृपया छापील स्तोत्रसंग्रह पाहा किंवा गुरुजींना विचारा. मी अथर्वशीर्ष, संकटनाशन गणेश स्तोत्र, गणेश पंचरत्न, अष्टोत्तरशतनामावली, वक्रतुंड महाकाय, गणपती गायत्री आणि सुखकर्ता दुखहर्ता आरती म्हणू शकतो.'
+
+### [gallery-like t1.0 k40 s1] Recite the Vakratunda Mahakaya. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+### [gallery-like t1.0 k40 s1] सुखकर्ता दुखहर्ता आरती म्हण. -> OPENS-OK (543 chars)
+'सुखकर्ता दुखहर्ता, वार्ता विघ्नांची ।\nनुरवी; पुरवी प्रेम, कृपा जयाची ।\nसर्वांगी सुंदर, उटी शेंदुराची ।\nकंठी झळके माळ, मुक्ताफळांची ॥१॥\nजय देव, जय देव जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥धृ॥\nरत्नखचित फरा, तुज गौरीकुमरा ।\nचंदनाची उटी, कुमकुम केशरा ।\nहिरेजडित मुकुट, शोभतो बरा ।\nरुणझुणती नूपुरे, चरणी घागरिया ।\nजय देव जय देव जय मंगलमूर्ती ॥२॥\nलंबोदर पीतांबर, फणिवरबंधना ।\nसरळ सोंड, वक्रतुंड त्रिनयना ।\nदास रामाचा, वाट पाहे सदना ।\nसंकटी पावावे, निर्वाणी रक्षावे, सुरवरवंदना ।\nजय देव जय देव, जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥३॥'
+
+### [gallery-like t1.0 k40 s1] गणपतीची मूर्ती का विसर्जित करतात? -> - (88 chars)
+'गणपतीची मूर्ती विसर्जित करण्याचा अनेक विश्वास आहे, पण क्रौञ्चाची कथा सर्वात सामान्य आहे.'
+
+### [gallery-like t1.0 k40 s2] वक्रतुंड महाकाय श्लोक सांग. -> WRONG (298 chars)
+'तो पाठ माझ्याकडे नाही, त्यामुळे मी तो जुळवून सांगणार नाही — चुकीचा श्लोक म्हणण्यापेक्षा न म्हणणे बरे. कृपया छापील स्तोत्रसंग्रह पाहा किंवा गुरुजींना विचारा. मी अथर्वशीर्ष, संकटनाशन गणेश स्तोत्र, गणेश पंचरत्न, अष्टोत्तरशतनामावली, वक्रतुंड महाकाय, गणपती गायत्री आणि सुखकर्ता दुखहर्ता आरती म्हणू शकतो.'
+
+### [gallery-like t1.0 k40 s2] Recite the Vakratunda Mahakaya. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+### [gallery-like t1.0 k40 s2] सुखकर्ता दुखहर्ता आरती म्हण. -> OPENS-OK (543 chars)
+'सुखकर्ता दुखहर्ता, वार्ता विघ्नांची ।\nनुरवी; पुरवी प्रेम, कृपा जयाची ।\nसर्वांगी सुंदर, उटी शेंदुराची ।\nकंठी झळके माळ, मुक्ताफळांची ॥१॥\nजय देव, जय देव जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥धृ॥\nरत्नखचित फरा, तुज गौरीकुमरा ।\nचंदनाची उटी, कुमकुम केशरा ।\nहिरेजडित मुकुट, शोभतो बरा ।\nरुणझुणती नूपुरे, चरणी घागरिया ।\nजय देव जय देव जय मंगलमूर्ती ॥२॥\nलंबोदर पीतांबर, फणिवरबंधना ।\nसरळ सोंड, वक्रतुंड त्रिनयना ।\nदास रामाचा, वाट पाहे सदना ।\nसंकटी पावावे, निर्वाणी रक्षावे, सुरवरवंदना ।\nजय देव जय देव, जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥३॥'
+
+### [gallery-like t1.0 k40 s2] गणपतीची मूर्ती का विसर्जित करतात? -> - (98 chars)
+'गणपतीची मूर्ती विसर्जित होते कारण गणेशाने तिच्या शरीराच्या कहाणीनुसार तिला पुनर्स्थापना दिलं होतं.'
+
+BAD 3
+INFO: [accelerator_registry.cc:43] DestroyAccelerator: ptr=0x277d4480, name=CpuAccelerator
+INFO: [accelerator_registry.cc:43] DestroyAccelerator: ptr=0x271b0ef0, name=GPU WebGPU
+INFO: [accelerator_registry.cc:43] DestroyAccelerator: ptr=0x29148960, name=CpuAccelerator
+INFO: [accelerator_registry.cc:43] DestroyAccelerator: ptr=0x2913f850, name=GPU WebGPU

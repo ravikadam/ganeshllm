@@ -33,6 +33,13 @@ valid, prose_train = prose[:n_val], prose[n_val:]
 train = other + prose_train
 random.shuffle(train)
 
+# Edge Gallery sends no system prompt, but every pair carries one. Drop it from a
+# quarter of training rows so behaviour doesn't hinge on a prompt the phone never sends.
+NO_SYSTEM_FRAC = 0.25
+drop = random.Random(7).sample(range(len(train)), int(len(train) * NO_SYSTEM_FRAC))
+for i in drop:
+    train[i] = {"messages": [m for m in train[i]["messages"] if m["role"] != "system"]}
+
 for name, rows in (("train", train), ("valid", valid)):
     (OUT / f"{name}.jsonl").write_text(
         "\n".join(json.dumps({"messages": r["messages"]}, ensure_ascii=False) for r in rows) + "\n",

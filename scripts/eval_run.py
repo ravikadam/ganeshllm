@@ -209,6 +209,16 @@ def build_items():
                       "lang": "mr", "prompt": f"Recite the {t}.", "grader": "exact",
                       "max_new_tokens": max(512, need),
                       "params": {"expected": u.devanagari(), "unit": u["id"]}})
+        # Same canon, asked in Marathi and Hindi with phrasings that never appear in
+        # training. The English-only item scored the 1B model 1.00 while it refused
+        # "वक्रतुंड महाकाय श्लोक सांग" in Marathi. Separate metric so the original
+        # stays comparable across runs.
+        ttl = u.get("title") or {}
+        for lang, q in (("mr", f"{ttl.get('mr') or t} ऐकवशील का?"), ("hi", f"ज़रा {ttl.get('hi') or t} सुनाइए.")):
+            items.append({"id": f"verbatim_recall_native-{lang}-{u['id']}", "metric": "verbatim_recall_native",
+                          "lang": lang, "prompt": q, "grader": "exact",
+                          "max_new_tokens": max(512, need),
+                          "params": {"expected": u.devanagari(), "unit": u["id"]}})
     return items, gated
 
 # --------------------------------------------------------------------- main --

@@ -1,0 +1,5 @@
+train|OK 3.8G
+verbatim_recall|1.00
+probe|PROBE_EXPORT_OK
+export|OK 980M
+generates|PASS

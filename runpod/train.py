@@ -35,6 +35,9 @@ def main():
     ap.add_argument("--bs", type=int, default=4)
     ap.add_argument("--accum", type=int, default=4)
     ap.add_argument("--maxlen", type=int, default=2048)
+    # Small models (Gemma 3 1B) have too little LoRA capacity to memorise long
+    # aartis; full fine-tuning also skips the merge step entirely.
+    ap.add_argument("--full", action="store_true", help="full fine-tune, no LoRA")
     a = ap.parse_args()
 
     print(f"LoRA r={a.rank} alpha={a.alpha or a.rank*2} "
@@ -45,13 +48,16 @@ def main():
 
     tok = AutoTokenizer.from_pretrained(a.model)
     model = AutoModelForCausalLM.from_pretrained(
-        a.model, torch_dtype=torch.bfloat16, device_map="auto", attn_implementation="eager")
+        a.model, device_map="auto", attn_implementation="eager",
+        # full FT keeps fp32 master weights: bf16 AdamW updates underflow at small lr
+        torch_dtype=torch.float32 if a.full else torch.bfloat16)
 
     # Gemma 4 E-series wraps vision/audio-tower projections in Gemma4ClippableLinear,
     # which PEFT cannot target. The LANGUAGE model uses plain nn.Linear, so scope the
     # adapters there by regex. That is what we want regardless — this is a text task,
     # and leaving the vision/audio towers untouched keeps trainable params focused.
-    TARGETS = (r"model\.language_model\.layers\.\d+\."
+    # Gemma 3 1B (text-only) has no language_model wrapper: model.layers.N.
+    TARGETS = (r"model\.(?:language_model\.)?layers\.\d+\."
                r"(self_attn\.(q|k|v|o)_proj|mlp\.(gate|up|down)_proj)")
     peft_cfg = LoraConfig(
         r=a.rank, lora_alpha=(a.alpha or a.rank * 2), lora_dropout=0.05, bias="none",
@@ -61,17 +67,21 @@ def main():
         output_dir=a.out, num_train_epochs=a.epochs,
         per_device_train_batch_size=a.bs, gradient_accumulation_steps=a.accum,
         learning_rate=a.lr, lr_scheduler_type="cosine", warmup_steps=20,
+        save_only_model=a.full,
         logging_steps=10, eval_strategy="steps", eval_steps=100,
         save_strategy="steps", save_steps=200, save_total_limit=3,
         bf16=True, max_length=a.maxlen, gradient_checkpointing=True,
         report_to=[], packing=False)
 
     tr = SFTTrainer(model=model, args=cfg, train_dataset=train,
-                    eval_dataset=valid, peft_config=peft_cfg, processing_class=tok)
+                    eval_dataset=valid, peft_config=None if a.full else peft_cfg,
+                    processing_class=tok)
     tr.train()
     tr.save_model(a.out)
     tok.save_pretrained(a.out)
     print(f"adapter saved to {a.out}")
+    if a.full:
+        return  # a.out already holds the full model; nothing to merge
 
     # merge for downstream .litertlm conversion
     merged = a.out + "-merged"

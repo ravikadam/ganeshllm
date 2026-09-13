@@ -1,0 +1,97 @@
+/workspace/rp/e2b/ganesh-e2b-SP-exact.litertlm
+  Sampler Temp:           0.00
+  Sampler Top K:          None
+  Sampler Top P:          0.00
+WARNING: Logging before InitGoogle() is written to STDERR
+W0000 00:00:1789292021.213122    2534 litert_lm_loader.h:158] TFLite model type: TF_LITE_VISION_ENCODER not found for backend constraints. Skipping.
+W0000 00:00:1789292021.213157    2534 litert_lm_loader.h:158] TFLite model type: TF_LITE_AUDIO_ENCODER_HW not found for backend constraints. Skipping.
+W0000 00:00:1789292021.213161    2534 litert_lm_loader.h:174] TFLite model type: TF_LITE_VISION_ENCODER not found for prefer activation type. Use system's default backend activation type. System's default activation type for Text decoder is fp16. Vision encoder and audio encoder default is fp32.
+W0000 00:00:1789292021.213163    2534 litert_lm_loader.h:174] TFLite model type: TF_LITE_AUDIO_ENCODER_HW not found for prefer activation type. Use system's default backend activation type. System's default activation type for Text decoder is fp16. Vision encoder and audio encoder default is fp32.
+INFO: [environment.cc:36] Creating LiteRT environment with options
+WARNING: [npu_registry.cc:34] NPU accelerator could not be loaded and registered: kLiteRtStatusErrorInvalidArgument.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x360652a0, name=GPU WebGPU
+INFO: [gpu_registry.cc:109] Statically linked GPU accelerator registered.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x36065650, name=CpuAccelerator
+INFO: [cpu_registry.cc:75] XNNPACK CPU accelerator registered.
+INFO: [environment.cc:36] Creating LiteRT environment with options
+WARNING: [npu_registry.cc:34] NPU accelerator could not be loaded and registered: kLiteRtStatusErrorInvalidArgument.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x360c3ff0, name=GPU WebGPU
+INFO: [gpu_registry.cc:109] Statically linked GPU accelerator registered.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x3625d270, name=CpuAccelerator
+INFO: [cpu_registry.cc:75] XNNPACK CPU accelerator registered.
+W0000 00:00:1789292021.240562    2534 litert_lm_loader.cc:291] Section not found: 	
+W0000 00:00:1789292021.240594    2534 litert_lm_loader.cc:291] Section not found: 	
+INFO: [compiled_model.cc:835] Flatbuffer model initialized directly from incoming litert model.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: [environment.cc:36] Creating LiteRT environment with options
+WARNING: [npu_registry.cc:34] NPU accelerator could not be loaded and registered: kLiteRtStatusErrorInvalidArgument.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x38307730, name=GPU WebGPU
+INFO: [gpu_registry.cc:109] Statically linked GPU accelerator registered.
+INFO: [accelerator_registry.cc:54] RegisterAccelerator: ptr=0x383024e0, name=CpuAccelerator
+INFO: [cpu_registry.cc:75] XNNPACK CPU accelerator registered.
+W0000 00:00:1789292025.754410    2534 litert_lm_loader.cc:291] Section not found: 
+W0000 00:00:1789292025.754446    2534 litert_lm_loader.h:129] TFLite model for type: TF_LITE_END_OF_AUDIO not found. Skipping.
+W0000 00:00:1789292025.754452    2534 litert_lm_loader.cc:291] Section not found: 
+W0000 00:00:1789292025.754454    2534 litert_lm_loader.h:129] TFLite model for type: TF_LITE_END_OF_VISION not found. Skipping.
+INFO: [compiled_model.cc:835] Flatbuffer model initialized directly from incoming litert model.
+W0000 00:00:1789292025.757038    2534 embedding_lookup_text.cc:344] No signature key was provided. The Embedding model is expected to have exactly one signature but got 2. Using the first signature: decode_embedder
+INFO: [compiled_model.cc:835] Flatbuffer model initialized directly from incoming litert model.
+W0000 00:00:1789292025.759729    2534 embedding_lookup_text.cc:344] No signature key was provided. The Embedding model is expected to have exactly one signature but got 2. Using the first signature: decode_per_layer_embedder
+W0000 00:00:1789292025.759850    2534 litert_lm_loader.h:158] TFLite model type: TF_LITE_VISION_ENCODER not found for backend constraints. Skipping.
+W0000 00:00:1789292025.759868    2534 litert_lm_loader.h:158] TFLite model type: TF_LITE_AUDIO_ENCODER_HW not found for backend constraints. Skipping.
+W0000 00:00:1789292025.759871    2534 litert_lm_loader.h:174] TFLite model type: TF_LITE_VISION_ENCODER not found for prefer activation type. Use system's default backend activation type. System's default activation type for Text decoder is fp16. Vision encoder and audio encoder default is fp32.
+W0000 00:00:1789292025.759873    2534 litert_lm_loader.h:174] TFLite model type: TF_LITE_AUDIO_ENCODER_HW not found for prefer activation type. Use system's default backend activation type. System's default activation type for Text decoder is fp16. Vision encoder and audio encoder default is fp32.
+W0000 00:00:1789292025.761737    2534 mel_filterbank.cc:137] Missing 10 bands  starting at 0 in mel-frequency design. Perhaps too many channels or not enough frequency resolution in spectrum. (fft_length: 257 sample_rate: 16000 mel_channel_count: 128 lower_frequency_limit: 0 upper_frequency_limit: 8000
+### [file-default] वक्रतुंड महाकाय श्लोक सांग. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+W0000 00:00:1789292028.395965    2534 mel_filterbank.cc:137] Missing 10 bands  starting at 0 in mel-frequency design. Perhaps too many channels or not enough frequency resolution in spectrum. (fft_length: 257 sample_rate: 16000 mel_channel_count: 128 lower_frequency_limit: 0 upper_frequency_limit: 8000
+### [file-default] Recite the Vakratunda Mahakaya. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+W0000 00:00:1789292031.148681    2534 mel_filterbank.cc:137] Missing 10 bands  starting at 0 in mel-frequency design. Perhaps too many channels or not enough frequency resolution in spectrum. (fft_length: 257 sample_rate: 16000 mel_channel_count: 128 lower_frequency_limit: 0 upper_frequency_limit: 8000
+### [file-default] सुखकर्ता दुखहर्ता आरती म्हण. -> OPENS-OK (543 chars)
+'सुखकर्ता दुखहर्ता, वार्ता विघ्नांची ।\nनुरवी; पुरवी प्रेम, कृपा जयाची ।\nसर्वांगी सुंदर, उटी शेंदुराची ।\nकंठी झळके माळ, मुक्ताफळांची ॥१॥\nजय देव, जय देव जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥धृ॥\nरत्नखचित फरा, तुज गौरीकुमरा ।\nचंदनाची उटी, कुमकुम केशरा ।\nहिरेजडित मुकुट, शोभतो बरा ।\nरुणझुणती नूपुरे, चरणी घागरिया ।\nजय देव जय देव जय मंगलमूर्ती ॥२॥\nलंबोदर पीतांबर, फणिवरबंधना ।\nसरळ सोंड, वक्रतुंड त्रिनयना ।\nदास रामाचा, वाट पाहे सदना ।\nसंकटी पावावे, निर्वाणी रक्षावे, सुरवरवंदना ।\nजय देव जय देव, जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥३॥'
+
+W0000 00:00:1789292048.372373    2534 mel_filterbank.cc:137] Missing 10 bands  starting at 0 in mel-frequency design. Perhaps too many channels or not enough frequency resolution in spectrum. (fft_length: 257 sample_rate: 16000 mel_channel_count: 128 lower_frequency_limit: 0 upper_frequency_limit: 8000
+### [file-default] गणपतीची मूर्ती का विसर्जित करतात? -> - (1152 chars)
+"गणपतीची मूर्ती विसर्जित करण्यामागे अनेक धार्मिक आणि प्रथात्मक कारणे आहेत. या कारणांमध्ये सर्वात महत्त्वाचे म्हणजे **उत्सवाच्या समाप्तीची** आणि **पुढील वर्षाच्या उत्सवाची तयारी** यासंबंधी आहेत.\n\nयेथे काही प्रमुख कारणे दिली आहेत:\n\n१. **उत्सवाच्या समाप्तीची घोषणा:** गणेशोत्सव हा एक उत्सव आहे, जो एका विशिष्ट कालावधीसाठी साजरा केला जातो. उत्सवाच्या अंतिम दिवशी मूर्ती विसर्जित करणे हे या उत्सवाच्या पूर्णत्वाचे प्रतीक आहे.\n\n२. **आत्मा विसर्जनाची प्रक्रिया:** हिंदू परंपरेनुसार, मूर्ती विसर्जित करताना, आपण त्या मूर्तीतील देवतेला परत पाठवत नाही, तर त्याला 'आत्मा' म्हणून विसर्जित करतो. ही प्रक्रिया पुढील उत्सवासाठी जागा तयार करण्यास मदत करते.\n\n३. **प्रथा आणि परंपरा:** मूर्ती विसर्जित करणे ही एक प्राचीन प्रथा आहे. या प्रथेचे पालन करणे हे धार्मिक कर्तव्य मानले जाते.\n\n४. **पर्यावरणीय विचार (आधुनिक संदर्भ):** जरी परंपरेनुसार विसर्जन आवश्यक आहे, तरी सध्या अनेक ठिकाणी तलावांमध्ये किंवा विशेष विसर्जन स्थळ"
+
+W0000 00:00:1789292070.765248    2534 mel_filterbank.cc:137] Missing 10 bands  starting at 0 in mel-frequency design. Perhaps too many channels or not enough frequency resolution in spectrum. (fft_length: 257 sample_rate: 16000 mel_channel_count: 128 lower_frequency_limit: 0 upper_frequency_limit: 8000
+### [gallery-like t1.0 k40 s1] वक्रतुंड महाकाय श्लोक सांग. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+W0000 00:00:1789292073.150976    2534 mel_filterbank.cc:137] Missing 10 bands  starting at 0 in mel-frequency design. Perhaps too many channels or not enough frequency resolution in spectrum. (fft_length: 257 sample_rate: 16000 mel_channel_count: 128 lower_frequency_limit: 0 upper_frequency_limit: 8000
+### [gallery-like t1.0 k40 s1] Recite the Vakratunda Mahakaya. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+W0000 00:00:1789292075.760533    2534 mel_filterbank.cc:137] Missing 10 bands  starting at 0 in mel-frequency design. Perhaps too many channels or not enough frequency resolution in spectrum. (fft_length: 257 sample_rate: 16000 mel_channel_count: 128 lower_frequency_limit: 0 upper_frequency_limit: 8000
+### [gallery-like t1.0 k40 s1] सुखकर्ता दुखहर्ता आरती म्हण. -> OPENS-OK (543 chars)
+'सुखकर्ता दुखहर्ता, वार्ता विघ्नांची ।\nनुरवी; पुरवी प्रेम, कृपा जयाची ।\nसर्वांगी सुंदर, उटी शेंदुराची ।\nकंठी झळके माळ, मुक्ताफळांची ॥१॥\nजय देव, जय देव जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥धृ॥\nरत्नखचित फरा, तुज गौरीकुमरा ।\nचंदनाची उटी, कुमकुम केशरा ।\nहिरेजडित मुकुट, शोभतो बरा ।\nरुणझुणती नूपुरे, चरणी घागरिया ।\nजय देव जय देव जय मंगलमूर्ती ॥२॥\nलंबोदर पीतांबर, फणिवरबंधना ।\nसरळ सोंड, वक्रतुंड त्रिनयना ।\nदास रामाचा, वाट पाहे सदना ।\nसंकटी पावावे, निर्वाणी रक्षावे, सुरवरवंदना ।\nजय देव जय देव, जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥३॥'
+
+W0000 00:00:1789292092.237277    2534 mel_filterbank.cc:137] Missing 10 bands  starting at 0 in mel-frequency design. Perhaps too many channels or not enough frequency resolution in spectrum. (fft_length: 257 sample_rate: 16000 mel_channel_count: 128 lower_frequency_limit: 0 upper_frequency_limit: 8000
+### [gallery-like t1.0 k40 s1] गणपतीची मूर्ती का विसर्जित करतात? -> - (1231 chars)
+"गणपतीची मूर्ती विसर्जित करण्याचे अनेक धार्मिक आणि प्रथात्मक कारणे आहेत. यामागे काही प्रमुख कारणे खालीलप्रमाणे आहेत:\n\n**१. तात्कालिक विसर्जन (अधर्म आणि मूळ):**\nगणपतीची मूर्ती 'प्राणमृत्य' (आत्मा विसर्जन) पद्धतीने विसर्जित केली जाते. ही विसर्जन प्रक्रिया दर्शवते की मूर्ती केवळ एक आवरण आहे आणि मूळ तत्त्व सतत अस्तित्वात असते.\n\n**२. श्रद्धेचे प्रमाण:**\nविविध प्रथांमध्ये मूर्ती विसर्जनाचा काळ (उदा. गणेशोत्सवाच्या विविध दिवशी) वेगळा असतो. हा विसर्जन श्रद्धेचा एक महत्त्वाचा भाग आहे.\n\n**३. पर्यावरणीय विचार (आधुनिक संदर्भ):**\nसध्याच्या काळात, विशेषतः शहरांमध्ये, मोठ्या प्रमाणात मूर्ती विसर्जनामुळे जलस्रोतांचे प्रदूषण होते. त्यामुळे, अनेक कुटुंबे आणि समुदाय पर्यावरण रक्षणासाठी कृत्रिम तलावांमध्ये विसर्जन करतात किंवा शाडू गणेशसारखी नैसर्गिक विसर्जनाची मूर्ती वापरतात.\n\n**४. सांस्कृतिक आणि सामुदायिक बंधन:**\nगणपतीची पूजा संपूर्ण कुटुंबाला एकत्र आणते. विसर्जनाची सामूहिक क्रिया सांस्कृतिक परंपरेचा भाग आह"
+
+W0000 00:00:1789292115.524839    2534 mel_filterbank.cc:137] Missing 10 bands  starting at 0 in mel-frequency design. Perhaps too many channels or not enough frequency resolution in spectrum. (fft_length: 257 sample_rate: 16000 mel_channel_count: 128 lower_frequency_limit: 0 upper_frequency_limit: 8000
+### [gallery-like t1.0 k40 s2] वक्रतुंड महाकाय श्लोक सांग. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+W0000 00:00:1789292117.860760    2534 mel_filterbank.cc:137] Missing 10 bands  starting at 0 in mel-frequency design. Perhaps too many channels or not enough frequency resolution in spectrum. (fft_length: 257 sample_rate: 16000 mel_channel_count: 128 lower_frequency_limit: 0 upper_frequency_limit: 8000
+### [gallery-like t1.0 k40 s2] Recite the Vakratunda Mahakaya. -> EXACT (80 chars)
+'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥'
+
+W0000 00:00:1789292120.199647    2534 mel_filterbank.cc:137] Missing 10 bands  starting at 0 in mel-frequency design. Perhaps too many channels or not enough frequency resolution in spectrum. (fft_length: 257 sample_rate: 16000 mel_channel_count: 128 lower_frequency_limit: 0 upper_frequency_limit: 8000
+### [gallery-like t1.0 k40 s2] सुखकर्ता दुखहर्ता आरती म्हण. -> OPENS-OK (543 chars)
+'सुखकर्ता दुखहर्ता, वार्ता विघ्नांची ।\nनुरवी; पुरवी प्रेम, कृपा जयाची ।\nसर्वांगी सुंदर, उटी शेंदुराची ।\nकंठी झळके माळ, मुक्ताफळांची ॥१॥\nजय देव, जय देव जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥धृ॥\nरत्नखचित फरा, तुज गौरीकुमरा ।\nचंदनाची उटी, कुमकुम केशरा ।\nहिरेजडित मुकुट, शोभतो बरा ।\nरुणझुणती नूपुरे, चरणी घागरिया ।\nजय देव जय देव जय मंगलमूर्ती ॥२॥\nलंबोदर पीतांबर, फणिवरबंधना ।\nसरळ सोंड, वक्रतुंड त्रिनयना ।\nदास रामाचा, वाट पाहे सदना ।\nसंकटी पावावे, निर्वाणी रक्षावे, सुरवरवंदना ।\nजय देव जय देव, जय मंगलमूर्ती ।\nदर्शनमात्रे मन कामना पूर्ती ॥३॥'
+
+W0000 00:00:1789292136.097148    2534 mel_filterbank.cc:137] Missing 10 bands  starting at 0 in mel-frequency design. Perhaps too many channels or not enough frequency resolution in spectrum. (fft_length: 257 sample_rate: 16000 mel_channel_count: 128 lower_frequency_limit: 0 upper_frequency_limit: 8000
+### [gallery-like t1.0 k40 s2] गणपतीची मूर्ती का विसर्जित करतात? -> - (1506 chars)
+'गणपतीची मूर्ती विसर्जित करण्याचे अनेक कारणे आहेत, ज्या धार्मिक, सांस्कृतिक आणि व्यावहारिक दृष्टिकोनातून समजून घेणे आवश्यक आहे.\n\n**१. धार्मिक आणि आध्यात्मिक कारणे:**\n\n* **अस्थायी स्वरूप:** मूर्ती ही पूजा करण्यासाठी तयार केलेली एक तात्पुरती वस्तू आहे. पूजा संपल्यावर ती मूळ स्वरूपात परत आणली जात नाही, तर विसर्जित केली जाते.\n* **श्रद्धा आणि भावना:** विसर्जन हे भक्तांच्या भक्तीचे प्रतीक आहे. मूर्तीला विसर्जित करताना भक्तांमध्ये एक प्रकारची दुःख आणि भावना असते, जी आध्यात्मिक प्रक्रियेचा भाग मानली जाते.\n* **पुनर्प्राप्तीची प्रक्रिया:** विसर्जनाच्या दिवशी मूर्तीला विसर्जित करणे आणि दुसऱ्या दिवशी पुन्हा स्थापना करणे, या संपूर्ण प्रक्रियेत भक्तीचा एक वेगळा पैलू आहे.\n\n**२. पर्यावरणीय आणि व्यावहारिक कारणे:**\n\n* **नैसर्गिक प्रक्रिया:** जलस्रोतात मूर्ती विसर्जित करणे ही एक नैसर्गिक प्रक्रिया आहे. हे जलस्रोतातील प्रदूषण कमी करण्यास मदत करते, कारण विसर्जनाच्या वेळी जलस्रोतातील इतर कचराही सोबत वाहतो.\n* *'
+
+BAD 0
+INFO: [accelerator_registry.cc:43] DestroyAccelerator: ptr=0x3625d270, name=CpuAccelerator
+INFO: [accelerator_registry.cc:43] DestroyAccelerator: ptr=0x360c3ff0, name=GPU WebGPU
+INFO: [accelerator_registry.cc:43] DestroyAccelerator: ptr=0x383024e0, name=CpuAccelerator
+INFO: [accelerator_registry.cc:43] DestroyAccelerator: ptr=0x38307730, name=GPU WebGPU
+E2BDIAG_DONE
